@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[立志做一个勤奋的笔耕者]]></title>
+    <url>%2F%2F2019%2F07%2F19%2F%E7%AB%8B%E5%BF%97%E5%81%9A%E4%B8%80%E4%B8%AA%E5%8B%A4%E5%A5%8B%E7%9A%84%E7%AC%94%E8%80%95%E8%80%85%2F</url>
+    <content type="text"><![CDATA[​ 花了五六个小时的时间，利用hexo框架总算是把我的个人博客给搭建起来了，实属不易呀，并且完成了在GitHub上的静态发布。 ​ 搭建个人博客对程序员来说是挺重要的一件事，可以在个人博客上写一些个人的学习笔记，知识总结，加深自己对相关知识的理解，还有一些踩坑记录，避免自己再次踩坑:grin:，以后还可以在上面放一些生活随笔。下搭建个人博客决心的过程有点艰难，本来很早的时候就有过搭建个人博客的想法，可是那个时候感觉，写个人博客的都是技术大拿，自己作为一个程序猿小透明，不会也没有必要去写个人博客，感觉写了也没人看，这么长时间经历了蛮多事，同学们大都考研了，自己找实习的过程中又屡遭碰壁，感觉自己的基础知识极度不扎实，有些知识点说明白也明白点，可但往深处一问，就有啥都不会了，更让自己无法接受的是那个说自己基础不扎实的面试官还是自己的同龄。幸而有个学长给自己指明了现阶段的方向，终于决定暑假恶补自己的java的基础知识，外加数据库（mysql）和开发框架（spring全家桶），无奈学习效率不尽如人意，感觉看过教学视频后再在总结为一篇博客效果会好点。 博客更新计划如下： 1.框架部分准备一日多更 2.java部分一日一更 3.其他博文周更 具体步骤参见个人博客的搭建。 ​]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[为你的hexo添加表情]]></title>
+    <url>%2F%2F2019%2F07%2F19%2F%E4%B8%BA%E4%BD%A0%E7%9A%84hexo%E6%B7%BB%E5%8A%A0%E8%A1%A8%E6%83%85%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[个人博客的搭建]]></title>
+    <url>%2F%2F2019%2F07%2F19%2F%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[我采用的是hexo博客框架 搭建过程需要一下步骤： 1.安装git 2.安装Nodejs 3.安装hexo（包括以上两项都可以去官网下载，直接安装，没毛病） 4.需要在github上注册一个账号，已有可自动忽略 生成hexo目录及更改hexo的配置文件以上算是搭建完成了，之后需要新建一个文件夹你的git usename（或者其他），cd进入此文件夹，执行： hexo init 会默认在当前文件夹下生成hexo的目录，目录及命令介绍详见hexo文档，详细阅读之后能了解hexo的目录架构，及工作方式，同时更改_config.yml的配置 修改主题在_config.yml配置文件中有个theme字段中可更改主题，next挺好用的，详细配置参见https://www.jianshu.com/p/b75146d016e6及next文档http://theme-next.iissnan.com/getting-started.html]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Tomcat导入源码]]></title>
+    <url>%2F%2F2019%2F07%2F19%2FTomcat%E5%AF%BC%E5%85%A5%E6%BA%90%E7%A0%81%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[java与编码]]></title>
+    <url>%2F%2F2019%2F07%2F19%2Fjava%E4%B8%8E%E7%BC%96%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[utf-16编码​ 先解释一下utf-16编码： ​ 原文链接：https://blog.csdn.net/wusj3/article/details/88641084 java与utf-16​ 从jdk 5.0开始。代码点是指与一个编码表中的某个字符对应的代码值。在Unicode标准中，代码点采用十六进制书写，并加上前缀U+，例如U+0041就是字母A的代码点。Unicode的代码点可以分为十七个代码级别。第一个代码级别被称为基本的多语言级别，代码点从U+0000到U+FFFF，其中包含了经典的Unicode代码；其余的十六个附加级别代码点从U+10000到U+10FFFF，其中包含了一些辅助字符，辅助字符一般采用一对连续的的代码单元表示 在java中，char类型用UTF-16编码描述一个代码单元]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo中next的其他配置]]></title>
+    <url>%2F%2F2019%2F07%2F19%2FHexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E4%B8%8B%E6%98%BE%E7%A4%BA%E6%91%98%E8%A6%81%E5%92%8C%E9%98%85%E8%AF%BB%E5%8E%9F%E6%96%87%E6%8C%89%E9%92%AE%2F</url>
+    <content type="text"><![CDATA[1.Hexo博客NexT主题下显示摘要和阅读原文按钮转自https://blog.csdn.net/mqdxiaoxiao/article/details/93263923 2. 我可以设置这一句的颜色哈哈]]></content>
+      <tags>
+        <tag>博客框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F%2F2019%2F07%2F19%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+</search>
