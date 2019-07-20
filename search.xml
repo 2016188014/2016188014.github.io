@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[绘制图表软件visio]]></title>
+    <url>%2F%2F2019%2F07%2F20%2F%E7%BB%98%E5%88%B6%E5%9B%BE%E8%A1%A8%E8%BD%AF%E4%BB%B6visio%2F</url>
+    <content type="text"><![CDATA[去掉绘图背景右击图形， 选择格式，再点里面的填充 选择”图案颜色”的对应的下拉菜单。选择“无”，点击确定，再看，图形形状就变成透明的了， 绘图图片输出步骤如下：https://jingyan.baidu.com/article/48b558e336a8a17f38c09a9e.html]]></content>
+      <tags>
+        <tag>其他软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[java流家族]]></title>
+    <url>%2F%2F2019%2F07%2F20%2Fjava%E6%B5%81%E5%AE%B6%E6%97%8F%2F</url>
+    <content type="text"><![CDATA[java流家族类及接口继承结构如下：]]></content>
+      <tags>
+        <tag>java核心技术笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[DataOutputStream二进制输入输出时存在的问题]]></title>
+    <url>%2F%2F2019%2F07%2F20%2FDataOutputStream%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%97%B6%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>java</category>
+        <category>io</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[记一次踩坑记录：hexo配置文件package]]></title>
+    <url>%2F%2F2019%2F07%2F19%2F%E8%AE%B0%E4%B8%80%E6%AC%A1%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95%EF%BC%9Ahexo%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6package%2F</url>
+    <content type="text"><![CDATA[哎呀花了我大半天时间终于把这个bug给解决了，都是当时我乱改配置文件惹的祸，发誓再也不乱改配置文件了。。。 ​ 之前发现的问题是我的hexo不能正常显示我的Markdown文本内嵌的html标签，到网上好一阵百度，终于证明不是hexo的锅，没错，这锅应该我来背，，这配置文件改的太久了，都过去了好几个月了，早忘了当时自己改了啥了， ​ 记一下解决办法吧，虽然还没意识到问题的本质，解决如下： ​ 重新初始化一个hexo项目文件夹，进行隔离测试（这是个好办法，出现不明原因bug时要记得经常使用），不断地将之前的配置拿到新文件夹中测试，先是对主题测试，证明不是主题配置的问题，之后再对_config.xml文件进行测试，结果没问题，而后在对hexo主目录下的package.json文件内节点进行逐项测试（而我比较懒，就没有逐项），证明是此文件的配置项的问题后，之后将老站点的资源文件及相关有效配置迁移到新站点]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[立志做一个勤奋的笔耕者]]></title>
     <url>%2F%2F2019%2F07%2F19%2F%E7%AB%8B%E5%BF%97%E5%81%9A%E4%B8%80%E4%B8%AA%E5%8B%A4%E5%A5%8B%E7%9A%84%E7%AC%94%E8%80%95%E8%80%85%2F</url>
     <content type="text"><![CDATA[​ 花了五六个小时的时间，利用hexo框架总算是把我的个人博客给搭建起来了，实属不易呀，并且完成了在GitHub上的静态发布。 ​ 搭建个人博客对程序员来说是挺重要的一件事，可以在个人博客上写一些个人的学习笔记，知识总结，加深自己对相关知识的理解，还有一些踩坑记录，避免自己再次踩坑:grin:，以后还可以在上面放一些生活随笔。下搭建个人博客决心的过程有点艰难，本来很早的时候就有过搭建个人博客的想法，可是那个时候感觉，写个人博客的都是技术大拿，自己作为一个程序猿小透明，不会也没有必要去写个人博客，感觉写了也没人看，这么长时间经历了蛮多事，同学们大都考研了，自己找实习的过程中又屡遭碰壁，感觉自己的基础知识极度不扎实，有些知识点说明白也明白点，可但往深处一问，就有啥都不会了，更让自己无法接受的是那个说自己基础不扎实的面试官还是自己的同龄。幸而有个学长给自己指明了现阶段的方向，终于决定暑假恶补自己的java的基础知识，外加数据库（mysql）和开发框架（spring全家桶），无奈学习效率不尽如人意，感觉看过教学视频后再在总结为一篇博客效果会好点。 博客更新计划如下： 1.框架部分准备一日多更 2.java部分一日一更 3.其他博文周更 具体步骤参见个人博客的搭建。 ​]]></content>
