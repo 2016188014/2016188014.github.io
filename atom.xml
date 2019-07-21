@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-21T00:24:36.660Z</updated>
+  <updated>2019-07-21T12:40:51.097Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,110 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些小细节</title>
+    <link href="http://yoursite.com//2019/07/21/%E4%B8%80%E4%BA%9B%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
+    <id>http://yoursite.com//2019/07/21/一些小细节/</id>
+    <published>2019-07-21T12:37:26.000Z</published>
+    <updated>2019-07-21T12:40:51.097Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="踩坑实录" scheme="http://yoursite.com/categories/%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown编辑器Typora</title>
+    <link href="http://yoursite.com//2019/07/21/Markdown%E7%BC%96%E8%BE%91%E5%99%A8Typora/"/>
+    <id>http://yoursite.com//2019/07/21/Markdown编辑器Typora/</id>
+    <published>2019-07-21T10:03:53.000Z</published>
+    <updated>2019-07-21T10:09:34.480Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Typora快捷键&quot;&gt;&lt;a href=&quot;#Typora快捷键&quot; class=&quot;headerlink&quot; title=&quot;Typora快捷键&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.cnblogs.com/hongdada/p/9776547.html&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="其他软件" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html的常用标签</title>
+    <link href="http://yoursite.com//2019/07/21/html%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/"/>
+    <id>http://yoursite.com//2019/07/21/html的常用标签/</id>
+    <published>2019-07-21T07:27:41.000Z</published>
+    <updated>2019-07-21T08:32:50.752Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;在html中插入音频&quot;&gt;&lt;a href=&quot;#在html中插入音频&quot; class=&quot;headerlink&quot; title=&quot;在html中插入音频&quot;&gt;&lt;/a&gt;在html中插入音频&lt;/h4&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="html" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/html/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>xml(一)</title>
+    <link href="http://yoursite.com//2019/07/21/xml-%E4%B8%80/"/>
+    <id>http://yoursite.com//2019/07/21/xml-一/</id>
+    <published>2019-07-21T07:15:15.000Z</published>
+    <updated>2019-07-21T13:30:12.125Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;xml标准文档的极佳版本&quot;&gt;&lt;a href=&quot;#xml标准文档的极佳版本&quot; class=&quot;headerlink&quot; title=&quot;xml标准文档的极佳版本&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.xml.com/axml/axml.html&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="xml" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/xml/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>绘制图表软件visio</title>
@@ -46,7 +150,7 @@
     <link href="http://yoursite.com//2019/07/20/java%E6%B5%81%E5%AE%B6%E6%97%8F/"/>
     <id>http://yoursite.com//2019/07/20/java流家族/</id>
     <published>2019-07-20T09:57:47.000Z</published>
-    <updated>2019-07-21T00:18:20.638Z</updated>
+    <updated>2019-07-21T00:34:30.589Z</updated>
     
     <summary type="html">
     
@@ -64,9 +168,9 @@
     
     </summary>
     
-      <category term="java笔记" scheme="http://yoursite.com/categories/java%E7%AC%94%E8%AE%B0/"/>
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="io" scheme="http://yoursite.com/categories/java%E7%AC%94%E8%AE%B0/io/"/>
+      <category term="io" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/io/"/>
     
     
   </entry>
