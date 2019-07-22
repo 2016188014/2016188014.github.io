@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-22T09:08:59.376Z</updated>
+  <updated>2019-07-22T09:18:17.731Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com//2019/07/22/XPath/"/>
     <id>http://yoursite.com//2019/07/22/XPath/</id>
     <published>2019-07-22T07:03:37.000Z</published>
-    <updated>2019-07-22T09:08:59.376Z</updated>
+    <updated>2019-07-22T09:18:17.731Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,7 @@
       
         
         
-          &lt;p&gt;如果要定位某个XML文档中的一段特定信息，DOM解析方式过于麻烦，此时可用XPath&lt;/p&gt;
-&lt;p&gt;XPath可以描述XML文档中的一组节点&lt;/p&gt;
-&lt;p&gt;例如: /gridbag/row
+          &lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
         
       
     
