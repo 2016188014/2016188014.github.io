@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-21T12:40:51.097Z</updated>
+  <updated>2019-07-22T02:31:55.481Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>致自己</title>
+    <link href="http://yoursite.com//2019/07/22/%E8%87%B4%E8%87%AA%E5%B7%B1/"/>
+    <id>http://yoursite.com//2019/07/22/致自己/</id>
+    <published>2019-07-22T00:51:25.000Z</published>
+    <updated>2019-07-22T02:31:55.481Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;​    水星记：&lt;/p&gt;
+&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>一些小细节</title>
@@ -99,7 +124,7 @@
     <link href="http://yoursite.com//2019/07/21/xml-%E4%B8%80/"/>
     <id>http://yoursite.com//2019/07/21/xml-一/</id>
     <published>2019-07-21T07:15:15.000Z</published>
-    <updated>2019-07-21T13:50:36.836Z</updated>
+    <updated>2019-07-21T14:04:08.901Z</updated>
     
     <summary type="html">
     
@@ -107,7 +132,7 @@
       
         
         
-          &lt;h5 id=&quot;xml标准文档的极佳版本&quot;&gt;&lt;a href=&quot;#xml标准文档的极佳版本&quot; class=&quot;headerlink&quot; title=&quot;xml标准文档的极佳版本&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.xml.com/axml/axml.html&quot;
+          &lt;h4 id=&quot;xml概述&quot;&gt;&lt;a href=&quot;#xml概述&quot; class=&quot;headerlink&quot; title=&quot;xml概述&quot;&gt;&lt;/a&gt;xml概述&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;http://www.xml.com/axml/axml.html&quot;
         
       
     
