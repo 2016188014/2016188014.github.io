@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-22T09:25:19.818Z</updated>
+  <updated>2019-07-22T09:37:08.946Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com//2019/07/22/XPath/"/>
     <id>http://yoursite.com//2019/07/22/XPath/</id>
     <published>2019-07-22T07:03:37.000Z</published>
-    <updated>2019-07-22T09:25:19.818Z</updated>
+    <updated>2019-07-22T09:37:08.946Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,9 @@
       
         
         
-          &lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
+          &lt;center&gt;缘分一道桥&lt;/center&gt;
+
+&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
         
       
     
@@ -101,7 +103,7 @@
     <link href="http://yoursite.com//2019/07/21/Markdown%E7%BC%96%E8%BE%91%E5%99%A8Typora/"/>
     <id>http://yoursite.com//2019/07/21/Markdown编辑器Typora/</id>
     <published>2019-07-21T10:03:53.000Z</published>
-    <updated>2019-07-21T10:09:34.480Z</updated>
+    <updated>2019-07-22T10:18:21.655Z</updated>
     
     <summary type="html">
     
@@ -151,7 +153,7 @@
     <link href="http://yoursite.com//2019/07/21/xml-%E4%B8%80/"/>
     <id>http://yoursite.com//2019/07/21/xml-一/</id>
     <published>2019-07-21T07:15:15.000Z</published>
-    <updated>2019-07-21T14:04:08.901Z</updated>
+    <updated>2019-07-22T10:57:05.237Z</updated>
     
     <summary type="html">
     
@@ -159,7 +161,7 @@
       
         
         
-          &lt;h4 id=&quot;xml概述&quot;&gt;&lt;a href=&quot;#xml概述&quot; class=&quot;headerlink&quot; title=&quot;xml概述&quot;&gt;&lt;/a&gt;xml概述&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;http://www.xml.com/axml/axml.html&quot;
+          &lt;h4 id=&quot;xml概述&quot;&gt;&lt;a href=&quot;#xml概述&quot; class=&quot;headerlink&quot; title=&quot;xml概述&quot;&gt;&lt;/a&gt;&lt;center&gt;xml概述&lt;/center&gt;&lt;/h4&gt;&lt;center&gt;&lt;audio controls=&quot;controls&quot;
         
       
     
