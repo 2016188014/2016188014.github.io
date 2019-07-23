@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-22T09:37:08.946Z</updated>
+  <updated>2019-07-23T00:25:19.890Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xml(二)</title>
+    <link href="http://yoursite.com//2019/07/23/xml-%E4%BA%8C/"/>
+    <id>http://yoursite.com//2019/07/23/xml-二/</id>
+    <published>2019-07-23T00:19:17.000Z</published>
+    <updated>2019-07-23T00:25:19.890Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;center&gt;刚刚好——薛之谦&lt;/center&gt;
+
+&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="xml" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/xml/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>XPath</title>
@@ -153,7 +181,7 @@
     <link href="http://yoursite.com//2019/07/21/xml-%E4%B8%80/"/>
     <id>http://yoursite.com//2019/07/21/xml-一/</id>
     <published>2019-07-21T07:15:15.000Z</published>
-    <updated>2019-07-22T10:59:37.266Z</updated>
+    <updated>2019-07-23T00:17:42.611Z</updated>
     
     <summary type="html">
     
