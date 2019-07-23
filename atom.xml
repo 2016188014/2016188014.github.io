@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-23T09:11:40.242Z</updated>
+  <updated>2019-07-23T14:35:23.716Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>xml(三)</title>
+    <link href="http://yoursite.com//2019/07/23/xml-%E4%B8%89/"/>
+    <id>http://yoursite.com//2019/07/23/xml-三/</id>
+    <published>2019-07-23T13:01:57.000Z</published>
+    <updated>2019-07-23T14:35:23.716Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;XSL转换&quot;&gt;&lt;a href=&quot;#XSL转换&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="xml" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/xml/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>java访问控制</title>
@@ -498,30 +524,6 @@
     
     
       <category term="操作与实战" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E6%88%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com//2019/07/19/hello-world/"/>
-    <id>http://yoursite.com//2019/07/19/hello-world/</id>
-    <published>2019-07-19T13:02:04.609Z</published>
-    <updated>2019-07-19T12:26:15.819Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
     
   </entry>
   
