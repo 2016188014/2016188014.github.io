@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[static关键字的使用(一)]]></title>
+    <url>%2F%2F2019%2F07%2F23%2Fstatic%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8-%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[static方法与构造静态方法一般不能调用任何非静态成员，却能调用非静态的构造 12345678910111213141516171819202122232425262728293031323334353637383940414243package staticmethod;public class Main &#123; public static void main(String[] args) &#123; // TODO Auto-generated method stub StaticMethod aMethod=StaticMethod.newInstance(); System.out.println(aMethod); &#125;&#125;class StaticMethod&#123; private int id; private String name; public int getId() &#123; return id; &#125; public void setId(int id) &#123; this.id = id; &#125; public String getName() &#123; return name; &#125; public void setName(String name) &#123; this.name = name; &#125; public static StaticMethod newInstance()&#123; return new StaticMethod(1, "hhh"); &#125; private StaticMethod()&#123; &#125; @Override public String toString() &#123; return "StaticMethod [id=" + id + ", name=" + name + "]"; &#125; private StaticMethod(int id, String name) &#123; super(); this.id = id; this.name = name; &#125;&#125;]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>对象与类</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[xml(二)]]></title>
     <url>%2F%2F2019%2F07%2F23%2Fxml-%E4%BA%8C%2F</url>
-    <content type="text"><![CDATA[刚刚好——薛之谦]]></content>
+    <content type="text"><![CDATA[刚刚好——薛之谦 StAX解析器StAX解析器是一种“拉解析器（pull parser）”，与安装事件处理器不同，你只需要使用下面的基本循环来迭代所有事件： 1234567InputStream in = url.openStream();XMLInputFactory factory=XMLInputFactory.newInstance();XMLStreamReader parser=factory.createXMLStreamReader(in);wehile(parser.hasNext())&#123; int event =parser.next(); Call parser methods to obtain event details&#125; 例如，在解析下面的片段时 1234&lt;font&gt; &lt;name&gt;Helvetica&lt;/name&gt; &lt;size units="pt"&gt;78&lt;/size&gt;&lt;/font&gt; 解析器将产生下面的事件： START_ELEMENT,元素名：font CHARACTERS，内容：空白字符 START_ELEMENT，元素名：name CHARACTERS，内容：Helvetica END_ELEMENT，元素名：name CHARACTERS，内容：空白字符 START_ELEMENT，元素名：size CHARACTERS，内容：78 END_ELEMENT，元素名：size CHARACTERS，内容：空白字符 END_ELEMENT，元素名：font 默认情况下命名空间是使能的，你可以通过修改下面的工厂来使其无效： 1factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE,false); 示例程序如下： 1234567891011121314151617181920212223242526272829303132333435363738394041package staxtest;import java.io.InputStream;import java.net.URL;import javax.xml.stream.XMLInputFactory;import javax.xml.stream.XMLStreamConstants;import javax.xml.stream.XMLStreamReader;public class StAXTest&#123; public static void main(String[] args) throws Exception &#123; String urlString; if (args.length == 0) &#123; urlString = "https://bigengzhe.github.io/atom.xml"; System.out.println("Using " + urlString); &#125; else urlString = args[0]; URL url = new URL(urlString); InputStream in = url.openStream();//用URL来初始化一个输入流 XMLInputFactory factory = XMLInputFactory.newInstance(); XMLStreamReader parser = factory.createXMLStreamReader(in);//用输入流来初始化解析器 while (parser.hasNext()) &#123; int event = parser.next();//返回的常量代表相应的解析事件， if (event == XMLStreamConstants.START_ELEMENT) &#123; if (parser.getLocalName().equals("link")) &#123; String href = parser.getAttributeValue(null, "href"); //当前事件是START_ELEMENT时，获取给定属性的值。 //若第一个参数为空，则不检查命名空间 if (href != null) System.out.println(href); &#125; &#125; &#125; &#125;&#125; 结果截图：]]></content>
       <categories>
         <category>java学习笔记</category>
         <category>xml</category>
@@ -146,7 +155,7 @@
     <url>%2F%2F2019%2F07%2F19%2Fjava%E4%B8%8E%E7%BC%96%E7%A0%81%2F</url>
     <content type="text"><![CDATA[utf-16编码​ 先解释一下utf-16编码： ​ 原文链接：https://blog.csdn.net/wusj3/article/details/88641084 java与utf-16​ 从jdk 5.0开始。代码点是指与一个编码表中的某个字符对应的代码值。在Unicode标准中，代码点采用十六进制书写，并加上前缀U+，例如U+0041就是字母A的代码点。Unicode的代码点可以分为十七个代码级别。第一个代码级别被称为基本的多语言级别，代码点从U+0000到U+FFFF，其中包含了经典的Unicode代码；其余的十六个附加级别代码点从U+10000到U+10FFFF，其中包含了一些辅助字符，辅助字符一般采用一对连续的的代码单元表示 在java中，char类型用UTF-16编码描述一个代码单元]]></content>
       <categories>
-        <category>我理解的java</category>
+        <category>我眼中的java</category>
       </categories>
   </entry>
   <entry>

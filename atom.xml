@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-23T00:25:19.890Z</updated>
+  <updated>2019-07-23T01:37:32.281Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>static关键字的使用(一)</title>
+    <link href="http://yoursite.com//2019/07/23/static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8-%E4%B8%80/"/>
+    <id>http://yoursite.com//2019/07/23/static关键字的使用-一/</id>
+    <published>2019-07-23T01:26:00.000Z</published>
+    <updated>2019-07-23T01:37:32.281Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;static方法与构造&quot;&gt;&lt;a href=&quot;#static方法与构造&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="对象与类" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>xml(二)</title>
     <link href="http://yoursite.com//2019/07/23/xml-%E4%BA%8C/"/>
     <id>http://yoursite.com//2019/07/23/xml-二/</id>
     <published>2019-07-23T00:19:17.000Z</published>
-    <updated>2019-07-23T00:25:19.890Z</updated>
+    <updated>2019-07-23T00:59:53.755Z</updated>
     
     <summary type="html">
     
@@ -404,7 +430,7 @@
     <link href="http://yoursite.com//2019/07/19/java%E4%B8%8E%E7%BC%96%E7%A0%81/"/>
     <id>http://yoursite.com//2019/07/19/java与编码/</id>
     <published>2019-07-19T14:05:47.972Z</published>
-    <updated>2019-07-21T00:18:50.637Z</updated>
+    <updated>2019-07-23T01:31:48.918Z</updated>
     
     <summary type="html">
     
@@ -419,7 +445,7 @@
     
     </summary>
     
-      <category term="我理解的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%90%86%E8%A7%A3%E7%9A%84java/"/>
+      <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
     
     
   </entry>

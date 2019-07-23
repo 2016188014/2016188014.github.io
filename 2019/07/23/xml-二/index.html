@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="刚刚好——薛之谦">
+<meta name="description" content="刚刚好——薛之谦        StAX解析器StAX解析器是一种“拉解析器（pull parser）”，与安装事件处理器不同，你只需要使用下面的基本循环来迭代所有事件： 1234567InputStream in = url.openStream();XMLInputFactory factory=XMLInputFactory.newInstance();XMLStreamReader par">
 <meta property="og:type" content="article">
 <meta property="og:title" content="xml(二)">
 <meta property="og:url" content="http://yoursite.com/2019/07/23/xml-二/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="刚刚好——薛之谦">
+<meta property="og:description" content="刚刚好——薛之谦        StAX解析器StAX解析器是一种“拉解析器（pull parser）”，与安装事件处理器不同，你只需要使用下面的基本循环来迭代所有事件： 1234567InputStream in = url.openStream();XMLInputFactory factory=XMLInputFactory.newInstance();XMLStreamReader par">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-23T00:25:19.890Z">
+<meta property="og:image" content="https://bigengzhe.github.io/images/Snipaste_2019-07-23_08-58-48.png">
+<meta property="og:updated_time" content="2019-07-23T00:59:53.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xml(二)">
-<meta name="twitter:description" content="刚刚好——薛之谦">
+<meta name="twitter:description" content="刚刚好——薛之谦        StAX解析器StAX解析器是一种“拉解析器（pull parser）”，与安装事件处理器不同，你只需要使用下面的基本循环来迭代所有事件： 1234567InputStream in = url.openStream();XMLInputFactory factory=XMLInputFactory.newInstance();XMLStreamReader par">
+<meta name="twitter:image" content="https://bigengzhe.github.io/images/Snipaste_2019-07-23_08-58-48.png">
 
 
 
@@ -386,6 +388,30 @@
 
 <center><audio controls="controls" height="100" width="100"><br>  <source src="https://bigengzhe.github.io/music/刚刚好-薛之谦.mp3" type="audio/mp3"><br>  <source src type="audio/ogg"><br><embed height="100" width="100" src="song.mp3"><br></audio></center>
 
+<h3 id="StAX解析器"><a href="#StAX解析器" class="headerlink" title="StAX解析器"></a>StAX解析器</h3><p>StAX解析器是一种“拉解析器（pull parser）”，与安装事件处理器不同，你只需要使用下面的基本循环来迭代所有事件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">InputStream in = url.openStream();</span><br><span class="line">XMLInputFactory factory=XMLInputFactory.newInstance();</span><br><span class="line">XMLStreamReader parser=factory.createXMLStreamReader(in);</span><br><span class="line">wehile(parser.hasNext())&#123;</span><br><span class="line">    <span class="keyword">int</span> event =parser.next();</span><br><span class="line">    Call parser methods to obtain event details</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例如，在解析下面的片段时</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>Helvetica<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">size</span> <span class="attr">units</span>=<span class="string">"pt"</span>&gt;</span>78<span class="tag">&lt;/<span class="name">size</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>解析器将产生下面的事件：</p>
+<ol>
+<li>START_ELEMENT,元素名：font</li>
+<li>CHARACTERS，内容：空白字符</li>
+<li>START_ELEMENT，元素名：name</li>
+<li>CHARACTERS，内容：Helvetica</li>
+<li>END_ELEMENT，元素名：name</li>
+<li>CHARACTERS，内容：空白字符</li>
+<li>START_ELEMENT，元素名：size</li>
+<li>CHARACTERS，内容：78</li>
+<li>END_ELEMENT，元素名：size</li>
+<li>CHARACTERS，内容：空白字符</li>
+<li>END_ELEMENT，元素名：font</li>
+</ol>
+<p>默认情况下命名空间是使能的，你可以通过修改下面的工厂来使其无效：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">factory.setProperty(XMLInputFactory.IS_NAMESPACE_AWARE,<span class="keyword">false</span>);</span><br></pre></td></tr></table></figure>
+<p>示例程序如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> staxtest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.xml.stream.XMLInputFactory;</span><br><span class="line"><span class="keyword">import</span> javax.xml.stream.XMLStreamConstants;</span><br><span class="line"><span class="keyword">import</span> javax.xml.stream.XMLStreamReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StAXTest</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      String urlString;</span><br><span class="line">      <span class="keyword">if</span> (args.length == <span class="number">0</span>)</span><br><span class="line">      &#123;</span><br><span class="line">         urlString = <span class="string">"https://bigengzhe.github.io/atom.xml"</span>;</span><br><span class="line">         System.out.println(<span class="string">"Using "</span> + urlString);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> urlString = args[<span class="number">0</span>];</span><br><span class="line">      URL url = <span class="keyword">new</span> URL(urlString);</span><br><span class="line">      InputStream in = url.openStream();<span class="comment">//用URL来初始化一个输入流</span></span><br><span class="line">      XMLInputFactory factory = XMLInputFactory.newInstance();</span><br><span class="line">      XMLStreamReader parser = factory.createXMLStreamReader(in);<span class="comment">//用输入流来初始化解析器</span></span><br><span class="line">      <span class="keyword">while</span> (parser.hasNext())</span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">int</span> event = parser.next();<span class="comment">//返回的常量代表相应的解析事件，</span></span><br><span class="line">         <span class="keyword">if</span> (event == XMLStreamConstants.START_ELEMENT)</span><br><span class="line">         &#123;</span><br><span class="line">            <span class="keyword">if</span> (parser.getLocalName().equals(<span class="string">"link"</span>)) </span><br><span class="line">            &#123;</span><br><span class="line">               String href = parser.getAttributeValue(<span class="keyword">null</span>, <span class="string">"href"</span>);</span><br><span class="line">               <span class="comment">//当前事件是START_ELEMENT时，获取给定属性的值。</span></span><br><span class="line">               <span class="comment">//若第一个参数为空，则不检查命名空间</span></span><br><span class="line">               <span class="keyword">if</span> (href != <span class="keyword">null</span>)</span><br><span class="line">                  System.out.println(href);               </span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果截图：</p>
+<p><img src="https://bigengzhe.github.io/images/Snipaste_2019-07-23_08-58-48.png" alt></p>
 
       
     </div>
@@ -454,6 +480,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/07/23/static关键字的使用-一/" rel="prev" title="static关键字的使用(一)">
+                static关键字的使用(一) <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -504,8 +534,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -522,7 +561,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -533,7 +572,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -574,6 +613,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#StAX解析器"><span class="nav-text">StAX解析器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
