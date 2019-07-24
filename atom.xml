@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-23T14:37:05.814Z</updated>
+  <updated>2019-07-24T08:58:03.928Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>xml(三)</title>
-    <link href="http://yoursite.com//2019/07/23/xml-%E4%B8%89/"/>
-    <id>http://yoursite.com//2019/07/23/xml-三/</id>
-    <published>2019-07-23T13:01:57.000Z</published>
-    <updated>2019-07-23T14:37:05.814Z</updated>
+    <title>连接到服务器</title>
+    <link href="http://yoursite.com//2019/07/24/%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://yoursite.com//2019/07/24/连接到服务器/</id>
+    <published>2019-07-24T07:11:09.000Z</published>
+    <updated>2019-07-24T08:58:03.928Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,33 @@
       
         
         
-          &lt;center&gt;friendships&lt;/center&gt;
-
-&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
+          &lt;h4 id=&quot;使用套接字socket&quot;&gt;&lt;a href=&quot;#使用套接字socket&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="网络" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>xml(三)</title>
+    <link href="http://yoursite.com//2019/07/23/xml-%E4%B8%89/"/>
+    <id>http://yoursite.com//2019/07/23/xml-三/</id>
+    <published>2019-07-23T13:01:57.000Z</published>
+    <updated>2019-07-24T07:09:17.469Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;center&gt;friendships&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
         
       
     
@@ -498,34 +522,6 @@
     
       <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>hexo中next的其他配置</title>
-    <link href="http://yoursite.com//2019/07/19/Hexo%E5%8D%9A%E5%AE%A2NexT%E4%B8%BB%E9%A2%98%E4%B8%8B%E6%98%BE%E7%A4%BA%E6%91%98%E8%A6%81%E5%92%8C%E9%98%85%E8%AF%BB%E5%8E%9F%E6%96%87%E6%8C%89%E9%92%AE/"/>
-    <id>http://yoursite.com//2019/07/19/Hexo博客NexT主题下显示摘要和阅读原文按钮/</id>
-    <published>2019-07-19T14:05:47.969Z</published>
-    <updated>2019-07-21T00:30:19.117Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;1-Hexo博客NexT主题下显示摘要和阅读原文按钮&quot;&gt;&lt;a href=&quot;#1-Hexo博客NexT主题下显示摘要和阅读原文按钮&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="博客框架" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="操作与实战" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E6%88%98/"/>
     
   </entry>
   
