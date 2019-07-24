@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="使用套接字socketSocket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。 下面是一个示例程序，该程序只适用于非常简单的服务器 123456789101112131415161718192021222324252627282930313233343536import java.io.*">
+<meta name="description" content="bad guy        使用套接字socketSocket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。 下面是一个示例程序，该程序只适用于非常简单的服务器 123456789101112131415161718192021222324252627282930313233343536i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="连接到服务器">
 <meta property="og:url" content="http://yoursite.com/2019/07/24/连接到服务器/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="使用套接字socketSocket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。 下面是一个示例程序，该程序只适用于非常简单的服务器 123456789101112131415161718192021222324252627282930313233343536import java.io.*">
+<meta property="og:description" content="bad guy        使用套接字socketSocket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。 下面是一个示例程序，该程序只适用于非常简单的服务器 123456789101112131415161718192021222324252627282930313233343536i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-24T08:58:03.928Z">
+<meta property="og:updated_time" content="2019-07-24T09:01:45.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="连接到服务器">
-<meta name="twitter:description" content="使用套接字socketSocket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。 下面是一个示例程序，该程序只适用于非常简单的服务器 123456789101112131415161718192021222324252627282930313233343536import java.io.*">
+<meta name="twitter:description" content="bad guy        使用套接字socketSocket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。 下面是一个示例程序，该程序只适用于非常简单的服务器 123456789101112131415161718192021222324252627282930313233343536i">
 
 
 
@@ -382,7 +382,11 @@
       
 
       
-        <h4 id="使用套接字socket"><a href="#使用套接字socket" class="headerlink" title="使用套接字socket"></a>使用套接字socket</h4><p>Socket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。</p>
+        <center>bad guy</center>
+
+<center><audio controls="controls" height="100" width="100"><br>  <source src="https://bigengzhe.github.io/music/bad_guy.mp3" type="audio/mp3"><br>  <source src type="audio/ogg"><br><embed height="100" width="100" src="song.mp3"><br></audio></center>
+
+<h4 id="使用套接字socket"><a href="#使用套接字socket" class="headerlink" title="使用套接字socket"></a>使用套接字socket</h4><p>Socket类非常简单易用，因为java技术隐藏了建立网络连接和通过连接发送数据的复杂过程。实际上，java.net包提供的编程接口和操作文件时所使用的接口基本相同。</p>
 <p>下面是一个示例程序，该程序只适用于非常简单的服务器</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.net.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SocketTest</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="keyword">try</span></span><br><span class="line">      &#123;</span><br><span class="line">         Socket s = <span class="keyword">new</span> Socket(<span class="string">"time-A.timefreq.bldrdoc.gov"</span>, <span class="number">13</span>);</span><br><span class="line">          <span class="comment">//通过一个url和端口号打开一个套接字，如果失败它将抛出一个UnknownHostException异常</span></span><br><span class="line">          <span class="comment">//如果有其他问题，它将抛出一个IOException异常</span></span><br><span class="line">         <span class="keyword">try</span></span><br><span class="line">         &#123;</span><br><span class="line">            InputStream inStream = s.getInputStream();</span><br><span class="line">             <span class="comment">//一旦套接字被打开，getInputStream()方法将返回一个InputStream对象</span></span><br><span class="line">             <span class="comment">//可以使用这个对象实例化Scanner打印输出</span></span><br><span class="line">            Scanner in = <span class="keyword">new</span> Scanner(inStream);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (in.hasNextLine())</span><br><span class="line">            &#123;</span><br><span class="line">               String line = in.nextLine();</span><br><span class="line">               System.out.println(line);</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">finally</span></span><br><span class="line">         &#123;</span><br><span class="line">            s.close();</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">catch</span> (IOException e)</span><br><span class="line">      &#123;</span><br><span class="line">         e.printStackTrace();</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="套接字超时"><a href="#套接字超时" class="headerlink" title="套接字超时"></a>套接字超时</h4><p><a href="E:/eclipse/Java/docs/api/index.html" target="_blank" rel="noopener">SocketAPI</a></p>
