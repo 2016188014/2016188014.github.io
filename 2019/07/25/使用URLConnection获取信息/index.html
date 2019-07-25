@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexohong" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="使用URIConnection获取信息如果想从某个Web资源获取更多信息，那么应该使用URLConnection类，它能得到比基本的URL类更多的控制功能。 使用URLConnection类的步骤如下  调用URL类中的openConnection方法获得URLConnection对象  1URLConnection connection=url.openConnection();  使用以下方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用URLConnection获取信息">
+<meta property="og:url" content="http://yoursite.com/2019/07/25/使用URLConnection获取信息/index.html">
+<meta property="og:site_name" content="Hexohong">
+<meta property="og:description" content="使用URIConnection获取信息如果想从某个Web资源获取更多信息，那么应该使用URLConnection类，它能得到比基本的URL类更多的控制功能。 使用URLConnection类的步骤如下  调用URL类中的openConnection方法获得URLConnection对象  1URLConnection connection=url.openConnection();  使用以下方法">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-25T02:52:46.825Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用URLConnection获取信息">
+<meta name="twitter:description" content="使用URIConnection获取信息如果想从某个Web资源获取更多信息，那么应该使用URLConnection类，它能得到比基本的URL类更多的控制功能。 使用URLConnection类的步骤如下  调用URL类中的openConnection方法获得URLConnection对象  1URLConnection connection=url.openConnection();  使用以下方法">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/25/使用URLConnection获取信息/">
+
+
+
+
+
+  <title>使用URLConnection获取信息 | Hexohong</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexohong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/25/使用URLConnection获取信息/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/headima.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexohong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">使用URLConnection获取信息</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-25T09:34:58+08:00">
+                2019-07-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/网络/" itemprop="url" rel="index">
+                    <span itemprop="name">网络</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="使用URIConnection获取信息"><a href="#使用URIConnection获取信息" class="headerlink" title="使用URIConnection获取信息"></a>使用URIConnection获取信息</h3><p>如果想从某个Web资源获取更多信息，那么应该使用URLConnection类，它能得到比基本的URL类更多的控制功能。</p>
+<p>使用URLConnection类的步骤如下</p>
+<ol>
+<li><p>调用URL类中的openConnection方法获得URLConnection对象</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">URLConnection connection=url.openConnection();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用以下方法来设置任意的请求属性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   setDoInput</span><br><span class="line">   setDoOutput</span><br><span class="line">setIfModifiedSince</span><br><span class="line">   setUseCaches<span class="comment">//用于命令浏览器首先检查它的缓存</span></span><br><span class="line">   setAllowUserInteraction<span class="comment">//用于在访问有密码保护的资源时弹出对话框，以便查询用户名和口令</span></span><br><span class="line">   setRequestProperty</span><br><span class="line">   setConnectTimeout</span><br><span class="line">   setReadTimeout</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="3">
+<li><p>调用connect方法连接远程资源并获取响应头信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.connect();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>与服务器建立连接后，你可以查询头信息。getHeaderFieldKey和getHeaderField两个方法列举了消息头的所有字段。getHeaderFields方法返回一个包含了消息头中所有字段的标准Map对象。为了方便使用，以下方法可以查询各标准字段</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">getContentType</span><br><span class="line">getContentLength</span><br><span class="line">getContentEncoding</span><br><span class="line">getDate</span><br><span class="line">getExpiration</span><br><span class="line">getLastModified</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后，访问资源数据。使用getInputStream方法获取一个输入流用以读入信息（这个输入流与URL类中的openStream方法返回的流相同）。</p>
+</li>
+</ol>
+<p>下面详细介绍一下URLConnection类中的一些方法。有几个方法可以在与服务器建立连接之前设置连接属性，其中最重要的是setDoInput和setDoOutput。在默认情况下建立的连接只有从服务器读取信息的输入流，并没有任何执行写操作的输出流。如果想获得输出流（例如，向一个Web服务器提交数据），那么可以调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.setDoOutput</span><br></pre></td></tr></table></figure>
+<p>下面也可以设置请求头。请求头是与请求命令一起被发送到服务器的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET www.server.com/index.html HTTP/1.0</span><br><span class="line">Referer: http://www.somewhere.com/links.html</span><br><span class="line">Proxy-Connection: Keep-Alive</span><br><span class="line">User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1.4)</span><br><span class="line">Host: www.server.com</span><br><span class="line">Accept-Language: en</span><br><span class="line">Accept-Charset: iso-8859-1,*,utf-8</span><br><span class="line">Cookie: orangemilano=192218887821987</span><br></pre></td></tr></table></figure>
+<p>setIfModifiedSince方法用于告诉连接你只对某个特定日期以来被修改过的数据感兴趣；setUseCaches和setAllowUserInteraction这两个方法只作用于Applet；</p>
+<p>还有一个总揽全局的方法：setRequestProperty，它可以用来设置对特定协议起作用的任何“名值对”</p>
+<p>如果你想访问一个有保护的Web页，可以按照以下步骤操作</p>
+<ol>
+<li><p>将用户名、冒号和口令以字符串形式连接在一起</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String input=username+<span class="string">":"</span>+password;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li><p>计算上一步所得字符串的base64编码。（base64编码用于将字节流编码成可打印的ASCII字符流。）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String encoding = base64Encode(input);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用setRequestProperty方法，设置name参数的值为”Authorization”,value参数的值为“Base”+encoding:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.setRequestProperty(<span class="string">"Authorization"</span>,<span class="string">"Basic "</span>+encoding);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>一旦调用了connect方法，就可以查询响应头字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String key=connection.getHeaderFieldKey(n);</span><br><span class="line">//可以获得响应头的第n个键，其中n从1开始</span><br><span class="line">//还可以使用以下方法获得第n个值</span><br><span class="line">//String value= connection.getHeaderField(n);</span><br></pre></td></tr></table></figure>
+<p>getHeadreFields方法可以返回一个封装了响应头字段的Map对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;String,List&lt;String&gt;&gt; headerFields=connection.getHeaderFields();</span><br></pre></td></tr></table></figure>
+<p>HTTP响应头举例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Date: Wed,27 Aug 2008 00:15:48 GMT</span><br><span class="line">Server: Apache/2.2.2(Unix)</span><br><span class="line">Last-Modified: Sun, 22 Jun 2008 20:53:38 GMT</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Content-Length: 4813</span><br><span class="line">Connection: close</span><br><span class="line">Content-Type: text/html</span><br></pre></td></tr></table></figure>
+<p>java提供了六个访问响应头的常用方法</p>
+<table>
+<thead>
+<tr>
+<th>键名</th>
+<th>方法名</th>
+<th>返回类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>getDate</td>
+<td>long</td>
+</tr>
+<tr>
+<td>Expires</td>
+<td>getExpiration</td>
+<td>long</td>
+</tr>
+<tr>
+<td>Last-Modified</td>
+<td>getLastModified</td>
+<td>long</td>
+</tr>
+<tr>
+<td>Content-length</td>
+<td>getContentLength</td>
+<td>int</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>getContentType</td>
+<td>String</td>
+</tr>
+<tr>
+<td>Content-Encoding</td>
+<td>getContentEncoding</td>
+<td>String</td>
+</tr>
+</tbody>
+</table>
+<p>示例程序如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.net.*;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * This program connects to an URL and displays the response header data and the first 10 lines of</span></span><br><span class="line"><span class="comment"> * the requested data.</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * Supply the URL and an optional username and password (for HTTP basic authentication) on the</span></span><br><span class="line"><span class="comment"> * command line.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.11 2007-06-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Cay Horstmann</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">URLConnectionTest</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="keyword">try</span></span><br><span class="line">      &#123;</span><br><span class="line">         String urlName;</span><br><span class="line">         <span class="keyword">if</span> (args.length &gt; <span class="number">0</span>) urlName = args[<span class="number">0</span>];</span><br><span class="line">         <span class="keyword">else</span> urlName = <span class="string">"http://java.sun.com"</span>;</span><br><span class="line"></span><br><span class="line">         URL url = <span class="keyword">new</span> URL(urlName);</span><br><span class="line">         URLConnection connection = url.openConnection();</span><br><span class="line"></span><br><span class="line">         <span class="comment">// set username, password if specified on command line</span></span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span> (args.length &gt; <span class="number">2</span>)</span><br><span class="line">         &#123;</span><br><span class="line">            String username = args[<span class="number">1</span>];</span><br><span class="line">            String password = args[<span class="number">2</span>];</span><br><span class="line">            String input = username + <span class="string">":"</span> + password;</span><br><span class="line">            String encoding = base64Encode(input);</span><br><span class="line">            connection.setRequestProperty(<span class="string">"Authorization"</span>, <span class="string">"Basic "</span> + encoding);</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         connection.connect();</span><br><span class="line"></span><br><span class="line">         <span class="comment">// print header fields</span></span><br><span class="line"></span><br><span class="line">         Map&lt;String, List&lt;String&gt;&gt; headers = connection.getHeaderFields();</span><br><span class="line">         <span class="keyword">for</span> (Map.Entry&lt;String, List&lt;String&gt;&gt; entry : headers.entrySet())</span><br><span class="line">         &#123;</span><br><span class="line">            String key = entry.getKey();</span><br><span class="line">            <span class="keyword">for</span> (String value : entry.getValue())</span><br><span class="line">               System.out.println(key + <span class="string">": "</span> + value);</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="comment">// print convenience functions</span></span><br><span class="line"></span><br><span class="line">         System.out.println(<span class="string">"----------"</span>);</span><br><span class="line">         System.out.println(<span class="string">"getContentType: "</span> + connection.getContentType());</span><br><span class="line">         System.out.println(<span class="string">"getContentLength: "</span> + connection.getContentLength());</span><br><span class="line">         System.out.println(<span class="string">"getContentEncoding: "</span> + connection.getContentEncoding());</span><br><span class="line">         System.out.println(<span class="string">"getDate: "</span> + connection.getDate());</span><br><span class="line">         System.out.println(<span class="string">"getExpiration: "</span> + connection.getExpiration());</span><br><span class="line">         System.out.println(<span class="string">"getLastModifed: "</span> + connection.getLastModified());</span><br><span class="line">         System.out.println(<span class="string">"----------"</span>);</span><br><span class="line"></span><br><span class="line">         Scanner in = <span class="keyword">new</span> Scanner(connection.getInputStream());</span><br><span class="line"></span><br><span class="line">         <span class="comment">// print first ten lines of contents</span></span><br><span class="line"></span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">int</span> n = <span class="number">1</span>; in.hasNextLine() &amp;&amp; n &lt;= <span class="number">10</span>; n++)</span><br><span class="line">            System.out.println(in.nextLine());</span><br><span class="line">         <span class="keyword">if</span> (in.hasNextLine()) System.out.println(<span class="string">". . ."</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">catch</span> (IOException e)</span><br><span class="line">      &#123;</span><br><span class="line">         e.printStackTrace();</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * Computes the Base64 encoding of a string</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> s a string</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span> the Base 64 encoding of s</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">base64Encode</span><span class="params">(String s)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      ByteArrayOutputStream bOut = <span class="keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">      Base64OutputStream out = <span class="keyword">new</span> Base64OutputStream(bOut);</span><br><span class="line">      <span class="keyword">try</span></span><br><span class="line">      &#123;</span><br><span class="line">         out.write(s.getBytes());</span><br><span class="line">         out.flush();</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">catch</span> (IOException e)</span><br><span class="line">      &#123;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> bOut.toString();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * This stream filter converts a stream of bytes to their Base64 encoding.</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * Base64 encoding encodes 3 bytes into 4 characters. |11111122|22223333|33444444| Each set of 6</span></span><br><span class="line"><span class="comment"> * bits is encoded according to the toBase64 map. If the number of input bytes is not a multiple of</span></span><br><span class="line"><span class="comment"> * 3, then the last group of 4 characters is padded with one or two = signs. Each output line is at</span></span><br><span class="line"><span class="comment"> * most 76 characters.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base64OutputStream</span> <span class="keyword">extends</span> <span class="title">FilterOutputStream</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * Constructs the stream filter</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> out the stream to filter</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Base64OutputStream</span><span class="params">(OutputStream out)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="keyword">super</span>(out);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(<span class="keyword">int</span> c)</span> <span class="keyword">throws</span> IOException</span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      inbuf[i] = c;</span><br><span class="line">      i++;</span><br><span class="line">      <span class="keyword">if</span> (i == <span class="number">3</span>)</span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[(inbuf[<span class="number">0</span>] &amp; <span class="number">0xFC</span>) &gt;&gt; <span class="number">2</span>]);</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[((inbuf[<span class="number">0</span>] &amp; <span class="number">0x03</span>) &lt;&lt; <span class="number">4</span>) | ((inbuf[<span class="number">1</span>] &amp; <span class="number">0xF0</span>) &gt;&gt; <span class="number">4</span>)]);</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[((inbuf[<span class="number">1</span>] &amp; <span class="number">0x0F</span>) &lt;&lt; <span class="number">2</span>) | ((inbuf[<span class="number">2</span>] &amp; <span class="number">0xC0</span>) &gt;&gt; <span class="number">6</span>)]);</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[inbuf[<span class="number">2</span>] &amp; <span class="number">0x3F</span>]);</span><br><span class="line">         col += <span class="number">4</span>;</span><br><span class="line">         i = <span class="number">0</span>;</span><br><span class="line">         <span class="keyword">if</span> (col &gt;= <span class="number">76</span>)</span><br><span class="line">         &#123;</span><br><span class="line">            <span class="keyword">super</span>.write(<span class="string">'\n'</span>);</span><br><span class="line">            col = <span class="number">0</span>;</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">flush</span><span class="params">()</span> <span class="keyword">throws</span> IOException</span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (i == <span class="number">1</span>)</span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[(inbuf[<span class="number">0</span>] &amp; <span class="number">0xFC</span>) &gt;&gt; <span class="number">2</span>]);</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[(inbuf[<span class="number">0</span>] &amp; <span class="number">0x03</span>) &lt;&lt; <span class="number">4</span>]);</span><br><span class="line">         <span class="keyword">super</span>.write(<span class="string">'='</span>);</span><br><span class="line">         <span class="keyword">super</span>.write(<span class="string">'='</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">2</span>)</span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[(inbuf[<span class="number">0</span>] &amp; <span class="number">0xFC</span>) &gt;&gt; <span class="number">2</span>]);</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[((inbuf[<span class="number">0</span>] &amp; <span class="number">0x03</span>) &lt;&lt; <span class="number">4</span>) | ((inbuf[<span class="number">1</span>] &amp; <span class="number">0xF0</span>) &gt;&gt; <span class="number">4</span>)]);</span><br><span class="line">         <span class="keyword">super</span>.write(toBase64[(inbuf[<span class="number">1</span>] &amp; <span class="number">0x0F</span>) &lt;&lt; <span class="number">2</span>]);</span><br><span class="line">         <span class="keyword">super</span>.write(<span class="string">'='</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (col &gt; <span class="number">0</span>)</span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">super</span>.write(<span class="string">'\n'</span>);</span><br><span class="line">         col = <span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">char</span>[] toBase64 = &#123; <span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>, <span class="string">'F'</span>, <span class="string">'G'</span>, <span class="string">'H'</span>, <span class="string">'I'</span>, <span class="string">'J'</span>, <span class="string">'K'</span>, <span class="string">'L'</span>,</span><br><span class="line">         <span class="string">'M'</span>, <span class="string">'N'</span>, <span class="string">'O'</span>, <span class="string">'P'</span>, <span class="string">'Q'</span>, <span class="string">'R'</span>, <span class="string">'S'</span>, <span class="string">'T'</span>, <span class="string">'U'</span>, <span class="string">'V'</span>, <span class="string">'W'</span>, <span class="string">'X'</span>, <span class="string">'Y'</span>, <span class="string">'Z'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>,</span><br><span class="line">         <span class="string">'e'</span>, <span class="string">'f'</span>, <span class="string">'g'</span>, <span class="string">'h'</span>, <span class="string">'i'</span>, <span class="string">'j'</span>, <span class="string">'k'</span>, <span class="string">'l'</span>, <span class="string">'m'</span>, <span class="string">'n'</span>, <span class="string">'o'</span>, <span class="string">'p'</span>, <span class="string">'q'</span>, <span class="string">'r'</span>, <span class="string">'s'</span>, <span class="string">'t'</span>, <span class="string">'u'</span>, <span class="string">'v'</span>,</span><br><span class="line">         <span class="string">'w'</span>, <span class="string">'x'</span>, <span class="string">'y'</span>, <span class="string">'z'</span>, <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>, <span class="string">'+'</span>, <span class="string">'/'</span> &#125;;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> col = <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">private</span> <span class="keyword">int</span>[] inbuf = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hong WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="hong Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="hong Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/24/URL和URI/" rel="next" title="URL和URI">
+                <i class="fa fa-chevron-left"></i> URL和URI
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/25/提交表单数据/" rel="prev" title="提交表单数据">
+                提交表单数据 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/headima.jpg" alt="hong">
+            
+              <p class="site-author-name" itemprop="name">hong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用URIConnection获取信息"><span class="nav-text">使用URIConnection获取信息</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
