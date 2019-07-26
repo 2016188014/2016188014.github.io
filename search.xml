@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LDAP]]></title>
+    <url>%2F%2F2019%2F07%2F26%2FLDAP%2F</url>
+    <content type="text"><![CDATA[LDAP介绍是一类为了浏览和搜索数据而设计的特殊的数据库，目录服务是按照树状形式存储信息的，目录包含基于属性的描述性信息，并且支持高级的过滤功能。 一般来说，目录不支持大多数事务性数据库所支持的高吞吐量和复杂的更新操作，目录服务适合的业务应用在于提供大量的查询和搜索操作，而不是大量的写入。LDAP可以说是活动目录在Linux上的一个开源实现。 目录服务器通常有两个标准，分别是X.500和LDAP。X.500是ITU定义的目录标准，而LDAP是基于TCP/IP的目录访问协议，是internet上通用的目录访问协议。 LDAP是轻量级目录访问协议（Lightweight Directory Access Protocol）的缩写 LDAP实际上是X.500标准的简化版本 视频教程]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>数据库</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[OpenLDAP的安装及配置]]></title>
+    <url>%2F%2F2019%2F07%2F26%2FOpenLDAP%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[OpenLDAP下载地址点击下载]]></content>
+      <categories>
+        <category>其他软件</category>
+      </categories>
+      <tags>
+        <tag>操作与实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[事务]]></title>
+    <url>%2F%2F2019%2F07%2F26%2F%E4%BA%8B%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[事务我们可以将一组数据建成一个事务。当所有语句都顺利执行后，事务可以被提交，否则，如果其中某个语句遇到错误，那么事务将被回滚。 默认情况下，数据库连接处于自动提交模式，每个SQL命令一旦被执行便提交给数据库。之后便无法回滚，在使用事务时，需要关闭这个默认值 1conn.setAutoCommit(false); 然后任意多次的调用executeUpdate方法，在执行了所有命令之后调用commit方法 1conn.commit(); 如果出现错误，可以回滚 1conn.rollback(); 保存点创建一个保存点意味着稍后只需要返回这个点而不是事务的开头。 1234567891011conn.setAutoCommit(false);Statement stat=conn.createStatement();stat.executeUpdate(command1);Savepoint svpt=conn.setSavepoint();//设置保存点stat.executeUpdate(command2);if(...)conn.rollback(svpt);//回滚到保存点conn.commit();conn.releaseSavepoint(svpt);//不再需要保存点时，必须释放它 批量更新若有一个程序需要多次执行更新语句，可以使用批量更新的方法提高程序性能。在使用批量更新时，一个命令序列作为一批操作将同时被收集和提交。不过要使用DatabaseMetaData类中的，supportsBatchUpdates方法查看数据库是否支持这种特性（mysql是支持的）。 同一批操作可以包括insert、update、delete等操作，也可以是数据库定义命令，如create table和drop table。但是不能包含select操作，若有会抛异常 示例程序如下 123456789101112131415161718192021222324252627282930package transaction;import java.sql.*;import database.TestDB;public class Transaction &#123; public static void main(String[] args) throws Exception&#123; // TODO Auto-generated method stub Connection conn= TestDB.getConnection(); boolean autoCommit=conn.getAutoCommit(); conn.setAutoCommit(false); //屏蔽自动提交 Statement stat=conn.createStatement(); String sql=null; for(int i=0;i&lt;=5;i++)&#123; sql="insert into avator(id)value("+i+")"; stat.addBatch(sql); &#125; stat.executeBatch(); //批量执行 conn.commit(); //提交 conn.setAutoCommit(autoCommit); stat.close(); conn.close(); &#125;&#125;]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>数据库</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[数据库（二）]]></title>
+    <url>%2F%2F2019%2F07%2F26%2F%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[多结果集在执行存储过程，或者在使用允许在单个查询中提交多个select语句的数据库时，一个查询有可能会返回多个结果集，下面是获取所有结果集的步骤： 使用execute方法来执行多个SQL语句 获取第一个结果集或更新计数 重复调用getMoreResults方法以移动到下一个结果集（这个调用会自动关闭前一个结果集） 当不存在更多的结果集时，完成操作 如果有多个结果集构成的链中的下一项是结果集，execute和getMoreResults方法将返回true，，如果在链中的下一项不是更新计数，getUpdateCount方法将返回-1 下面的循环将遍历所有的结果 123456789101112131415boolean done=false;boolean isResult=stmt.execute(command);while(!done)&#123; if(isResult)&#123; ResultSet result=stmt.getResultSet(); so something with result &#125;else&#123; int updateCount =stmt.getUpdateCount(); if(updateCount&gt;=0)&#123; do something with updateCount &#125;else done=true; &#125; isResult=stmt.getMoreResults();&#125; 获取自动生成键大多数数据库都支持某种在数据库中对行自动计数的机制。但是，不同的提供商所提供的机制之间存在着很大的差异，这些自动计数的值经常用做主键。jdbc提供了获取自动生成键的有效途径。当我们向数据库插入数据时，可以实现下面的代码来获取这个键 12345stmt.executeUpdate(insertStatement,Statement.RETURN_GENERATED_KEYS);ResultSet rs=stmt.getGeneratedKeys();if(rs.next())&#123; int key=rs.getInt(1);&#125;]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>数据库</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[SQL转义]]></title>
+    <url>%2F%2F2019%2F07%2F26%2FSQL%E8%BD%AC%E4%B9%89%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Image对象]]></title>
     <url>%2F%2F2019%2F07%2F26%2FImage%E5%AF%B9%E8%B1%A1%2F</url>
     <content type="text"><![CDATA[由于这个类是个抽象类，不能直接实例化，必须借助其子类，类继承结构如下 实例化方式如下 使用Toolkit类 123Toolkit.getDefaultToolkit().getImage("fiveCHessBourd.jpg");//此方法得到的是sun.awt.image.ToolkitImage对象//是一种专属实现，不属于java标准部分 ImageIO方式，这是较常用的方式 12ImageIO.read(new File("fiveCHessBourd.jpg"));//返回一个BufferedImage对象 还有一种方式是实例化Image的子类BufferedImage，不过BufferedImage并没有提供对于文件的构造器，构造方法如下 123456BufferedImage(ColorModel cm, WritableRaster raster, boolean isRasterPremultiplied, Hashtable&lt;?,?&gt; properties)//Constructs a new BufferedImage with a specified ColorModel and Raster.BufferedImage(int width, int height, int imageType)//Constructs a BufferedImage of one of the predefined image types.BufferedImage(int width, int height, int imageType, IndexColorModel cm)//Constructs a BufferedImage of one of the predefined image types: TYPE_BYTE_BINARY or TYPE_BYTE_INDEXED.]]></content>
@@ -118,7 +161,7 @@
   <entry>
     <title><![CDATA[static关键字的使用(一)]]></title>
     <url>%2F%2F2019%2F07%2F23%2Fstatic%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8-%E4%B8%80%2F</url>
-    <content type="text"><![CDATA[static方法与构造静态方法一般不能调用任何非静态成员，却能调用非静态的构造 12345678910111213141516171819202122232425262728293031323334353637383940414243package staticmethod;public class Main &#123; public static void main(String[] args) &#123; // TODO Auto-generated method stub StaticMethod aMethod=StaticMethod.newInstance(); System.out.println(aMethod); &#125;&#125;class StaticMethod&#123; private int id; private String name; public int getId() &#123; return id; &#125; public void setId(int id) &#123; this.id = id; &#125; public String getName() &#123; return name; &#125; public void setName(String name) &#123; this.name = name; &#125; public static StaticMethod newInstance()&#123; return new StaticMethod(1, "hhh"); &#125; private StaticMethod()&#123; &#125; @Override public String toString() &#123; return "StaticMethod [id=" + id + ", name=" + name + "]"; &#125; private StaticMethod(int id, String name) &#123; super(); this.id = id; this.name = name; &#125;&#125;]]></content>
+    <content type="text"><![CDATA[static方法与构造静态方法一般不能调用任何非静态成员，却能调用非静态的构造 12345678910111213141516171819202122232425262728293031323334353637383940414243package staticmethod;public class Main &#123; public static void main(String[] args) &#123; // TODO Auto-generated method stub StaticMethod aMethod=StaticMethod.newInstance(); System.out.println(aMethod); &#125;&#125;class StaticMethod&#123; private int id; private String name; public int getId() &#123; return id; &#125; public void setId(int id) &#123; this.id = id; &#125; public String getName() &#123; return name; &#125; public void setName(String name) &#123; this.name = name; &#125; public static StaticMethod newInstance()&#123; return new StaticMethod(1, "hhh"); &#125; private StaticMethod()&#123; &#125; @Override public String toString() &#123; return "StaticMethod [id=" + id + ", name=" + name + "]"; &#125; private StaticMethod(int id, String name) &#123; super(); this.id = id; this.name = name; &#125;&#125; static方法与接口接口中可以包含static方法了，但是必须有方法的实现，且调用方式有严格限制 123456public interface TestInter &#123;void printme();static void print_s()&#123;System.out.println("print in static method in interface");&#125;&#125; 必须像下面这样调用 1TestInter.print_s();]]></content>
       <categories>
         <category>java学习笔记</category>
         <category>对象与类</category>

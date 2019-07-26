@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包">
+<meta name="description" content="多结果集在执行存储过程，或者在使用允许在单个查询中提交多个select语句的数据库时，一个查询有可能会返回多个结果集，下面是获取所有结果集的步骤：  使用execute方法来执行多个SQL语句 获取第一个结果集或更新计数 重复调用getMoreResults方法以移动到下一个结果集（这个调用会自动关闭前一个结果集） 当不存在更多的结果集时，完成操作  如果有多个结果集构成的链中的下一项是结果集，e">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一些小细节">
-<meta property="og:url" content="http://yoursite.com/2019/07/21/一些小细节/index.html">
+<meta property="og:title" content="数据库（二）">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/数据库（二）/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包">
+<meta property="og:description" content="多结果集在执行存储过程，或者在使用允许在单个查询中提交多个select语句的数据库时，一个查询有可能会返回多个结果集，下面是获取所有结果集的步骤：  使用execute方法来执行多个SQL语句 获取第一个结果集或更新计数 重复调用getMoreResults方法以移动到下一个结果集（这个调用会自动关闭前一个结果集） 当不存在更多的结果集时，完成操作  如果有多个结果集构成的链中的下一项是结果集，e">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-21T12:40:51.097Z">
+<meta property="og:updated_time" content="2019-07-26T11:21:23.445Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一些小细节">
-<meta name="twitter:description" content="导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包">
+<meta name="twitter:title" content="数据库（二）">
+<meta name="twitter:description" content="多结果集在执行存储过程，或者在使用允许在单个查询中提交多个select语句的数据库时，一个查询有可能会返回多个结果集，下面是获取所有结果集的步骤：  使用execute方法来执行多个SQL语句 获取第一个结果集或更新计数 重复调用getMoreResults方法以移动到下一个结果集（这个调用会自动关闭前一个结果集） 当不存在更多的结果集时，完成操作  如果有多个结果集构成的链中的下一项是结果集，e">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/21/一些小细节/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/26/数据库（二）/">
 
 
 
 
 
-  <title>一些小细节 | Hexohong</title>
+  <title>数据库（二） | Hexohong</title>
   
 
 
@@ -282,7 +282,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/21/一些小细节/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/数据库（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hong">
@@ -299,7 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">一些小细节</h1>
+          <h1 class="post-title" itemprop="name headline">数据库（二）</h1>
         
 
         <div class="post-meta">
@@ -311,8 +311,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-21T20:37:26+08:00">
-                2019-07-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-26T17:39:11+08:00">
+                2019-07-26
               </time>
             
 
@@ -334,8 +334,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/踩坑实录/" itemprop="url" rel="index">
-                    <span itemprop="name">踩坑实录</span>
+                  <a href="/categories/java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -371,10 +382,18 @@
       
 
       
-        <ol>
-<li>导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包</li>
-<li></li>
+        <h4 id="多结果集"><a href="#多结果集" class="headerlink" title="多结果集"></a>多结果集</h4><p>在执行存储过程，或者在使用允许在单个查询中提交多个select语句的数据库时，一个查询有可能会返回多个结果集，下面是获取所有结果集的步骤：</p>
+<ol>
+<li>使用execute方法来执行多个SQL语句</li>
+<li>获取第一个结果集或更新计数</li>
+<li>重复调用getMoreResults方法以移动到下一个结果集（这个调用会自动关闭前一个结果集）</li>
+<li>当不存在更多的结果集时，完成操作</li>
 </ol>
+<p>如果有多个结果集构成的链中的下一项是结果集，execute和getMoreResults方法将返回true，，如果在链中的下一项不是更新计数，getUpdateCount方法将返回-1</p>
+<p>下面的循环将遍历所有的结果</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> done=<span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">boolean</span> isResult=stmt.execute(command);</span><br><span class="line"><span class="keyword">while</span>(!done)&#123;</span><br><span class="line">    <span class="keyword">if</span>(isResult)&#123;</span><br><span class="line">        ResultSet result=stmt.getResultSet();</span><br><span class="line">        so something with result</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">int</span> updateCount =stmt.getUpdateCount();</span><br><span class="line">        <span class="keyword">if</span>(updateCount&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">do</span> something with updateCount</span><br><span class="line">        &#125;<span class="keyword">else</span></span><br><span class="line">            done=<span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    isResult=stmt.getMoreResults();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="获取自动生成键"><a href="#获取自动生成键" class="headerlink" title="获取自动生成键"></a>获取自动生成键</h4><p>大多数数据库都支持某种在数据库中对行自动计数的机制。但是，不同的提供商所提供的机制之间存在着很大的差异，这些自动计数的值经常用做主键。jdbc提供了获取自动生成键的有效途径。当我们向数据库插入数据时，可以实现下面的代码来获取这个键</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">stmt.executeUpdate(insertStatement,Statement.RETURN_GENERATED_KEYS);</span><br><span class="line">ResultSet rs=stmt.getGeneratedKeys();</span><br><span class="line"><span class="keyword">if</span>(rs.next())&#123;</span><br><span class="line">    <span class="keyword">int</span> key=rs.getInt(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -433,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/21/Markdown编辑器Typora/" rel="next" title="Markdown编辑器Typora">
-                <i class="fa fa-chevron-left"></i> Markdown编辑器Typora
+              <a href="/2019/07/26/SQL转义/" rel="next" title="SQL转义">
+                <i class="fa fa-chevron-left"></i> SQL转义
               </a>
             
           </div>
@@ -443,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/22/致自己/" rel="prev" title="致自己">
-                致自己 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/26/事务/" rel="prev" title="事务">
+                事务 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -497,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -567,6 +595,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#多结果集"><span class="nav-text">多结果集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取自动生成键"><span class="nav-text">获取自动生成键</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

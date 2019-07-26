@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-26T02:33:25.238Z</updated>
+  <updated>2019-07-26T13:48:29.279Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,124 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LDAP</title>
+    <link href="http://yoursite.com//2019/07/26/LDAP/"/>
+    <id>http://yoursite.com//2019/07/26/LDAP/</id>
+    <published>2019-07-26T13:21:38.000Z</published>
+    <updated>2019-07-26T13:48:29.279Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;LDAP介绍&quot;&gt;&lt;a href=&quot;#LDAP介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OpenLDAP的安装及配置</title>
+    <link href="http://yoursite.com//2019/07/26/OpenLDAP%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com//2019/07/26/OpenLDAP的安装及配置/</id>
+    <published>2019-07-26T12:56:08.000Z</published>
+    <updated>2019-07-26T13:21:14.249Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;OpenLDAP下载地址&quot;&gt;&lt;a href=&quot;#OpenLDAP下载地址&quot; class=&quot;headerlink&quot; title=&quot;OpenLDAP下载地址&quot;&gt;&lt;/a&gt;OpenLDAP下载地址&lt;/h4&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="其他软件" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="操作与实战" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E6%88%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>事务</title>
+    <link href="http://yoursite.com//2019/07/26/%E4%BA%8B%E5%8A%A1/"/>
+    <id>http://yoursite.com//2019/07/26/事务/</id>
+    <published>2019-07-26T11:00:10.000Z</published>
+    <updated>2019-07-26T13:19:18.863Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;事务&quot;&gt;&lt;a href=&quot;#事务&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据库（二）</title>
+    <link href="http://yoursite.com//2019/07/26/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com//2019/07/26/数据库（二）/</id>
+    <published>2019-07-26T09:39:11.000Z</published>
+    <updated>2019-07-26T11:21:23.445Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;多结果集&quot;&gt;&lt;a href=&quot;#多结果集&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数据库" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SQL转义</title>
+    <link href="http://yoursite.com//2019/07/26/SQL%E8%BD%AC%E4%B9%89/"/>
+    <id>http://yoursite.com//2019/07/26/SQL转义/</id>
+    <published>2019-07-26T08:54:47.000Z</published>
+    <updated>2019-07-26T08:54:47.338Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Image对象</title>
@@ -367,7 +485,7 @@
     <link href="http://yoursite.com//2019/07/23/static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8-%E4%B8%80/"/>
     <id>http://yoursite.com//2019/07/23/static关键字的使用-一/</id>
     <published>2019-07-23T01:26:00.000Z</published>
-    <updated>2019-07-23T01:37:32.281Z</updated>
+    <updated>2019-07-26T11:47:16.778Z</updated>
     
     <summary type="html">
     
@@ -410,138 +528,6 @@
       <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="xml" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/xml/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>XPath</title>
-    <link href="http://yoursite.com//2019/07/22/XPath/"/>
-    <id>http://yoursite.com//2019/07/22/XPath/</id>
-    <published>2019-07-22T07:03:37.000Z</published>
-    <updated>2019-07-22T09:37:08.946Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;center&gt;缘分一道桥&lt;/center&gt;
-
-&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="xml" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/xml/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>致自己</title>
-    <link href="http://yoursite.com//2019/07/22/%E8%87%B4%E8%87%AA%E5%B7%B1/"/>
-    <id>http://yoursite.com//2019/07/22/致自己/</id>
-    <published>2019-07-22T00:51:25.000Z</published>
-    <updated>2019-07-22T07:02:40.353Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;center&gt;水星记——郭顶：&lt;/center&gt;
-
-&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>一些小细节</title>
-    <link href="http://yoursite.com//2019/07/21/%E4%B8%80%E4%BA%9B%E5%B0%8F%E7%BB%86%E8%8A%82/"/>
-    <id>http://yoursite.com//2019/07/21/一些小细节/</id>
-    <published>2019-07-21T12:37:26.000Z</published>
-    <updated>2019-07-21T12:40:51.097Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-        
-      
-    
-    </summary>
-    
-      <category term="踩坑实录" scheme="http://yoursite.com/categories/%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown编辑器Typora</title>
-    <link href="http://yoursite.com//2019/07/21/Markdown%E7%BC%96%E8%BE%91%E5%99%A8Typora/"/>
-    <id>http://yoursite.com//2019/07/21/Markdown编辑器Typora/</id>
-    <published>2019-07-21T10:03:53.000Z</published>
-    <updated>2019-07-22T10:18:21.655Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Typora快捷键&quot;&gt;&lt;a href=&quot;#Typora快捷键&quot; class=&quot;headerlink&quot; title=&quot;Typora快捷键&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.cnblogs.com/hongdada/p/9776547.html&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="其他软件" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>html的常用标签</title>
-    <link href="http://yoursite.com//2019/07/21/html%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/"/>
-    <id>http://yoursite.com//2019/07/21/html的常用标签/</id>
-    <published>2019-07-21T07:27:41.000Z</published>
-    <updated>2019-07-21T08:32:50.752Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;在html中插入音频&quot;&gt;&lt;a href=&quot;#在html中插入音频&quot; class=&quot;headerlink&quot; title=&quot;在html中插入音频&quot;&gt;&lt;/a&gt;在html中插入音频&lt;/h4&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="html" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/html/"/>
     
     
   </entry>

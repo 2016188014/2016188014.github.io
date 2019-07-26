@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包">
+<meta name="description" content="事务我们可以将一组数据建成一个事务。当所有语句都顺利执行后，事务可以被提交，否则，如果其中某个语句遇到错误，那么事务将被回滚。 默认情况下，数据库连接处于自动提交模式，每个SQL命令一旦被执行便提交给数据库。之后便无法回滚，在使用事务时，需要关闭这个默认值 1conn.setAutoCommit(false); 然后任意多次的调用executeUpdate方法，在执行了所有命令之后调用commit">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一些小细节">
-<meta property="og:url" content="http://yoursite.com/2019/07/21/一些小细节/index.html">
+<meta property="og:title" content="事务">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/事务/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包">
+<meta property="og:description" content="事务我们可以将一组数据建成一个事务。当所有语句都顺利执行后，事务可以被提交，否则，如果其中某个语句遇到错误，那么事务将被回滚。 默认情况下，数据库连接处于自动提交模式，每个SQL命令一旦被执行便提交给数据库。之后便无法回滚，在使用事务时，需要关闭这个默认值 1conn.setAutoCommit(false); 然后任意多次的调用executeUpdate方法，在执行了所有命令之后调用commit">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-21T12:40:51.097Z">
+<meta property="og:updated_time" content="2019-07-26T13:19:18.863Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一些小细节">
-<meta name="twitter:description" content="导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包">
+<meta name="twitter:title" content="事务">
+<meta name="twitter:description" content="事务我们可以将一组数据建成一个事务。当所有语句都顺利执行后，事务可以被提交，否则，如果其中某个语句遇到错误，那么事务将被回滚。 默认情况下，数据库连接处于自动提交模式，每个SQL命令一旦被执行便提交给数据库。之后便无法回滚，在使用事务时，需要关闭这个默认值 1conn.setAutoCommit(false); 然后任意多次的调用executeUpdate方法，在执行了所有命令之后调用commit">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/21/一些小细节/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/26/事务/">
 
 
 
 
 
-  <title>一些小细节 | Hexohong</title>
+  <title>事务 | Hexohong</title>
   
 
 
@@ -282,7 +282,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/21/一些小细节/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/事务/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hong">
@@ -299,7 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">一些小细节</h1>
+          <h1 class="post-title" itemprop="name headline">事务</h1>
         
 
         <div class="post-meta">
@@ -311,8 +311,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-21T20:37:26+08:00">
-                2019-07-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-26T19:00:10+08:00">
+                2019-07-26
               </time>
             
 
@@ -334,8 +334,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/踩坑实录/" itemprop="url" rel="index">
-                    <span itemprop="name">踩坑实录</span>
+                  <a href="/categories/java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
                   </a>
                 </span>
 
@@ -371,11 +382,19 @@
       
 
       
-        <ol>
-<li>导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包</li>
-<li></li>
-</ol>
-
+        <h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>我们可以将一组数据建成一个事务。当所有语句都顺利执行后，事务可以被提交，否则，如果其中某个语句遇到错误，那么事务将被回滚。</p>
+<p>默认情况下，数据库连接处于自动提交模式，每个SQL命令一旦被执行便提交给数据库。之后便无法回滚，在使用事务时，需要关闭这个默认值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn.setAutoCommit(<span class="keyword">false</span>);</span><br></pre></td></tr></table></figure>
+<p>然后任意多次的调用executeUpdate方法，在执行了所有命令之后调用commit方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn.commit();</span><br></pre></td></tr></table></figure>
+<p>如果出现错误，可以回滚</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn.rollback();</span><br></pre></td></tr></table></figure>
+<h4 id="保存点"><a href="#保存点" class="headerlink" title="保存点"></a>保存点</h4><p>创建一个保存点意味着稍后只需要返回这个点而不是事务的开头。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conn.setAutoCommit(false);</span><br><span class="line">Statement stat=conn.createStatement();</span><br><span class="line">stat.executeUpdate(command1);</span><br><span class="line">Savepoint svpt=conn.setSavepoint();</span><br><span class="line">//设置保存点</span><br><span class="line">stat.executeUpdate(command2);</span><br><span class="line">if(...)conn.rollback(svpt);</span><br><span class="line">//回滚到保存点</span><br><span class="line">conn.commit();</span><br><span class="line">conn.releaseSavepoint(svpt);</span><br><span class="line">//不再需要保存点时，必须释放它</span><br></pre></td></tr></table></figure>
+<h4 id="批量更新"><a href="#批量更新" class="headerlink" title="批量更新"></a>批量更新</h4><p>若有一个程序需要多次执行更新语句，可以使用批量更新的方法提高程序性能。在使用批量更新时，一个命令序列作为一批操作将同时被收集和提交。不过要使用DatabaseMetaData类中的，supportsBatchUpdates方法查看数据库是否支持这种特性（mysql是支持的）。</p>
+<p>同一批操作可以包括insert、update、delete等操作，也可以是数据库定义命令，如create table和drop table。但是不能包含select操作，若有会抛异常</p>
+<p>示例程序如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> transaction;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> database.TestDB;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Transaction</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">	 	Connection conn= TestDB.getConnection();</span><br><span class="line">	 	<span class="keyword">boolean</span> autoCommit=conn.getAutoCommit();</span><br><span class="line">	 	conn.setAutoCommit(<span class="keyword">false</span>);</span><br><span class="line">        <span class="comment">//屏蔽自动提交</span></span><br><span class="line">	 	Statement stat=conn.createStatement();</span><br><span class="line">	 	String sql=<span class="keyword">null</span>;</span><br><span class="line">	 	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">5</span>;i++)&#123;</span><br><span class="line">	 		sql=<span class="string">"insert into avator(id)value("</span>+i+<span class="string">")"</span>;</span><br><span class="line">	 		stat.addBatch(sql);</span><br><span class="line">	 	&#125;</span><br><span class="line">	 	stat.executeBatch();</span><br><span class="line">        <span class="comment">//批量执行</span></span><br><span class="line">	 	conn.commit();</span><br><span class="line">        <span class="comment">//提交</span></span><br><span class="line">	 	conn.setAutoCommit(autoCommit);</span><br><span class="line">	 	stat.close();</span><br><span class="line">	 	conn.close();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -433,8 +452,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/21/Markdown编辑器Typora/" rel="next" title="Markdown编辑器Typora">
-                <i class="fa fa-chevron-left"></i> Markdown编辑器Typora
+              <a href="/2019/07/26/数据库（二）/" rel="next" title="数据库（二）">
+                <i class="fa fa-chevron-left"></i> 数据库（二）
               </a>
             
           </div>
@@ -443,8 +462,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/22/致自己/" rel="prev" title="致自己">
-                致自己 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/26/OpenLDAP的安装及配置/" rel="prev" title="OpenLDAP的安装及配置">
+                OpenLDAP的安装及配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -497,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -567,6 +595,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#事务"><span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#保存点"><span class="nav-text">保存点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#批量更新"><span class="nav-text">批量更新</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
