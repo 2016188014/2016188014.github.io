@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-25T10:29:34.862Z</updated>
+  <updated>2019-07-26T02:33:25.238Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,15 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>如何为Image对象实例化</title>
-    <link href="http://yoursite.com//2019/07/25/%E5%A6%82%E4%BD%95%E4%B8%BAImage%E5%AF%B9%E8%B1%A1%E5%AE%9E%E4%BE%8B%E5%8C%96/"/>
-    <id>http://yoursite.com//2019/07/25/如何为Image对象实例化/</id>
-    <published>2019-07-25T10:29:34.000Z</published>
-    <updated>2019-07-25T10:29:34.862Z</updated>
+    <title>Image对象</title>
+    <link href="http://yoursite.com//2019/07/26/Image%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com//2019/07/26/Image对象/</id>
+    <published>2019-07-26T01:41:07.000Z</published>
+    <updated>2019-07-26T02:33:25.238Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;p&gt;由于这个类是个抽象类，不能直接实例化，必须借助其子类，类继承结构如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bigengzhe.github.io/images/Image类.jpg&quot;
+        
+      
+    
     </summary>
+    
+      <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
     
     
   </entry>
@@ -35,7 +46,7 @@
     <link href="http://yoursite.com//2019/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com//2019/07/25/数据库（一）/</id>
     <published>2019-07-25T09:37:34.000Z</published>
-    <updated>2019-07-25T14:06:46.999Z</updated>
+    <updated>2019-07-26T04:29:29.083Z</updated>
     
     <summary type="html">
     
@@ -43,9 +54,7 @@
       
         
         
-          &lt;h4 id=&quot;读写LOB&quot;&gt;&lt;a href=&quot;#读写LOB&quot; class=&quot;headerlink&quot; title=&quot;读写LOB&quot;&gt;&lt;/a&gt;读写LOB&lt;/h4&gt;&lt;center&gt;等你下课-周杰伦&lt;/center&gt;
-
-&lt;center&gt;&lt;audio
+          &lt;h4 id=&quot;读写LOB&quot;&gt;&lt;a href=&quot;#读写LOB&quot; class=&quot;headerlink&quot; title=&quot;读写LOB&quot;&gt;&lt;/a&gt;读写LOB&lt;/h4&gt;&lt;center&gt;等你下课-周杰伦&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;audio
         
       
     
