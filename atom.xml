@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-26T13:48:29.279Z</updated>
+  <updated>2019-07-27T10:31:35.098Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,136 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文本文件和字符集</title>
+    <link href="http://yoursite.com//2019/07/27/%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%92%8C%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    <id>http://yoursite.com//2019/07/27/文本文件和字符集/</id>
+    <published>2019-07-27T10:28:36.000Z</published>
+    <updated>2019-07-27T10:31:35.098Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>消息格式化</title>
+    <link href="http://yoursite.com//2019/07/27/%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
+    <id>http://yoursite.com//2019/07/27/消息格式化/</id>
+    <published>2019-07-27T09:47:36.000Z</published>
+    <updated>2019-07-27T10:27:46.643Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;消息格式化&quot;&gt;&lt;a href=&quot;#消息格式化&quot; class=&quot;headerlink&quot; title=&quot;消息格式化&quot;&gt;&lt;/a&gt;消息格式化&lt;/h4&gt;&lt;p&gt;java类库中有个MessageFormat类，用来格式化带变量的文本&lt;/p&gt;
+&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>排序</title>
+    <link href="http://yoursite.com//2019/07/27/%E6%8E%92%E5%BA%8F/"/>
+    <id>http://yoursite.com//2019/07/27/排序/</id>
+    <published>2019-07-27T08:01:18.000Z</published>
+    <updated>2019-07-27T08:39:39.908Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数字格式</title>
+    <link href="http://yoursite.com//2019/07/27/%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/"/>
+    <id>http://yoursite.com//2019/07/27/数字格式/</id>
+    <published>2019-07-27T01:36:54.000Z</published>
+    <updated>2019-07-27T07:03:09.270Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;数字&quot;&gt;&lt;a href=&quot;#数字&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Locales</title>
+    <link href="http://yoursite.com//2019/07/27/Locales/"/>
+    <id>http://yoursite.com//2019/07/27/Locales/</id>
+    <published>2019-07-27T00:35:26.000Z</published>
+    <updated>2019-07-27T01:37:13.454Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Locale是一种专门负责国际化格式处理的类。它描述了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一种语言&lt;/li&gt;
+&lt;li&gt;一个位置（可选）&lt;/li&gt;
+&lt;li&gt;一个变量（可选）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;定位了国家与语言&lt;/p&gt;
+&lt;p&gt;比如在美国是：language=English,
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>LDAP</title>
@@ -397,137 +527,6 @@
       <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="网络" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>连接到服务器</title>
-    <link href="http://yoursite.com//2019/07/24/%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>http://yoursite.com//2019/07/24/连接到服务器/</id>
-    <published>2019-07-24T07:11:09.000Z</published>
-    <updated>2019-07-24T09:31:28.367Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;center&gt;bad guy&lt;/center&gt;
-
-&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="网络" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>xml(三)</title>
-    <link href="http://yoursite.com//2019/07/23/xml-%E4%B8%89/"/>
-    <id>http://yoursite.com//2019/07/23/xml-三/</id>
-    <published>2019-07-23T13:01:57.000Z</published>
-    <updated>2019-07-24T07:09:17.469Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;center&gt;friendships&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="xml" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/xml/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>java访问控制</title>
-    <link href="http://yoursite.com//2019/07/23/java%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/"/>
-    <id>http://yoursite.com//2019/07/23/java访问控制/</id>
-    <published>2019-07-23T09:09:25.000Z</published>
-    <updated>2019-07-23T09:11:40.242Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;java所有的的访问修饰符控制的都是直接访问&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-      <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>static关键字的使用(一)</title>
-    <link href="http://yoursite.com//2019/07/23/static%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E4%BD%BF%E7%94%A8-%E4%B8%80/"/>
-    <id>http://yoursite.com//2019/07/23/static关键字的使用-一/</id>
-    <published>2019-07-23T01:26:00.000Z</published>
-    <updated>2019-07-26T11:47:16.778Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;static方法与构造&quot;&gt;&lt;a href=&quot;#static方法与构造&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="对象与类" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>xml(二)</title>
-    <link href="http://yoursite.com//2019/07/23/xml-%E4%BA%8C/"/>
-    <id>http://yoursite.com//2019/07/23/xml-二/</id>
-    <published>2019-07-23T00:19:17.000Z</published>
-    <updated>2019-07-23T12:20:40.480Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;center&gt;刚刚好——薛之谦&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="xml" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/xml/"/>
     
     
   </entry>

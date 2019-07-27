@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexohong" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="数字数字和货币的格式是高度依赖于locale的，java类库提供了一个格式器对象的集合，可以对java.text包中的数字值进行格式化和解析。步骤如下  使用上一节的方法获得一个locale对象 使用一个工厂方法得到一个格式器对象 使用这个格式器对象来完成格式化和解析工作  工厂方法共有三个：getNumberInstance、getCurrencyInstance和getPercentInsta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数字格式">
+<meta property="og:url" content="http://yoursite.com/2019/07/27/数字格式/index.html">
+<meta property="og:site_name" content="Hexohong">
+<meta property="og:description" content="数字数字和货币的格式是高度依赖于locale的，java类库提供了一个格式器对象的集合，可以对java.text包中的数字值进行格式化和解析。步骤如下  使用上一节的方法获得一个locale对象 使用一个工厂方法得到一个格式器对象 使用这个格式器对象来完成格式化和解析工作  工厂方法共有三个：getNumberInstance、getCurrencyInstance和getPercentInsta">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://bigengzhe.github.io/images/Snipaste_2019-07-27_10-27-15.png">
+<meta property="og:image" content="https://bigengzhe.github.io/images/Snipaste_2019-07-27_14-56-04.png">
+<meta property="og:updated_time" content="2019-07-27T07:03:09.270Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数字格式">
+<meta name="twitter:description" content="数字数字和货币的格式是高度依赖于locale的，java类库提供了一个格式器对象的集合，可以对java.text包中的数字值进行格式化和解析。步骤如下  使用上一节的方法获得一个locale对象 使用一个工厂方法得到一个格式器对象 使用这个格式器对象来完成格式化和解析工作  工厂方法共有三个：getNumberInstance、getCurrencyInstance和getPercentInsta">
+<meta name="twitter:image" content="https://bigengzhe.github.io/images/Snipaste_2019-07-27_10-27-15.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/27/数字格式/">
+
+
+
+
+
+  <title>数字格式 | Hexohong</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexohong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/27/数字格式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/headima.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexohong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数字格式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-27T09:36:54+08:00">
+                2019-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/国际化/" itemprop="url" rel="index">
+                    <span itemprop="name">国际化</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h4><p>数字和货币的格式是高度依赖于locale的，java类库提供了一个格式器对象的集合，可以对java.text包中的数字值进行格式化和解析。步骤如下</p>
+<ol>
+<li>使用上一节的方法获得一个locale对象</li>
+<li>使用一个工厂方法得到一个格式器对象</li>
+<li>使用这个格式器对象来完成格式化和解析工作</li>
+</ol>
+<p>工厂方法共有三个：getNumberInstance、getCurrencyInstance和getPercentInstance。他们分别返回可以关于数字、货币和百分比进行格式化和解析的对象</p>
+<p>相反的，如果想读取一个按照某个locale规定而输入的数字，那么就需要使用parse方法，parse方法能够处理小数点和分隔符以及其他语言中的数字。</p>
+<p>parse返回类型是抽象的Number。这是一个Double或Long的包装器，这取决于被解析的数字是否是浮点数，如果两者都可以接受，可以使用Number类中的doubleValue方法来读取被包装的数字</p>
+<p>请注意，由getXxxInstance工厂方法返回的类只是抽象类NumberFormat类的一个子类，工厂方法知道如何定位属于特定的locale对象。</p>
+<p>可以用静态的getAvailableLocales方法得到一个当前所支持的locale的对象列表。这个方法返回一个locale对象数组，从中可以获得针对它们的数字格式器对象。</p>
+<p>示例程序如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testNumberFormat</span><span class="params">()</span><span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		<span class="comment">/*for( Locale locale : NumberFormat.getAvailableLocales())&#123;</span></span><br><span class="line"><span class="comment">			System.out.println(locale.getDisplayName(locale));</span></span><br><span class="line"><span class="comment">		&#125;</span></span><br><span class="line"><span class="comment">		//遍历可用locale，并用其专属locale输出*/</span></span><br><span class="line">		Locale loc=<span class="keyword">new</span> Locale(<span class="string">"de"</span>,<span class="string">"DE"</span>);</span><br><span class="line">		NumberFormat currFmt=NumberFormat.getCurrencyInstance(loc);</span><br><span class="line">		<span class="comment">//用给定的locale实例化转换器</span></span><br><span class="line">		<span class="keyword">double</span> amt=<span class="number">123456.78</span>;</span><br><span class="line">		String result=currFmt.format(amt);</span><br><span class="line">		System.out.println(result);</span><br><span class="line">		NumberFormat fmt=NumberFormat.getNumberInstance(loc);</span><br><span class="line">		<span class="comment">//用给定的locale实例化解析器，从字符串中用特定的loc提取数字</span></span><br><span class="line">		Number input = fmt.parse(result);</span><br><span class="line">		<span class="keyword">double</span> x=input.doubleValue();</span><br><span class="line">		System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<p><img src="https://bigengzhe.github.io/images/Snipaste_2019-07-27_10-27-15.png" alt></p>
+<h4 id="货币"><a href="#货币" class="headerlink" title="货币"></a>货币</h4><p>虽然我们可以使用NumberFormat.getCurrencyInstance方法格式化货币，可是在有些时候它不太灵活，只能针对一种locale进行格式化。假设你为一个美国客户准备了一张货物单，上面的货物金额有的是用美元表示的，有的是用欧元。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat format1 = NumberFormat.getCurrencyInstance(Locale.US); </span><br><span class="line">NumberFormat format2 = NumberFormat.getCurrencyInstance(Locale.GERMANY); </span><br><span class="line"><span class="comment">//这样一来，发票会很奇怪。 有些金额的格式是 $100，而另一些如 €100.00</span></span><br></pre></td></tr></table></figure>
+<p>这时，可以使用Currency类</p>
+<p>可以通过将一个货币标识符传给静态的Currency.getInstance方法来得到一个Currency对象，然后对每个格式器都调用setCurrency方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NumberFormat euroFormatter = NumberFormat.getCurrencyInstance(Locale.US); </span><br><span class="line">euroFormatter.setCurrency(Currency.getInstance(“EUR”));</span><br></pre></td></tr></table></figure>
+<h4 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h4><p>当格式化日期和时间时，需要考虑4个与locale相关的问题</p>
+<ul>
+<li>月份和星期应该用本地语言来表示</li>
+<li>年月日的顺序要符合本地习惯</li>
+<li>公历可能不是本地首选的日期表示方法</li>
+<li>必须要考虑本地的时区</li>
+</ul>
+<p>java的DateFormat类可以用来处理这些问题。它和NumberFormat很类似</p>
+<p>首先要得到一个locale，也可以使用默认的locale或者调用静态的getAvailableLocales方法来查看都是那些locale支持日期格式化。</p>
+<p>lenient标志用于对日期进行宽松的解释</p>
+<p>看个荔枝</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDateFormat</span><span class="params">()</span><span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">		Locale loc=<span class="keyword">new</span> Locale(<span class="string">"zh"</span>,<span class="string">"CN"</span>);</span><br><span class="line">		DateFormat fmt=DateFormat.getDateInstance(DateFormat.MEDIUM, loc);</span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * 与此类似的还有几个工厂方法，</span></span><br><span class="line"><span class="comment">		 * getTimeInstance(timestyle,loc);</span></span><br><span class="line"><span class="comment">		 * getDateTimeInstance(dateStyle,timeStyle,loc);</span></span><br><span class="line"><span class="comment">		 * getDateInstance(dateStyle);使用默认locale</span></span><br><span class="line"><span class="comment">		 * 为了设定想要的风格，这些工厂方法的style参数可以是以下的值</span></span><br><span class="line"><span class="comment">		 * 1.DateFormat.DEFAULT</span></span><br><span class="line"><span class="comment">		 * 2.DateFormat.FULL</span></span><br><span class="line"><span class="comment">		 * 3.DateFormat.LONG</span></span><br><span class="line"><span class="comment">		 * 4.DateFormat.MEDIUM</span></span><br><span class="line"><span class="comment">		 * 5.DateFormat.SHORT</span></span><br><span class="line"><span class="comment">		*/</span></span><br><span class="line">		Date now = <span class="keyword">new</span> Date();</span><br><span class="line">		String s=fmt.format(now);</span><br><span class="line">		System.out.println(s);</span><br><span class="line">		Date input=fmt.parse(<span class="string">"2015-1-2"</span>);</span><br><span class="line">		<span class="comment">//字符串必须按预定格式输入，否则解析错误，会抛异常</span></span><br><span class="line">		System.out.println(input);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果</p>
+<p><img src="https://bigengzhe.github.io/images/Snipaste_2019-07-27_14-56-04.png" alt></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hong WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="hong Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="hong Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/27/Locales/" rel="next" title="Locales">
+                <i class="fa fa-chevron-left"></i> Locales
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/27/排序/" rel="prev" title="排序">
+                排序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/headima.jpg" alt="hong">
+            
+              <p class="site-author-name" itemprop="name">hong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字"><span class="nav-text">数字</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#货币"><span class="nav-text">货币</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日期和时间"><span class="nav-text">日期和时间</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
