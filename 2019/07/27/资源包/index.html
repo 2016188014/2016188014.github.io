@@ -87,7 +87,7 @@
 <meta property="og:description" content="本文转自https://blog.csdn.net/PacosonSWJTU/article/details/50639756 java国际化——资源包相关problem+solution problem： 当本地化一个应用时， 可能会有大量的消息字符串， 按钮标签和其它的东西需要被翻译； solution： 你会希望在外部定义消息字符串， 通常称之为资源。 在java中， 需要使用属性文件来设定">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://bigengzhe.github.io/images/20160206082630932">
-<meta property="og:updated_time" content="2019-07-27T12:56:54.751Z">
+<meta property="og:updated_time" content="2019-07-27T13:00:37.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="资源包">
 <meta name="twitter:description" content="本文转自https://blog.csdn.net/PacosonSWJTU/article/details/50639756 java国际化——资源包相关problem+solution problem： 当本地化一个应用时， 可能会有大量的消息字符串， 按钮标签和其它的东西需要被翻译； solution： 你会希望在外部定义消息字符串， 通常称之为资源。 在java中， 需要使用属性文件来设定">
@@ -468,12 +468,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class ProgramResource_de extends ListResourceBundle</span><br><span class="line">&#123;</span><br><span class="line">    private static final Object[][] contents = </span><br><span class="line">    &#123;</span><br><span class="line">        &#123;&quot;background&quot;,Color.black];</span><br><span class="line">        &#123;&quot;defaultPaperSize&quot;, new double[]&#123;210, 297&#125;&#125;</span><br><span class="line">        ...</span><br><span class="line">    &#125;     </span><br><span class="line">    public Object[][] getContents() &#123; return contents ; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<ol start="5">
-<li><p>或者， 你的资源绑定类可以扩展 ResourceBundle 类。 然后需要实现两个方法， 一个是枚举所有键，二是用给定的键查找相应的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Enumeration&lt;String&gt; getKeys();</span><br><span class="line">Object handleGetObject(String key);</span><br><span class="line">ResourceBundle 类的 getObject 方法会调用你提供的 handleGetBundle 方法；</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol start="6">
+<p>   5.或者， 你的资源绑定类可以扩展 ResourceBundle 类。 然后需要实现两个方法， 一个是枚举所有键，二是用给定的键查找相应的值</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Enumeration&lt;String&gt; getKeys();</span><br><span class="line">Object handleGetObject(String key);</span><br><span class="line">ResourceBundle 类的 getObject 方法会调用你提供的 handleGetBundle 方法；</span><br></pre></td></tr></table></figure>
+</code></pre><ol start="6">
 <li><p>看个利用.class文件进行国际化的荔枝：</p>
 <ol>
 <li><p>for souce code, please visit : <a href="https://github.com/pacosonTang/core-java-volume/tree/master/coreJavaAdvanced/chapter5/ResourceBundle_Class" target="_blank" rel="noopener">https://github.com/pacosonTang/core-java-volume/tree/master/coreJavaAdvanced/chapter5/ResourceBundle_Class</a></p>
