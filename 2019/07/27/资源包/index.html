@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexohong" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="本文转自https://blog.csdn.net/PacosonSWJTU/article/details/50639756 java国际化——资源包相关problem+solution problem： 当本地化一个应用时， 可能会有大量的消息字符串， 按钮标签和其它的东西需要被翻译； solution： 你会希望在外部定义消息字符串， 通常称之为资源。 在java中， 需要使用属性文件来设定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="资源包">
+<meta property="og:url" content="http://yoursite.com/2019/07/27/资源包/index.html">
+<meta property="og:site_name" content="Hexohong">
+<meta property="og:description" content="本文转自https://blog.csdn.net/PacosonSWJTU/article/details/50639756 java国际化——资源包相关problem+solution problem： 当本地化一个应用时， 可能会有大量的消息字符串， 按钮标签和其它的东西需要被翻译； solution： 你会希望在外部定义消息字符串， 通常称之为资源。 在java中， 需要使用属性文件来设定">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://bigengzhe.github.io/images/20160206082630932">
+<meta property="og:updated_time" content="2019-07-27T12:51:22.289Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="资源包">
+<meta name="twitter:description" content="本文转自https://blog.csdn.net/PacosonSWJTU/article/details/50639756 java国际化——资源包相关problem+solution problem： 当本地化一个应用时， 可能会有大量的消息字符串， 按钮标签和其它的东西需要被翻译； solution： 你会希望在外部定义消息字符串， 通常称之为资源。 在java中， 需要使用属性文件来设定">
+<meta name="twitter:image" content="https://bigengzhe.github.io/images/20160206082630932">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/27/资源包/">
+
+
+
+
+
+  <title>资源包 | Hexohong</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexohong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            Sitemap
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/27/资源包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/headima.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexohong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">资源包</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-27T20:31:28+08:00">
+                2019-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">java学习笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java学习笔记/国际化/" itemprop="url" rel="index">
+                    <span itemprop="name">国际化</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文转自<a href="https://blog.csdn.net/PacosonSWJTU/article/details/50639756" target="_blank" rel="noopener">https://blog.csdn.net/PacosonSWJTU/article/details/50639756</a></p>
+<h4 id="java国际化——资源包相关"><a href="#java国际化——资源包相关" class="headerlink" title="java国际化——资源包相关"></a>java国际化——资源包相关</h4><p><strong>problem+solution</strong></p>
+<p><strong>problem：</strong> 当本地化一个应用时， 可能会有大量的消息字符串， 按钮标签和其它的东西需要被翻译；</p>
+<p><strong>solution：</strong> 你会希望在外部定义消息字符串， 通常称之为资源。 在java中， 需要使用属性文件来设定字符串资源，并为其它类型的资源实现相应的类；</p>
+<h4 id="定位资源包"><a href="#定位资源包" class="headerlink" title="定位资源包"></a>定位资源包</h4><p>当本地化一个应用时，会制造出很多资源包。每个包都是一个属性文件或者是一个描述了与 locale 相关的项的类。对于每一个包， 都要为所有你想要支持的 locale 提供相应的版本；<br>想要对这些包使用一种统一的命名规则：</p>
+<p>包名语言国家；<br>包名_语言；<br>来命名所有和语言相关的资源。</p>
+<p>最后，作为后备， 可以把默认资源放到一个没有后缀的文件中；</p>
+<p>可以用下面的命令加载一个包：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ResourceBundle resource = ResourceBundle.getBundle(bundleName, currentLocale);</span><br></pre></td></tr></table></figure>
+<p>getBundle 方法试图加载匹配当前 locale 定义的语言和国家的包。如果失败， 通过依次放弃国家和语言来继续进行查找， 然后同样的查找被应用于默认的 locale；</p>
+<p>也就是说， getBundle 方法试图加载以下的包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">（1）包名当前locale的语言当前Locale的国家_当前Locale的变量； </span><br><span class="line">（2）包名当前locale的语言当前Locale的国家； </span><br><span class="line">（3）包名_当前locale的语言； </span><br><span class="line">（4）包名默认locale的语言默认Locale的国家_默认Locale的变量； </span><br><span class="line">（5）包名默认locale的语言默认Locale的国家； </span><br><span class="line">（6）包名_默认locale的语言； </span><br><span class="line">（7）包名；</span><br></pre></td></tr></table></figure>
+<p>总之， java 的资源包机制会自动定位与给定的locale 匹配得最好的项<br>可以很容易地吧越来越多的本地化信息加到已有的程序中： 你需要做的只是增加额外的资源包；</p>
+<h4 id="利用属性文件进行国际化"><a href="#利用属性文件进行国际化" class="headerlink" title="利用属性文件进行国际化"></a>利用属性文件进行国际化</h4><ol>
+<li><p>对字符串进行国际化是很直接的， 你可以吧字符串放到一个属性文件中， 典型的 属性文件内容如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">computeButton=Rechnen </span><br><span class="line">colorName=black </span><br><span class="line">defaultPaperSize=210X297</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>然后利用以上提到的规则去命名你的属性文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyprocStrings.properties </span><br><span class="line">MyprocStrings_en.properties </span><br><span class="line">MyprocStrings_de_DE.properties</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><p>你可以直接加载包：如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ResourceBundle bundle = ResourceBundle.getBundle(“MyProcStrings”, locale);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="3">
+<li><p>要查找一个具体的字符串，可以调用： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string str = bundle.getString(“colorName”);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>**Warning**:
+
+存储属性的文件都是ASCII文件， 如果你需要将 Unicode 字符放到属性文件中， 那么请用\uxxxx 编码方式对它们进行编码。
+
+你可以使用 native2ascii 工具来产生这些文件；
+</code></pre><ol start="2">
+<li><p>看个利用.properties文件进行国际化的荔枝：</p>
+<ol>
+<li><p>for souce code, please visit : <a href="https://github.com/pacosonTang/core-java-volume/tree/master/coreJavaAdvanced/chapter5/ResourceBundle_Properties" target="_blank" rel="noopener">https://github.com/pacosonTang/core-java-volume/tree/master/coreJavaAdvanced/chapter5/ResourceBundle_Properties</a></p>
+</li>
+<li><p>key source code at a glance:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">public class PropertiesDemo</span><br><span class="line">&#123;</span><br><span class="line">    // 显示与给定Locale相关的.properties文件中的key对应的value</span><br><span class="line">    static void displayValue(Locale locale, String key)</span><br><span class="line">    &#123;</span><br><span class="line">        ResourceBundle labels = ResourceBundle.getBundle(&quot;LabelBundle&quot;, locale);</span><br><span class="line">        String value = labels.getString(key);</span><br><span class="line">        System.out.println(&quot;locale = &quot; + locale.getDisplayName() + </span><br><span class="line">                &quot;, key = &quot; + key + &quot;, value = &quot; + value);</span><br><span class="line">    &#125;</span><br><span class="line">    // 迭代与给定Locale相关的.properties文件中的keys</span><br><span class="line">    static void iterateKeys(Locale locale)</span><br><span class="line">    &#123;</span><br><span class="line">        ResourceBundle labels = ResourceBundle.getBundle(&quot;LabelBundle&quot;, locale);</span><br><span class="line">        Enumeration&lt;String&gt; keys = labels.getKeys();</span><br><span class="line">        while(keys.hasMoreElements())</span><br><span class="line">        &#123;</span><br><span class="line">            String key = keys.nextElement();</span><br><span class="line">            String value = labels.getString(key);</span><br><span class="line">            System.out.println(&quot;locale = &quot; + locale.getDisplayName() + </span><br><span class="line">                    &quot;, key = &quot; + key + &quot;, value = &quot; + value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Locale.setDefault(Locale.ENGLISH);</span><br><span class="line">        Locale[] supportedLocales = </span><br><span class="line">        &#123;</span><br><span class="line">            Locale.CHINA,</span><br><span class="line">            Locale.GERMAN,</span><br><span class="line">            Locale.ENGLISH</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;=== the output of method displayValue is as follows: ===\n&quot;);</span><br><span class="line">        for (int i = 0; i &lt; supportedLocales.length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            displayValue(supportedLocales[i], &quot;s2&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(&quot;=== the output of method iterateKeys is as follows: ===\n&quot;);</span><br><span class="line">        iterateKeys(supportedLocales[0]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="3">
+<li>relative printing results as follows:<img src="https://bigengzhe.github.io/images/20160206082630932" alt></li>
+</ol>
+<h4 id="利用包类进行国际化"><a href="#利用包类进行国际化" class="headerlink" title="利用包类进行国际化"></a>利用包类进行国际化</h4><ol>
+<li><p>为了提供字符串外的资源，需要定义类， 它必须扩展于 ResourceBundle 类， 应该使用标准的命名规则来命名你的类， 如：<strong>（干货——资源绑定类引入原因——为了对字符串外的资源进行国际化，需要定义资源绑定类）（干货——包类的命名规则）</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">MyprogResources.java </span><br><span class="line">MyprogResources_en.java </span><br><span class="line">MyprogResources_de_DE.java</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="2">
+<li><p>你可以使用 与 加载属性文件相同的getBundle 方法来加载这个类： <strong>（干货——加载资源绑定类与资源包的方法相同，即getBuddle）</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ResourceBundle bundle = ResourceBundle .getBundle(“MyprogResources”, locale);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Warning）</strong> 当搜索包时， 如果在类中的包和在属性文件中的包中都存在匹配， 优先选择类中的包； </p>
+<ol start="3">
+<li><p>每一个资源绑定类都实现了一个查询表。</p>
+<ol>
+<li><p>你需要为每一个你想定位的设置都提供一个关键字字符串， 使用这个字符串来提取相应的设置， 如；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Color background = (Color) bundle.getObject(“background”); </span><br><span class="line">double[] papersize = (double[]) bundle.getObject(“defaultSize”);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><p>使用资源绑定类的最简单方法就是 继承 ListReourceBundle类； <strong>（干货——使用资源绑定类的最简单方法就是 继承 ListReourceBundle类）</strong></p>
+</li>
+<li><p><strong>ListReourceBundle：</strong> 让你把所有资源都放到一个对象数组并提供查找功能， 请遵循以下框架代码： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class bundleName_language_country extends ListResourceBundle </span><br><span class="line">&#123; </span><br><span class="line">private static final Object[][] contents = </span><br><span class="line">&#123; </span><br><span class="line">&#123;key1, value1]; </span><br><span class="line">&#123;key1, value1]; </span><br><span class="line">… </span><br><span class="line">&#125; </span><br><span class="line">public Object[][] getContents() &#123; return contents ; &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="4">
+<li><p>看个栗子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class ProgramResource_de extends ListResourceBundle</span><br><span class="line">&#123;</span><br><span class="line">    private static final Object[][] contents = </span><br><span class="line">    &#123;</span><br><span class="line">        &#123;&quot;background&quot;,Color.black];</span><br><span class="line">        &#123;&quot;defaultPaperSize&quot;, new double[]&#123;210, 297&#125;&#125;</span><br><span class="line">        ...</span><br><span class="line">    &#125;     </span><br><span class="line">    public Object[][] getContents() &#123; return contents ; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="5">
+<li><p>*或者， 你的资源绑定类可以扩展 ResourceBundle 类。 然后需要实现两个方法， 一个是枚举所有键，二是用给定的键查找相应的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Enumeration&lt;String&gt; getKeys();</span><br><span class="line">Object handleGetObject(String key);</span><br><span class="line">ResourceBundle 类的 getObject 方法会调用你提供的 handleGetBundle 方法；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol start="6">
+<li><p>看个利用.class文件进行国际化的荔枝：</p>
+<ol>
+<li><p>for souce code, please visit : <a href="https://github.com/pacosonTang/core-java-volume/tree/master/coreJavaAdvanced/chapter5/ResourceBundle_Class" target="_blank" rel="noopener">https://github.com/pacosonTang/core-java-volume/tree/master/coreJavaAdvanced/chapter5/ResourceBundle_Class</a></p>
+</li>
+<li><p>key source code at a glance:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public class ListResourceBundleDemo</span><br><span class="line">&#123;</span><br><span class="line">    // 显示与给定Locale相关的.properties文件中的key对应的value</span><br><span class="line">    static void displayValue(Locale locale)</span><br><span class="line">    &#123;</span><br><span class="line">        ResourceBundle stats = ResourceBundle.getBundle(&quot;com.corejava.chapter573.StatsBundle&quot;, locale);</span><br><span class="line">        Integer gdp = (Integer) stats.getObject(&quot;GDP&quot;);</span><br><span class="line">        Integer population = (Integer) stats.getObject(&quot;Population&quot;);</span><br><span class="line">        Double literacy = (Double)stats.getObject(&quot;Literacy&quot;);</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;locale = &quot; + locale.getDisplayName() + </span><br><span class="line">                &quot;, gdp = &quot; + gdp + &quot;, population = &quot; + population + &quot;, literacy = &quot; + literacy);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        Locale.setDefault(Locale.US);</span><br><span class="line">        Locale[] locales = </span><br><span class="line">            &#123;</span><br><span class="line">                new Locale(&quot;en&quot;, &quot;CA&quot;),</span><br><span class="line">                new Locale(&quot;de&quot;, &quot;DE&quot;),</span><br><span class="line">                new Locale(&quot;zh&quot;, &quot;CN&quot;) </span><br><span class="line">            &#125;;</span><br><span class="line"></span><br><span class="line">        for (int i = 0; i &lt; locales.length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            displayValue(locales[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>3. relative printing results as follows:![](https://bigengzhe.github.io/images/20160206083133641)
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hong WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="hong Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="hong Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/27/文本文件和字符集/" rel="next" title="文本文件和字符集">
+                <i class="fa fa-chevron-left"></i> 文本文件和字符集
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/headima.jpg" alt="hong">
+            
+              <p class="site-author-name" itemprop="name">hong</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">43</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java国际化——资源包相关"><span class="nav-text">java国际化——资源包相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定位资源包"><span class="nav-text">定位资源包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用属性文件进行国际化"><span class="nav-text">利用属性文件进行国际化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用包类进行国际化"><span class="nav-text">利用包类进行国际化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

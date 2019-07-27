@@ -79,14 +79,21 @@
 
 
 
+<meta name="description" content="文本文件和字符集 java是完全基于Unicode的，但是 os 一般有它们自己的字符编码，比如在 美国是 ISO-8859-1（8位代码，有时候也称为 ANSI 代码）， 在台湾是 Big5； 当把数据保存到一个文本文件中时，应该照顾到本地的字符编码，这样，用户就可以用它们的其他程序打开这个文本文件。 字符编码是在 FileWriter 的构造器中指定的： out = newFileWriter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文本文件和字符集">
 <meta property="og:url" content="http://yoursite.com/2019/07/27/文本文件和字符集/index.html">
 <meta property="og:site_name" content="Hexohong">
+<meta property="og:description" content="文本文件和字符集 java是完全基于Unicode的，但是 os 一般有它们自己的字符编码，比如在 美国是 ISO-8859-1（8位代码，有时候也称为 ANSI 代码）， 在台湾是 Big5； 当把数据保存到一个文本文件中时，应该照顾到本地的字符编码，这样，用户就可以用它们的其他程序打开这个文本文件。 字符编码是在 FileWriter 的构造器中指定的： out = newFileWriter">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-27T10:31:35.098Z">
+<meta property="og:image" content="https://bigengzhe.github.io/images/20160204190354667.jpg">
+<meta property="og:image" content="https://bigengzhe.github.io/images/20160204190404539">
+<meta property="og:image" content="https://bigengzhe.github.io/images/20160204190409539">
+<meta property="og:updated_time" content="2019-07-27T12:31:00.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文本文件和字符集">
+<meta name="twitter:description" content="文本文件和字符集 java是完全基于Unicode的，但是 os 一般有它们自己的字符编码，比如在 美国是 ISO-8859-1（8位代码，有时候也称为 ANSI 代码）， 在台湾是 Big5； 当把数据保存到一个文本文件中时，应该照顾到本地的字符编码，这样，用户就可以用它们的其他程序打开这个文本文件。 字符编码是在 FileWriter 的构造器中指定的： out = newFileWriter">
+<meta name="twitter:image" content="https://bigengzhe.github.io/images/20160204190354667.jpg">
 
 
 
@@ -379,7 +386,42 @@
       
 
       
-        
+        <h3 id="文本文件和字符集"><a href="#文本文件和字符集" class="headerlink" title="文本文件和字符集"></a>文本文件和字符集</h3><ol>
+<li>java是完全基于Unicode的，但是 os 一般有它们自己的字符编码，比如在 美国是 ISO-8859-1（8位代码，有时候也称为 ANSI 代码）， 在台湾是 Big5；</li>
+<li>当把数据保存到一个文本文件中时，应该照顾到本地的字符编码，这样，用户就可以用它们的其他程序打开这个文本文件。<ol>
+<li>字符编码是在 FileWriter 的构造器中指定的： out = newFileWriter(filename, “ISO-8859-1”)；</li>
+<li>problem：遗憾的是， 目前，locale 和字符编码间没有任何联系。 比如， 你的 用户选择的是台湾的locale_zh_TW， 但是在 java中并没有提供任何方法来告诉你用 Big5 字符编码是最恰当的；</li>
+</ol>
+</li>
+</ol>
+<h4 id="源文件的字符编码"><a href="#源文件的字符编码" class="headerlink" title="源文件的字符编码"></a>源文件的字符编码</h4><ol>
+<li>作为 coder， 要牢记你需要与java 编译器进行交互： 这种交互需要通过本地系统的工具来完成； </li>
+<li>使用中文版的记事本来写你的java 源代码文件， 但这样写出来的源代码不能随处使用；因为它们使用的是本地的字符编码；只有编译后的class 文件才能随处使用， 因为它们会自动地使用 “modified UTF-8” 编码来处理标识符和字符串。</li>
+<li><p>这意味着即使在程序编译和运行时，依然有3种字符编码参与其中：</p>
+<ol>
+<li>源文件： 本地编码；</li>
+<li>类文件： modified UTF-8；</li>
+<li>虚拟机： UTF-16；</li>
+</ol>
+</li>
+<li><p>为了使你的源文件到处都可用， 必须使用普通 的 ASCII 编码： 也就是说， 你需要将所有 非ASCII 字符转换成等价的 Unicode 编码；</p>
+<ol>
+<li>jdk 有一个工具 native2ascii ：可以用它来将本地字符编码转换为 普通 的 ASCII ， 这个工具直接将输入中的每一个非 ASCII 字符替换为 跟尾儿 \u 加上四位 16进制数字的Unicode值；（干货——native2ascii 工具的作用）</li>
+<li>如何使用 native2ascii 工具：<br>native2ascii Myfile.java Myfile.temp</li>
+<li>用 -reverse 进行逆向转换：<br>native2ascii -reverse myfile.temp myfily.java</li>
+<li><strong>用 -encoding 选项指定另一种编码：</strong>编码的名字必须是 编码表所列出来的名字之一， 如：　native2ascii -encoding Big5 myfile.java myfile.temp</li>
+</ol>
+</li>
+<li><p>看个栗子</p>
+<ol>
+<li>native2ascii HelloWorld.java HelloWorld.temp<img src="https://bigengzhe.github.io/images/20160204190354667.jpg" alt></li>
+<li>native2ascii -encoding Big5 HelloWorld.java HelloWorldTW.temp<img src="https://bigengzhe.github.io/images/20160204190404539" alt></li>
+<li>native2ascii -reverse HelloWorld.temp Reverse.java<img src="https://bigengzhe.github.io/images/20160204190409539" alt></li>
+</ol>
+</li>
+</ol>
+<p>转自<a href="https://blog.csdn.net/PacosonSWJTU/article/details/50636153" target="_blank" rel="noopener">https://blog.csdn.net/PacosonSWJTU/article/details/50636153</a></p>
+
       
     </div>
     
@@ -447,6 +489,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/07/27/资源包/" rel="prev" title="资源包">
+                资源包 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -497,8 +543,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -515,7 +570,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -567,6 +622,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#文本文件和字符集"><span class="nav-text">文本文件和字符集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#源文件的字符编码"><span class="nav-text">源文件的字符编码</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
