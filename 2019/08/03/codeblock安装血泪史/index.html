@@ -87,15 +87,14 @@
 <meta property="og:site_name" content="Hexohong">
 <meta property="og:description" content="其实之前我用的C/C++IDE是Dev C++（此前一直以为IDE和编译器如gcc，和g++是一个东西，很久很以前，自己曾经还是明白这其中的弯弯绕的，时间太长给忘了），之后在网上发现比较精妙的C程序后，想调试一下，结果发现调试不了。 当时以为是Dev的问题，就去下载codeblock，结果发现也是能编译运行不能调试，有以下错误 123gcc: Internal error: Aborted (pr">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="file:///C:/Users/hsk/AppData/Local/Temp/SGPicFaceTpBq/5548/2BD2DDB9.png">
 <meta property="og:image" content="https://bigengzhe.github.io/images/Snipaste_2019-08-03_21-12-06.png">
 <meta property="og:image" content="https://bigengzhe.github.io/images/Snipaste_2019-08-03_21-25-41.png">
 <meta property="og:image" content="https://bigengzhe.github.io/images/Snipaste_2019-08-03_21-28-50.png">
-<meta property="og:updated_time" content="2019-08-03T13:47:20.764Z">
+<meta property="og:updated_time" content="2019-08-03T13:51:11.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="codeblock安装血泪史">
 <meta name="twitter:description" content="其实之前我用的C/C++IDE是Dev C++（此前一直以为IDE和编译器如gcc，和g++是一个东西，很久很以前，自己曾经还是明白这其中的弯弯绕的，时间太长给忘了），之后在网上发现比较精妙的C程序后，想调试一下，结果发现调试不了。 当时以为是Dev的问题，就去下载codeblock，结果发现也是能编译运行不能调试，有以下错误 123gcc: Internal error: Aborted (pr">
-<meta name="twitter:image" content="file:///C:/Users/hsk/AppData/Local/Temp/SGPicFaceTpBq/5548/2BD2DDB9.png">
+<meta name="twitter:image" content="https://bigengzhe.github.io/images/Snipaste_2019-08-03_21-12-06.png">
 
 
 
@@ -395,9 +394,9 @@
         <p>其实之前我用的C/C++IDE是Dev C++（此前一直以为IDE和编译器如gcc，和g++是一个东西，很久很以前，自己曾经还是明白这其中的弯弯绕的，时间太长给忘了），之后在网上发现比较精妙的C程序后，想调试一下，结果发现调试不了。</p>
 <p>当时以为是Dev的问题，就去下载codeblock，结果发现也是能编译运行不能调试，有以下错误</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc: Internal error: Aborted (program collect2)</span><br><span class="line">Please submit a full bug report.</span><br><span class="line">See &lt;URL:http://www.mingw.org/bugs.shtml&gt; for instructions.</span><br></pre></td></tr></table></figure>
-<p>那时已经有点明白是编译器出了问题，可是不知道如何解决，只能去网上Google，在网上codeblock的论坛上扒了好久，终于发现有个和我遇到同样问题的人，可是管理却说这不是codeblock论坛的负责范畴（可能是因为太简单，不屑与解答吧），并亮出了一份发帖规范（<img src="file:///C:\Users\hsk\AppData\Local\Temp\SGPicFaceTpBq\5548\2BD2DDB9.png" alt="img">），惹不起惹不起。</p>
+<p>那时已经有点明白是编译器出了问题，可是不知道如何解决，只能去网上Google，在网上codeblock的论坛上扒了好久，终于发现有个和我遇到同样问题的人，可是管理却说这不是codeblock论坛的负责范畴（可能是因为太简单，不屑于解答吧），并亮出了一份发帖规范（汗），惹不起惹不起。</p>
 <p>我把Dev C++和codeblock卸载重装了无数遍，同时接着在网上扒拉，发现每次安装codeblock时他都会自动寻找本机所安装的其他编译器（Dev 中有一个，还有个在C盘根目录下），之后倒是不报编译器error了，因为他已经没有编译器了。。</p>
-<p>后来明白codeblock有的版本自带编译器（其安装目录有MinGW文件夹），有的不自带编译器，若自带编译器的话还是提示找不到编译器，可按以下步骤：</p>
+<p>后来明白codeblock有的版本自带编译器（其安装目录有MinGW文件夹，可去<a href="http://www.codeblocks.org/downloads/26#windows" target="_blank" rel="noopener">此网站</a>下载），有的不自带编译器，若自带编译器的话还是提示找不到编译器，可按以下步骤：</p>
 <ol>
 <li>点开Settings下的Compiler<img src="https://bigengzhe.github.io/images/Snipaste_2019-08-03_21-12-06.png" alt></li>
 <li>找到Toolchain executables选项卡，设置Compiler’s installation directory为你的codeblock的MinGW文件夹</li>
