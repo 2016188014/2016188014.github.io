@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mysql常用命令]]></title>
+    <url>%2F%2F2019%2F08%2F03%2Fmysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[mysql命令12345show tables from databasename;#在当前数据库中查看其他数据库中内容select database();#显示当前操作数据库select version();-- 查看当前数据库版本show databases;#查看所有已建数据库show tables;#查看当前数据库中所有表 cmd命令 12mysql --version//查看当前数据库版本mysql -V//同上 mysql的语法规范 不区分大小写，但建议关键字大写，表名、列名小写 每条命令用分号结尾 注释 单行注释：#注释内容 单行注释：– 注释内容 多行注释：/ 注释内容 /]]></content>
+      <categories>
+        <category>mysql</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[mysql服务的启动与停止]]></title>
     <url>%2F%2F2019%2F08%2F03%2Fmysql%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%81%9C%E6%AD%A2%2F</url>
-    <content type="text"><![CDATA[首先右击我的电脑，点击管理 而后找到服务与应用程序中的服务 找到mysql服务，右击可以查看状态，并控制启动和停止 如果觉得这样查找过于麻烦可以使用命令行方式，不过要记得切换管理员呀 12-&gt;net start mysql80//启动-&gt;net stop mysql80//停止]]></content>
+    <content type="text"><![CDATA[mysql服务的启动与停止首先右击我的电脑，点击管理 而后找到服务与应用程序中的服务 找到mysql服务，右击可以查看状态，并控制启动和停止 如果觉得这样查找过于麻烦可以使用命令行方式，不过要记得切换管理员呀 12-&gt;net start mysql80//启动-&gt;net stop mysql80//停止 mysql的登录命令行方式12mysql -h主机名 -P端口号 -u用户名 -p密码//可以连接远程数据库mysql -u用户名 -p密码//若是本地的，可以简写，默认本机localhost，加默认端口号]]></content>
       <categories>
         <category>mysql</category>
       </categories>
