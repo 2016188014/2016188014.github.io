@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-30T09:35:51.732Z</updated>
+  <updated>2019-08-03T08:25:17.510Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql服务的启动与停止</title>
+    <link href="http://yoursite.com//2019/08/03/mysql%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%81%9C%E6%AD%A2/"/>
+    <id>http://yoursite.com//2019/08/03/mysql服务的启动与停止/</id>
+    <published>2019-08-03T08:07:36.000Z</published>
+    <updated>2019-08-03T08:25:17.510Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;首先右击我的电脑，点击管理&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bigengzhe.github.io/images/Snipaste_2019-08-03_16-13-47.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>C内存分配函数</title>
@@ -479,34 +504,6 @@
       <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="数据库" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>提交表单数据</title>
-    <link href="http://yoursite.com//2019/07/25/%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE/"/>
-    <id>http://yoursite.com//2019/07/25/提交表单数据/</id>
-    <published>2019-07-25T03:05:18.000Z</published>
-    <updated>2019-07-25T06:23:49.158Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在向Web服务器发送信息时，通常有两个命令会被用到：GET和POST。&lt;/p&gt;
-&lt;p&gt;在使用GET命令时，只需将参数附在URL的结尾处即可。格式如下&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="网络" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C/"/>
     
     
   </entry>
