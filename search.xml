@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[原子变量与CAS算法]]></title>
+    <url>%2F%2F2019%2F08%2F04%2F%E5%8E%9F%E5%AD%90%E5%8F%98%E9%87%8F%E4%B8%8ECAS%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &#123; // TODO Auto-generated method stub AtomicDemo ad=new AtomicDemo(); for(int i=0;i&lt;20;i++)&#123; new Thread(ad).start(); &#125;&#125; 1234567891011public class AtomicDemo implements Runnable&#123; private int serialNumber=0; @Override public void run() &#123; // TODO Auto-generated method stub System.out.println(getSerialNumber()); &#125; public int getSerialNumber()&#123; return serialNumber++; &#125;&#125; jdk1.5后java.util.concurrent.atomic包提供了许多包装器用于原子的整数浮点数等 它们内部使用了volatile保证内存可见性， CAS（Compare-And-Set）算法保证数据操作的原子性，CAS算法是硬件对于并发操作共享数据的支持 CAS算法包含了三个操作数： 内存值 V；预估值 A；更新值 B；当且仅当V == A时，V=B，否则什么也不做 1234567891011public class AtomicDemo implements Runnable&#123; private AtomicInteger serialNumber=new AtomicInteger(); @Override public void run() &#123; // TODO Auto-generated method stub System.out.println(getSerialNumber()); &#125; public int getSerialNumber()&#123; return serialNumber.getAndIncrement();//等价于i++ &#125;&#125;]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>多线程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[volatile关键字与内存可见性]]></title>
+    <url>%2F%2F2019%2F08%2F04%2Fvolatile%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E5%86%85%E5%AD%98%E5%8F%AF%E8%A7%81%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[内存屏蔽在某些情况下多个线程共享的数据段，会出现内存屏蔽，即其中一个线程已经对该共享数据做了修改，可其他线程却一直没有进行数据更新（比如在使用while(true){}循环时，由于此结构调用了较为底层的代码，执行效率极高，以至于没有更新数据段的机会） 看个栗子 1234567891011121314151617package juc;public class Main &#123; public static void main(String[] args) &#123; // TODO Auto-generated method stub ThreadDemo td=new ThreadDemo(); new Thread(td).start(); while(true)&#123; if(td.isFlag())&#123; System.out.println("-------------");//此段代码无法被执行 break; &#125; &#125; &#125;&#125; 123456789101112131415161718192021222324package juc;public class ThreadDemo implements Runnable&#123; private boolean flag=false; public boolean isFlag() &#123; return flag; &#125; public void setFlag(boolean flag) &#123; this.flag = flag; &#125; @Override public void run() &#123; // TODO Auto-generated method stub try &#123; Thread.sleep(200); &#125; catch (InterruptedException e) &#123; // TODO Auto-generated catch block e.printStackTrace(); &#125; flag=true; System.out.println("flag="+isFlag()); &#125;&#125; 输出结果如下 解决方法 同步锁（效率很低） 123456789while(true)&#123; synchronized (td)&#123;//可以保证数据的一个及时更新 if(td.isFlag())&#123; System.out.println("-------------"); //此段代码现在可以被执行 break; &#125; &#125;&#125; 使用volatile关键字，当多个线程操作共享数据时，可以保证内存中的数据可见，为实例域的同步访问提供了一种免锁机制 1private volatile boolean flag=false; 不过要注意的是，volatile不具备“操作互斥性”，且不提供原子操作]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>多线程</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[codeblock安装血泪史]]></title>
     <url>%2F%2F2019%2F08%2F03%2Fcodeblock%E5%AE%89%E8%A3%85%E8%A1%80%E6%B3%AA%E5%8F%B2%2F</url>
     <content type="text"><![CDATA[其实之前我用的C/C++IDE是Dev C++（此前一直以为IDE和编译器如gcc，和g++是一个东西，很久很以前，自己曾经还是明白这其中的弯弯绕的，时间太长给忘了），之后在网上发现比较精妙的C程序后，想调试一下，结果发现调试不了。 当时以为是Dev的问题，就去下载codeblock，结果发现也是能编译运行不能调试，有以下错误 123gcc: Internal error: Aborted (program collect2)Please submit a full bug report.See &lt;URL:http://www.mingw.org/bugs.shtml&gt; for instructions. 那时已经有点明白是编译器出了问题，可是不知道如何解决，只能去网上Google，在网上codeblock的论坛上扒了好久，终于发现有个和我遇到同样问题的人，可是管理却说这不是codeblock论坛的负责范畴（可能是因为太简单，不屑于解答吧），并亮出了一份发帖规范（汗），惹不起惹不起。 我把Dev C++和codeblock卸载重装了无数遍，同时接着在网上扒拉，发现每次安装codeblock时他都会自动寻找本机所安装的其他编译器（Dev 中有一个，还有个在C盘根目录下），之后倒是不报编译器error了，因为他已经没有编译器了。。 后来明白codeblock有的版本自带编译器（其安装目录有MinGW文件夹，可去此网站下载），有的不自带编译器，若自带编译器的话还是提示找不到编译器，可按以下步骤： 点开Settings下的Compiler 找到Toolchain executables选项卡，设置Compiler’s installation directory为你的codeblock的MinGW文件夹 记得把下面的编译器路径也改改 点击保存，重启codeblock，更改就会生效了 可是安装完之后，发现依然无法调试是下面这个错误 1234ERROR: You need to specify a debugger program in the debuggers&apos;s settings.(For MinGW compilers, it&apos;s &apos;gdb.exe&apos; (without the quotes))(For MSVC compilers, it&apos;s &apos;cdb.exe&apos; (without the quotes)) 呵，瞧我这暴脾气，又去google了一下 这时需要打开Settings里的Debugger 需要把下面这个路径设置为你的MinGW下的gdb.exe所在路径（若是没有，可去此网站 下载一个） 有些编译环境的中文不能编译，需要新建项目才能编译哦 再次调试终于没有问题了，真心累呀（codeblock调试方法见下篇）]]></content>
