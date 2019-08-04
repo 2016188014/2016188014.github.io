@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-04T03:41:44.058Z</updated>
+  <updated>2019-08-04T13:05:30.625Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浮点错误</title>
+    <link href="http://yoursite.com//2019/08/04/%E6%B5%AE%E7%82%B9%E9%94%99%E8%AF%AF/"/>
+    <id>http://yoursite.com//2019/08/04/浮点错误/</id>
+    <published>2019-08-04T13:03:04.000Z</published>
+    <updated>2019-08-04T13:05:30.625Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;浮点错误: 您的程序运行时发生浮点错误，比如遇到了除以 0
+        
+      
+    
+    </summary>
+    
+      <category term="C/C++" scheme="http://yoursite.com/categories/C-C/"/>
+    
+    
+      <category term="踩坑实录" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91%E5%AE%9E%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql之select</title>
+    <link href="http://yoursite.com//2019/08/04/mysql%E4%B9%8Bselect/"/>
+    <id>http://yoursite.com//2019/08/04/mysql之select/</id>
+    <published>2019-08-04T07:12:12.000Z</published>
+    <updated>2019-08-04T07:16:25.681Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;语法:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>原子变量与CAS算法</title>
@@ -463,46 +514,6 @@
       <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="数据库" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据库（二）</title>
-    <link href="http://yoursite.com//2019/07/26/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://yoursite.com//2019/07/26/数据库（二）/</id>
-    <published>2019-07-26T09:39:11.000Z</published>
-    <updated>2019-07-26T11:21:23.445Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;多结果集&quot;&gt;&lt;a href=&quot;#多结果集&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="数据库" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SQL转义</title>
-    <link href="http://yoursite.com//2019/07/26/SQL%E8%BD%AC%E4%B9%89/"/>
-    <id>http://yoursite.com//2019/07/26/SQL转义/</id>
-    <published>2019-07-26T08:54:47.000Z</published>
-    <updated>2019-07-26T08:54:47.338Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
     
     
   </entry>

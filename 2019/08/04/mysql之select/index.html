@@ -79,14 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql之select">
+<meta property="og:url" content="http://yoursite.com/2019/08/04/mysql之select/index.html">
 <meta property="og:site_name" content="Hexohong">
+<meta property="og:description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-19T12:28:19.084Z">
+<meta property="og:updated_time" content="2019-08-04T07:16:25.681Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="mysql之select">
+<meta name="twitter:description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/04/mysql之select/">
 
 
 
 
 
-  <title>tags | Hexohong</title>
+  <title>mysql之select | Hexohong</title>
   
 
 
@@ -299,40 +302,206 @@
 
   <div id="posts" class="posts-expand">
     
+
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/04/mysql之select/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/headima.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexohong">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                3 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/test/" style="font-size: 12px; color: #ccc">test</a> <a href="/tags/操作与实战/" style="font-size: 30px; color: #111">操作与实战</a> <a href="/tags/踩坑实录/" style="font-size: 21px; color: #6f6f6f">踩坑实录</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">mysql之select</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T15:12:12+08:00">
+                2019-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>语法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 查询列表 from 表名;</span><br></pre></td></tr></table></figure>
+<p>特点：</p>
+<p>1.查询列表可以是：表中的字段，常量值、表达式、函数</p>
+<p>2.查询的结果是一个虚拟的表格</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="hong WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="hong Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="hong Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/04/原子变量与CAS算法/" rel="next" title="原子变量与CAS算法">
+                <i class="fa fa-chevron-left"></i> 原子变量与CAS算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/04/浮点错误/" rel="prev" title="浮点错误">
+                浮点错误 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -341,6 +510,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
