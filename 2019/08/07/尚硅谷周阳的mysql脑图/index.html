@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="static方法与构造静态方法一般不能调用任何非静态成员，却能调用非静态的构造 12345678910111213141516171819202122232425262728293031323334353637383940414243package staticmethod;public class Main &amp;#123;	public static void main(String[] args">
+<meta name="description" content="参见此链接.html)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="static关键字的使用(一)">
-<meta property="og:url" content="http://yoursite.com/2019/07/23/static关键字的使用-一/index.html">
+<meta property="og:title" content="尚硅谷周阳的mysql脑图">
+<meta property="og:url" content="http://yoursite.com/2019/08/07/尚硅谷周阳的mysql脑图/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="static方法与构造静态方法一般不能调用任何非静态成员，却能调用非静态的构造 12345678910111213141516171819202122232425262728293031323334353637383940414243package staticmethod;public class Main &amp;#123;	public static void main(String[] args">
+<meta property="og:description" content="参见此链接.html)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-26T11:47:16.778Z">
+<meta property="og:updated_time" content="2019-08-07T02:15:09.294Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="static关键字的使用(一)">
-<meta name="twitter:description" content="static方法与构造静态方法一般不能调用任何非静态成员，却能调用非静态的构造 12345678910111213141516171819202122232425262728293031323334353637383940414243package staticmethod;public class Main &amp;#123;	public static void main(String[] args">
+<meta name="twitter:title" content="尚硅谷周阳的mysql脑图">
+<meta name="twitter:description" content="参见此链接.html)">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/23/static关键字的使用-一/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/07/尚硅谷周阳的mysql脑图/">
 
 
 
 
 
-  <title>static关键字的使用(一) | Hexohong</title>
+  <title>尚硅谷周阳的mysql脑图 | Hexohong</title>
   
 
 
@@ -315,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/static关键字的使用-一/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/07/尚硅谷周阳的mysql脑图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hong">
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">static关键字的使用(一)</h1>
+          <h1 class="post-title" itemprop="name headline">尚硅谷周阳的mysql脑图</h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-23T09:26:00+08:00">
-                2019-07-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-07T10:13:42+08:00">
+                2019-08-07
               </time>
             
 
@@ -367,19 +367,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">java学习笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java学习笔记/对象与类/" itemprop="url" rel="index">
-                    <span itemprop="name">对象与类</span>
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
                   </a>
                 </span>
 
@@ -418,12 +407,7 @@
       
 
       
-        <h4 id="static方法与构造"><a href="#static方法与构造" class="headerlink" title="static方法与构造"></a>static方法与构造</h4><p>静态方法一般不能调用任何非静态成员，却能调用非静态的构造</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> staticmethod;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		StaticMethod aMethod=StaticMethod.newInstance();</span><br><span class="line">		System.out.println(aMethod);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StaticMethod</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.id = id;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> name;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> StaticMethod <span class="title">newInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> StaticMethod(<span class="number">1</span>, <span class="string">"hhh"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">StaticMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"StaticMethod [id="</span> + id + <span class="string">", name="</span> + name + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="title">StaticMethod</span><span class="params">(<span class="keyword">int</span> id, String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>();</span><br><span class="line">		<span class="keyword">this</span>.id = id;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="static方法与接口"><a href="#static方法与接口" class="headerlink" title="static方法与接口"></a>static方法与接口</h4><p>接口中可以包含static方法了，但是必须有方法的实现，且调用方式有严格限制</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TestInter</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printme</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print_s</span><span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">"print in static method in interface"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>必须像下面这样调用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TestInter.print_s();</span><br></pre></td></tr></table></figure>
+        <p><a href="https://bigengzhe.github.io/otherfiles/%E5%B0%9A%E7%A1%85%E8%B0%B7mysql%E9%AB%98%E7%BA%A7%E6%95%99%E7%A8%8Bmmap%E7%89%88%E8%AF%BE%E4%BB%B6(%E5%91%A8%E9%98%B3" target="_blank" rel="noopener">参见此链接</a>.html)</p>
 
       
     </div>
@@ -482,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/23/xml-二/" rel="next" title="xml(二)">
-                <i class="fa fa-chevron-left"></i> xml(二)
+              <a href="/2019/08/04/浮点错误/" rel="next" title="浮点错误">
+                <i class="fa fa-chevron-left"></i> 浮点错误
               </a>
             
           </div>
@@ -491,10 +475,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/23/java访问控制/" rel="prev" title="java访问控制">
-                java访问控制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,17 +526,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -625,22 +596,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#static方法与构造"><span class="nav-text">static方法与构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#static方法与接口"><span class="nav-text">static方法与接口</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
