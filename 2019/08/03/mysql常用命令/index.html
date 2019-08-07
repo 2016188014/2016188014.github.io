@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexohong">
 <meta property="og:description" content="mysql命令12345show tables from databasename;#在当前数据库中查看其他数据库中内容select database();#显示当前操作数据库select version();-- 查看当前数据库版本show databases;#查看所有已建数据库show tables;#查看当前数据库中所有表 cmd命令 12mysql --version//查看当前数据库版">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-03T09:27:59.088Z">
+<meta property="og:updated_time" content="2019-08-06T07:21:26.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql常用命令">
 <meta name="twitter:description" content="mysql命令12345show tables from databasename;#在当前数据库中查看其他数据库中内容select database();#显示当前操作数据库select version();-- 查看当前数据库版本show databases;#查看所有已建数据库show tables;#查看当前数据库中所有表 cmd命令 12mysql --version//查看当前数据库版">
@@ -423,6 +423,14 @@
 </li>
 <li></li>
 </ol>
+<p>查看mysql字符集</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show VARIABLES like &apos;character%&apos;;</span><br></pre></td></tr></table></figure>
+<p>mysql 排序后加序号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SET @i := 0;</span><br><span class="line">SELECT @i := @i + 1 AS `order`,e.* FROM employees e WHERE hiredate= </span><br><span class="line">(</span><br><span class="line">SELECT MAX(hiredate) FROM employees</span><br><span class="line">);</span><br><span class="line">或者照下面做</span><br><span class="line">select ROW_NUMBER() OVER (ORDER BY a.hiredate ASC) AS XUHAO,a.* from employees a;</span><br></pre></td></tr></table></figure>
+<p>看个栗子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM employees WHERE employees.hire_date=</span><br><span class="line">(</span><br><span class="line">    SELECT hh.hire_date FROM (</span><br><span class="line">        SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC)  AS orde,e.hire_date FROM </span><br><span class="line">            employees e GROUP BY e.`hire_date`</span><br><span class="line">    )</span><br><span class="line">    hh WHERE hh.orde+2=(</span><br><span class="line">        SELECT COUNT(hh.orde) FROM (</span><br><span class="line">            SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC) AS `orde`,e.hire_date,COUNT(*) FROM </span><br><span class="line">                employees e GROUP BY e.`hire_date`</span><br><span class="line">        ) hh</span><br><span class="line">     )</span><br><span class="line"> );</span><br></pre></td></tr></table></figure>
+<p>查看及设置当前的隔离级别</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT @@transaction_isolation;</span><br><span class="line">SET SESSION TRANSACTION ISOLATION LEVEL	READ COMMITTED;</span><br><span class="line">#设置当前会话的隔离级别</span><br><span class="line">SET GLOBAL SESSION TRANSACTION ISOLATION LEVEL	READ COMMITTED;</span><br><span class="line">#设置全局的隔离级别</span><br></pre></td></tr></table></figure>
 
       
     </div>

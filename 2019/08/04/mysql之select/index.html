@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格">
+<meta name="description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格 12SELECT `first_name`,`last_name`,`phone_number` FROM employees;#查询列表中的·着重号去掉无影响，他可以用来判别有些以mysql关键字命名的属性名 按F9执行选中的select语句  sel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql之select">
 <meta property="og:url" content="http://yoursite.com/2019/08/04/mysql之select/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格">
+<meta property="og:description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格 12SELECT `first_name`,`last_name`,`phone_number` FROM employees;#查询列表中的·着重号去掉无影响，他可以用来判别有些以mysql关键字命名的属性名 按F9执行选中的select语句  sel">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-04T07:16:25.681Z">
+<meta property="og:image" content="https://bigengzhe.github.io/images/Snipaste_2019-08-05_07-10-39.png">
+<meta property="og:updated_time" content="2019-08-05T03:40:38.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql之select">
-<meta name="twitter:description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格">
+<meta name="twitter:description" content="语法: 1select 查询列表 from 表名; 特点： 1.查询列表可以是：表中的字段，常量值、表达式、函数 2.查询的结果是一个虚拟的表格 12SELECT `first_name`,`last_name`,`phone_number` FROM employees;#查询列表中的·着重号去掉无影响，他可以用来判别有些以mysql关键字命名的属性名 按F9执行选中的select语句  sel">
+<meta name="twitter:image" content="https://bigengzhe.github.io/images/Snipaste_2019-08-05_07-10-39.png">
 
 
 
@@ -412,6 +414,20 @@
 <p>特点：</p>
 <p>1.查询列表可以是：表中的字段，常量值、表达式、函数</p>
 <p>2.查询的结果是一个虚拟的表格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT `first_name`,`last_name`,`phone_number` FROM employees;</span><br><span class="line">#查询列表中的·着重号去掉无影响，他可以用来判别有些以mysql关键字命名的属性名</span><br></pre></td></tr></table></figure>
+<p>按F9执行选中的select语句</p>
+<p><img src="https://bigengzhe.github.io/images/Snipaste_2019-08-05_07-10-39.png" alt></p>
+<p>select中起别名优点</p>
+<ol>
+<li><p>便于理解</p>
+</li>
+<li><p>若要查询的字段有重名的情况，取别名可以避免</p>
+<p>语法如下：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. SELECT 100%98 AS  结果;</span><br><span class="line">2. SELECT 100%98  结果;#省略as</span><br><span class="line">3. SELECT salary AS &quot;out put&quot; FROM employees;</span><br><span class="line">#当要起的别名中含有关键字时，记得加上双引号（推荐）或单引号</span><br></pre></td></tr></table></figure>
+<p>判断函数ifnull</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT IFNULL(`commission_pct`,0.00) FROM employees;</span><br><span class="line">#若为空，显示为0</span><br></pre></td></tr></table></figure>
 
       
     </div>
