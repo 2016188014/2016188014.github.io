@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[尚硅谷周阳的mysql脑图]]></title>
     <url>%2F%2F2019%2F08%2F07%2F%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%91%A8%E9%98%B3%E7%9A%84mysql%E8%84%91%E5%9B%BE%2F</url>
-    <content type="text"><![CDATA[今天在看周阳老师授课时写了脑图，众所周知，脑图可是学习利器之一啊，于是就在网上到处翻，最后终于是找到了，无奈本人的MindManager即将过期，所以把脑图转了html文档，需要的可以点此下载。 由于搭建博客用的框架对会自动对html文档进行修改（神烦）以至于无法正常加载，所以上传的文件是无后缀的，下载后需要改为html后缀，之后可以直接用浏览器打开 这里是原版脑图 test]]></content>
+    <content type="text"><![CDATA[今天在看周阳老师授课时写了脑图，众所周知，脑图可是学习利器之一啊，于是就在网上到处翻，最后终于是找到了，无奈本人的MindManager即将过期，所以把脑图转了html文档，不想要安装MindManager的可以点此下载。 由于搭建博客用的框架对会自动对html文档进行修改（神烦）以至于无法正常加载，所以上传的文件是无后缀的，下载后需要改为html后缀，之后可以直接用浏览器打开 这里是原版脑图 注意： ​ github部署是html文件名需要非中文无空格]]></content>
       <categories>
         <category>mysql</category>
       </categories>
