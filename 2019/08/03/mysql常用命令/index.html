@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexohong">
 <meta property="og:description" content="mysql命令12345show tables from databasename;#在当前数据库中查看其他数据库中内容select database();#显示当前操作数据库select version();-- 查看当前数据库版本show databases;#查看所有已建数据库show tables;#查看当前数据库中所有表 cmd命令 12mysql --version//查看当前数据库版">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T07:21:26.626Z">
+<meta property="og:updated_time" content="2019-08-11T03:29:09.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql常用命令">
 <meta name="twitter:description" content="mysql命令12345show tables from databasename;#在当前数据库中查看其他数据库中内容select database();#显示当前操作数据库select version();-- 查看当前数据库版本show databases;#查看所有已建数据库show tables;#查看当前数据库中所有表 cmd命令 12mysql --version//查看当前数据库版">
@@ -431,6 +431,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM employees WHERE employees.hire_date=</span><br><span class="line">(</span><br><span class="line">    SELECT hh.hire_date FROM (</span><br><span class="line">        SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC)  AS orde,e.hire_date FROM </span><br><span class="line">            employees e GROUP BY e.`hire_date`</span><br><span class="line">    )</span><br><span class="line">    hh WHERE hh.orde+2=(</span><br><span class="line">        SELECT COUNT(hh.orde) FROM (</span><br><span class="line">            SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC) AS `orde`,e.hire_date,COUNT(*) FROM </span><br><span class="line">                employees e GROUP BY e.`hire_date`</span><br><span class="line">        ) hh</span><br><span class="line">     )</span><br><span class="line"> );</span><br></pre></td></tr></table></figure>
 <p>查看及设置当前的隔离级别</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT @@transaction_isolation;</span><br><span class="line">SET SESSION TRANSACTION ISOLATION LEVEL	READ COMMITTED;</span><br><span class="line">#设置当前会话的隔离级别</span><br><span class="line">SET GLOBAL SESSION TRANSACTION ISOLATION LEVEL	READ COMMITTED;</span><br><span class="line">#设置全局的隔离级别</span><br></pre></td></tr></table></figure>
+<p>查看所有表中加的锁</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show open tables;#加了锁的表只能处理当前表，直到释放锁</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -571,7 +573,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -582,7 +584,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>

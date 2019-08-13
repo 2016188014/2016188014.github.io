@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一些Linux命令]]></title>
+    <url>%2F%2F2019%2F08%2F08%2F%E4%B8%80%E4%BA%9BLinux%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否要同时安装依赖，或删除冲突的包，你可以自己作出判断； 删除的命令是 1yum remove ~ 用yum查询想安装的软件 我们常会碰到这样的情况，想安装一个软件，只知道它和某方面有关，但又不能确切知道它的名字。这时yum的查询功能就起作用了 12yum search keywordyum info packagename#获取包的相关信息 小技巧yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新 12rpm -U 软件包名称yum update 软件包名称 centos6 添加开机自启动转自https://www.jianshu.com/p/ca79093c488e 1chkconfig sshd on]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[尚硅谷周阳的mysql脑图]]></title>
     <url>%2F%2F2019%2F08%2F07%2F%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%91%A8%E9%98%B3%E7%9A%84mysql%E8%84%91%E5%9B%BE%2F</url>
     <content type="text"><![CDATA[今天在看周阳老师授课时写了脑图，众所周知，脑图可是学习利器之一啊，于是就在网上到处翻，最后终于是找到了，无奈本人的MindManager即将过期，所以把脑图转了html文档，不想要安装MindManager的可以点此下载。 由于搭建博客用的框架对会自动对html文档进行修改（神烦）以至于无法正常加载，所以上传的文件是无后缀的，下载后需要改为html后缀，之后可以直接用浏览器打开 这里是原版脑图 注意： ​ github部署是html文件名需要非中文无空格]]></content>
@@ -16,7 +24,7 @@
         <category>C/C++</category>
       </categories>
       <tags>
-        <tag>踩坑实录</tag>
+        <tag>踩坑日记</tag>
       </tags>
   </entry>
   <entry>
@@ -54,13 +62,13 @@
         <category>codeblock</category>
       </categories>
       <tags>
-        <tag>踩坑实录</tag>
+        <tag>踩坑日记</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[mysql常用命令]]></title>
     <url>%2F%2F2019%2F08%2F03%2Fmysql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[mysql命令12345show tables from databasename;#在当前数据库中查看其他数据库中内容select database();#显示当前操作数据库select version();-- 查看当前数据库版本show databases;#查看所有已建数据库show tables;#查看当前数据库中所有表 cmd命令 12mysql --version//查看当前数据库版本mysql -V//同上 mysql的语法规范 不区分大小写，但建议关键字大写，表名、列名小写 每条命令用分号结尾 注释 单行注释：#注释内容 单行注释：– 注释内容 多行注释：/ 注释内容 / 查看mysql字符集 1show VARIABLES like &apos;character%&apos;; mysql 排序后加序号 1234567SET @i := 0;SELECT @i := @i + 1 AS `order`,e.* FROM employees e WHERE hiredate= (SELECT MAX(hiredate) FROM employees);或者照下面做select ROW_NUMBER() OVER (ORDER BY a.hiredate ASC) AS XUHAO,a.* from employees a; 看个栗子 12345678910111213SELECT * FROM employees WHERE employees.hire_date=( SELECT hh.hire_date FROM ( SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC) AS orde,e.hire_date FROM employees e GROUP BY e.`hire_date` ) hh WHERE hh.orde+2=( SELECT COUNT(hh.orde) FROM ( SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC) AS `orde`,e.hire_date,COUNT(*) FROM employees e GROUP BY e.`hire_date` ) hh ) ); 查看及设置当前的隔离级别 12345SELECT @@transaction_isolation;SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;#设置当前会话的隔离级别SET GLOBAL SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;#设置全局的隔离级别]]></content>
+    <content type="text"><![CDATA[mysql命令12345show tables from databasename;#在当前数据库中查看其他数据库中内容select database();#显示当前操作数据库select version();-- 查看当前数据库版本show databases;#查看所有已建数据库show tables;#查看当前数据库中所有表 cmd命令 12mysql --version//查看当前数据库版本mysql -V//同上 mysql的语法规范 不区分大小写，但建议关键字大写，表名、列名小写 每条命令用分号结尾 注释 单行注释：#注释内容 单行注释：– 注释内容 多行注释：/ 注释内容 / 查看mysql字符集 1show VARIABLES like &apos;character%&apos;; mysql 排序后加序号 1234567SET @i := 0;SELECT @i := @i + 1 AS `order`,e.* FROM employees e WHERE hiredate= (SELECT MAX(hiredate) FROM employees);或者照下面做select ROW_NUMBER() OVER (ORDER BY a.hiredate ASC) AS XUHAO,a.* from employees a; 看个栗子 12345678910111213SELECT * FROM employees WHERE employees.hire_date=( SELECT hh.hire_date FROM ( SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC) AS orde,e.hire_date FROM employees e GROUP BY e.`hire_date` ) hh WHERE hh.orde+2=( SELECT COUNT(hh.orde) FROM ( SELECT ROW_NUMBER() OVER (ORDER BY e.hire_date ASC) AS `orde`,e.hire_date,COUNT(*) FROM employees e GROUP BY e.`hire_date` ) hh ) ); 查看及设置当前的隔离级别 12345SELECT @@transaction_isolation;SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;#设置当前会话的隔离级别SET GLOBAL SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;#设置全局的隔离级别 查看所有表中加的锁 1show open tables;#加了锁的表只能处理当前表，直到释放锁]]></content>
       <categories>
         <category>mysql</category>
       </categories>
@@ -418,7 +426,7 @@
         <category>博客框架</category>
       </categories>
       <tags>
-        <tag>踩坑实录</tag>
+        <tag>踩坑日记</tag>
       </tags>
   </entry>
   <entry>
