@@ -361,9 +361,9 @@
     <title><![CDATA[一些小细节]]></title>
     <url>%2F%2F2019%2F07%2F21%2F%E4%B8%80%E4%BA%9B%E5%B0%8F%E7%BB%86%E8%8A%82%2F</url>
     <content type="text"><![CDATA[导入jar包时看清哪些类在哪些包下，可以参考一下API（入伏能找到的话），确认这个类不在所有可运行的包下之后再去网上找jar包]]></content>
-      <categories>
-        <category>踩坑实录</category>
-      </categories>
+      <tags>
+        <tag>踩坑日记</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Markdown编辑器Typora]]></title>
