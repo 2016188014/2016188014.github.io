@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-11T04:30:08.636Z</updated>
+  <updated>2019-08-21T09:01:50.831Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>周阳jvm</title>
+    <link href="http://yoursite.com//2019/08/21/%E5%91%A8%E9%98%B3jvm/"/>
+    <id>http://yoursite.com//2019/08/21/周阳jvm/</id>
+    <published>2019-08-21T08:31:04.000Z</published>
+    <updated>2019-08-21T09:01:50.831Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;minor GC一般发生在新生代，使用的是复制算法&lt;/li&gt;
+&lt;li&gt;老年代一般是由标记清除或者是由标记清除或标记整理的混合实现&lt;/li&gt;
+&lt;li&gt;内存效率：
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="JVM" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JVM/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>linux常用网络命令</title>
+    <link href="http://yoursite.com//2019/08/20/linux%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com//2019/08/20/linux常用网络命令/</id>
+    <published>2019-08-20T01:13:31.000Z</published>
+    <updated>2019-08-20T01:54:16.761Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;网络命令：write给指定用户发消息&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ConcurrentHashMap</title>
+    <link href="http://yoursite.com//2019/08/19/ConcurrentHashMap/"/>
+    <id>http://yoursite.com//2019/08/19/ConcurrentHashMap/</id>
+    <published>2019-08-19T06:43:59.000Z</published>
+    <updated>2019-08-19T06:49:03.845Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;ConcurrentHashMap采用“锁分段”机制，每个段都是一个独立的锁&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bigengzhe.github.io/images/Snipaste_2019-08-19_14-48-20.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="多线程" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>一些Linux命令</title>
@@ -122,7 +203,7 @@
     <link href="http://yoursite.com//2019/08/04/%E5%8E%9F%E5%AD%90%E5%8F%98%E9%87%8F%E4%B8%8ECAS%E7%AE%97%E6%B3%95/"/>
     <id>http://yoursite.com//2019/08/04/原子变量与CAS算法/</id>
     <published>2019-08-04T02:50:45.000Z</published>
-    <updated>2019-08-04T03:41:44.058Z</updated>
+    <updated>2019-08-19T06:44:51.810Z</updated>
     
     <summary type="html">
     
@@ -130,7 +211,9 @@
       
         
         
-          &lt;h4 id=&quot;原子性问题&quot;&gt;&lt;a href=&quot;#原子性问题&quot; class=&quot;headerlink&quot; title=&quot;原子性问题&quot;&gt;&lt;/a&gt;原子性问题&lt;/h4&gt;&lt;p&gt;原子性：即一个操作或者多个操作
+          &lt;center&gt;此花不与群花比&lt;/center&gt;
+
+&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
         
       
     
@@ -427,91 +510,6 @@
       <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数字格式</title>
-    <link href="http://yoursite.com//2019/07/27/%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/"/>
-    <id>http://yoursite.com//2019/07/27/数字格式/</id>
-    <published>2019-07-27T01:36:54.000Z</published>
-    <updated>2019-07-27T07:03:09.270Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;数字&quot;&gt;&lt;a href=&quot;#数字&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Locales</title>
-    <link href="http://yoursite.com//2019/07/27/Locales/"/>
-    <id>http://yoursite.com//2019/07/27/Locales/</id>
-    <published>2019-07-27T00:35:26.000Z</published>
-    <updated>2019-07-27T01:37:13.454Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Locale是一种专门负责国际化格式处理的类。它描述了&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一种语言&lt;/li&gt;
-&lt;li&gt;一个位置（可选）&lt;/li&gt;
-&lt;li&gt;一个变量（可选）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;定位了国家与语言&lt;/p&gt;
-&lt;p&gt;比如在美国是：language=English,
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>LDAP</title>
-    <link href="http://yoursite.com//2019/07/26/LDAP/"/>
-    <id>http://yoursite.com//2019/07/26/LDAP/</id>
-    <published>2019-07-26T13:21:38.000Z</published>
-    <updated>2019-07-26T13:48:29.279Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;LDAP介绍&quot;&gt;&lt;a href=&quot;#LDAP介绍&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="数据库" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
   </entry>

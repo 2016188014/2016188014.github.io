@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[周阳jvm]]></title>
+    <url>%2F%2F2019%2F08%2F21%2F%E5%91%A8%E9%98%B3jvm%2F</url>
+    <content type="text"><![CDATA[minor GC一般发生在新生代，使用的是复制算法 老年代一般是由标记清除或者是由标记清除或标记整理的混合实现 内存效率： 复制算法&gt;标记清除算法&gt;标记整理算法（此处的效率只是简单地对比时间复杂度，实际情况不一定如此） 内存整齐度： 复制算法=标记整理算法&gt;标记清除算法。 内存利用率： 标记整理算法=标记清除算法&gt;复制算法。]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>JVM</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[linux常用网络命令]]></title>
+    <url>%2F%2F2019%2F08%2F20%2Flinux%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[网络命令：write给指定用户发消息 123write 用户名信息内容#以Ctrl+D保存结束 w命令可以查看当前在线用户 网络命令：wall给所有用户发消息 12345678910wall [message]#发送广播消息last#查看目前和过去的所有登录信息lastlog#最后登录的信息lastlog -u uid#只查看此用户的登录信息traceroute www.baidu.com#显示数据包到主机间的路径netstat -tlun #查看本机监听的端口netstat -an #查看本机所有网络连接netstat -rn #查看本机路由表]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[ConcurrentHashMap]]></title>
+    <url>%2F%2F2019%2F08%2F19%2FConcurrentHashMap%2F</url>
+    <content type="text"><![CDATA[ConcurrentHashMap采用“锁分段”机制，每个段都是一个独立的锁]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>多线程</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[一些Linux命令]]></title>
     <url>%2F%2F2019%2F08%2F08%2F%E4%B8%80%E4%BA%9BLinux%E5%91%BD%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否要同时安装依赖，或删除冲突的包，你可以自己作出判断； 删除的命令是 1yum remove ~ 用yum查询想安装的软件 我们常会碰到这样的情况，想安装一个软件，只知道它和某方面有关，但又不能确切知道它的名字。这时yum的查询功能就起作用了 12yum search keywordyum info packagename#获取包的相关信息 小技巧yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新 12rpm -U 软件包名称yum update 软件包名称 centos6 添加开机自启动转自https://www.jianshu.com/p/ca79093c488e 1chkconfig sshd on]]></content>
@@ -38,7 +64,7 @@
   <entry>
     <title><![CDATA[原子变量与CAS算法]]></title>
     <url>%2F%2F2019%2F08%2F04%2F%E5%8E%9F%E5%AD%90%E5%8F%98%E9%87%8F%E4%B8%8ECAS%E7%AE%97%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &#123; // TODO Auto-generated method stub AtomicDemo ad=new AtomicDemo(); for(int i=0;i&lt;20;i++)&#123; new Thread(ad).start(); &#125;&#125; 1234567891011public class AtomicDemo implements Runnable&#123; private int serialNumber=0; @Override public void run() &#123; // TODO Auto-generated method stub System.out.println(getSerialNumber()); &#125; public int getSerialNumber()&#123; return serialNumber++; &#125;&#125; jdk1.5后java.util.concurrent.atomic包提供了许多包装器用于原子的整数浮点数等 它们内部使用了volatile保证内存可见性， CAS（Compare-And-Set）算法保证数据操作的原子性，CAS算法是硬件对于并发操作共享数据的支持 CAS算法包含了三个操作数： 内存值 V；预估值 A；更新值 B；当且仅当V == A时，V=B，否则什么也不做 1234567891011public class AtomicDemo implements Runnable&#123; private AtomicInteger serialNumber=new AtomicInteger(); @Override public void run() &#123; // TODO Auto-generated method stub System.out.println(getSerialNumber()); &#125; public int getSerialNumber()&#123; return serialNumber.getAndIncrement();//等价于i++ &#125;&#125;]]></content>
+    <content type="text"><![CDATA[此花不与群花比 原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &#123; // TODO Auto-generated method stub AtomicDemo ad=new AtomicDemo(); for(int i=0;i&lt;20;i++)&#123; new Thread(ad).start(); &#125;&#125; 1234567891011public class AtomicDemo implements Runnable&#123; private int serialNumber=0; @Override public void run() &#123; // TODO Auto-generated method stub System.out.println(getSerialNumber()); &#125; public int getSerialNumber()&#123; return serialNumber++; &#125;&#125; jdk1.5后java.util.concurrent.atomic包提供了许多包装器用于原子的整数浮点数等 它们内部使用了volatile保证内存可见性， CAS（Compare-And-Set）算法保证数据操作的原子性，CAS算法是硬件对于并发操作共享数据的支持 CAS算法包含了三个操作数： 内存值 V；预估值 A；更新值 B；当且仅当V == A时，V=B，否则什么也不做 1234567891011public class AtomicDemo implements Runnable&#123; private AtomicInteger serialNumber=new AtomicInteger(); @Override public void run() &#123; // TODO Auto-generated method stub System.out.println(getSerialNumber()); &#125; public int getSerialNumber()&#123; return serialNumber.getAndIncrement();//等价于i++ &#125;&#125;]]></content>
       <categories>
         <category>java学习笔记</category>
         <category>多线程</category>

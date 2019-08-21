@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &amp;#123;	// TODO Auto-generated method stub	AtomicDemo ad=new AtomicD">
+<meta name="description" content="此花不与群花比        原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &amp;#123;	// TODO Auto-generated method stub	AtomicDemo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原子变量与CAS算法">
 <meta property="og:url" content="http://yoursite.com/2019/08/04/原子变量与CAS算法/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &amp;#123;	// TODO Auto-generated method stub	AtomicDemo ad=new AtomicD">
+<meta property="og:description" content="此花不与群花比        原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &amp;#123;	// TODO Auto-generated method stub	AtomicDemo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-04T03:41:44.058Z">
+<meta property="og:updated_time" content="2019-08-19T06:44:51.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原子变量与CAS算法">
-<meta name="twitter:description" content="原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &amp;#123;	// TODO Auto-generated method stub	AtomicDemo ad=new AtomicD">
+<meta name="twitter:description" content="此花不与群花比        原子性问题原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行 一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误 1234567public static void main(String[] args) &amp;#123;	// TODO Auto-generated method stub	AtomicDemo">
 
 
 
@@ -418,7 +418,11 @@
       
 
       
-        <h4 id="原子性问题"><a href="#原子性问题" class="headerlink" title="原子性问题"></a>原子性问题</h4><p>原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行</p>
+        <center>此花不与群花比</center>
+
+<center><audio controls="controls" height="100" width="100"><br>  <source src="https://bigengzhe.github.io/music/此花不与群花比.mp3" type="audio/mp3"><br>  <source src type="audio/ogg"><br><embed height="100" width="100" src="song.mp3"><br></audio></center>
+
+<h4 id="原子性问题"><a href="#原子性问题" class="headerlink" title="原子性问题"></a>原子性问题</h4><p>原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行</p>
 <p>一些常见的代码，如i++并不是原子操作，多线程并发执行时极易出现错误</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">	AtomicDemo ad=<span class="keyword">new</span> AtomicDemo();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">new</span> Thread(ad).start();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AtomicDemo</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> serialNumber=<span class="number">0</span>;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		System.out.println(getSerialNumber());</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSerialNumber</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> serialNumber++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -578,7 +582,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -589,7 +593,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
