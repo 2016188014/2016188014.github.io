@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-23T01:44:21.963Z</updated>
+  <updated>2019-08-25T15:46:00.716Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读《富爸爸 穷爸爸》</title>
+    <link href="http://yoursite.com//2019/08/25/%E8%AF%BB%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B/"/>
+    <id>http://yoursite.com//2019/08/25/读《富爸爸-穷爸爸》/</id>
+    <published>2019-08-25T14:51:31.000Z</published>
+    <updated>2019-08-25T15:46:00.716Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;富人不为钱工作&quot;&gt;&lt;a href=&quot;#富人不为钱工作&quot; class=&quot;headerlink&quot; title=&quot;富人不为钱工作&quot;&gt;&lt;/a&gt;富人不为钱工作&lt;/h4&gt;&lt;p&gt;P33 
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>eclipse使用</title>
@@ -476,33 +500,6 @@
         
         
           &lt;p&gt;本文转自&lt;a href=&quot;https://blog.csdn.net/PacosonSWJTU/article/details/50639756&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文本文件和字符集</title>
-    <link href="http://yoursite.com//2019/07/27/%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%92%8C%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
-    <id>http://yoursite.com//2019/07/27/文本文件和字符集/</id>
-    <published>2019-07-27T10:28:36.000Z</published>
-    <updated>2019-07-27T12:31:00.845Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;文本文件和字符集&quot;&gt;&lt;a href=&quot;#文本文件和字符集&quot; class=&quot;headerlink&quot; title=&quot;文本文件和字符集&quot;&gt;&lt;/a&gt;文本文件和字符集&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;java是完全基于Unicode的，但是 os
         
       
     
