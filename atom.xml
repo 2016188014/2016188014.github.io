@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-25T15:46:00.716Z</updated>
+  <updated>2019-08-26T06:50:18.060Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux虚拟机网络配置</title>
+    <link href="http://yoursite.com//2019/08/26/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com//2019/08/26/linux虚拟机网络配置/</id>
+    <published>2019-08-26T06:11:51.000Z</published>
+    <updated>2019-08-26T06:50:18.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;VMware Workstation
+        
+      
+    
+    </summary>
+    
+      <category term="其他软件" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="虚拟机" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>读《富爸爸 穷爸爸》</title>
@@ -180,7 +206,7 @@
     <link href="http://yoursite.com//2019/08/08/%E4%B8%80%E4%BA%9BLinux%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com//2019/08/08/一些Linux命令/</id>
     <published>2019-08-08T02:58:07.000Z</published>
-    <updated>2019-08-11T04:30:08.636Z</updated>
+    <updated>2019-08-26T01:35:59.395Z</updated>
     
     <summary type="html">
     
@@ -482,32 +508,6 @@
     </summary>
     
       <category term="C/C++" scheme="http://yoursite.com/categories/C-C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>资源包</title>
-    <link href="http://yoursite.com//2019/07/27/%E8%B5%84%E6%BA%90%E5%8C%85/"/>
-    <id>http://yoursite.com//2019/07/27/资源包/</id>
-    <published>2019-07-27T12:31:28.000Z</published>
-    <updated>2019-07-27T13:09:07.908Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;本文转自&lt;a href=&quot;https://blog.csdn.net/PacosonSWJTU/article/details/50639756&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="国际化" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%9B%BD%E9%99%85%E5%8C%96/"/>
     
     
   </entry>

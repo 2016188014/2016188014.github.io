@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexohong">
 <meta property="og:description" content="centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-11T04:30:08.636Z">
+<meta property="og:updated_time" content="2019-08-26T01:35:59.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些Linux命令">
 <meta name="twitter:description" content="centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否">
@@ -421,6 +421,8 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -U 软件包名称</span><br><span class="line">yum update 软件包名称</span><br></pre></td></tr></table></figure>
 <p>centos6 添加开机自启动转自<a href="https://www.jianshu.com/p/ca79093c488e" target="_blank" rel="noopener">https://www.jianshu.com/p/ca79093c488e</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig sshd on</span><br></pre></td></tr></table></figure>
+<p>虚拟机设置默认路由命令：gw表示网关，后面的参数需要是真实机的网关</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route add default gw 192.168.0.1</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -570,7 +572,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -581,7 +583,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>

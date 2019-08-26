@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux虚拟机网络配置]]></title>
+    <url>%2F%2F2019%2F08%2F26%2Flinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[VMware Workstation Pro中有三种网络设置方式：桥接模式、NAT模式、仅主机模式 桥接模式：将你的虚拟机以一个真实机方式连接到互联网上、会占用当前网络的一个ip（注意此ip不能被其他计算机占用），设置虚拟机的ip和子网掩码与网关确保他们位于同一网段，可能还需要设置DNS与默认路由，还要注意桥接方式。 优点：设置方便，不仅可以与本主机通信，虚拟机还可连接到互联网 仅主机模式：通常与VMnet1相关联只与本主机通信无法连接到互联网。本方式需要更改虚拟机ip及子网掩码，同样需要确保与真实机位于同一网段。不能连接到互联网 NAT模式：一般与VMnet8相关联，此方式比以上稍微复杂些。相比于桥接模式，此方式需要虚拟机和VMnet8位于同一网段，其他桥接所要做的设置其同样也不能少，除此外还要注意以下 为使以上配置永久生效，可将配置写入配置文件，以下网址可备参考 https://www.cnblogs.com/shuaixf/archive/2011/11/29/2267863.html]]></content>
+      <categories>
+        <category>其他软件</category>
+        <category>虚拟机</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[读《富爸爸 穷爸爸》]]></title>
     <url>%2F%2F2019%2F08%2F25%2F%E8%AF%BB%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B%2F</url>
     <content type="text"><![CDATA[富人不为钱工作P33 “生活是最好的老师。大多数时候，生活不会和你说什么，它只是推着你转，每一次推，它都像是在说：‘喂，醒一醒，我要让你学点东西。’ ” “假如你学会了生活这门课程，做任何事情你都会游刃有余。如果你学不会，生活照样会推着你转。人们通常会做两件事，一些人在生活推着他转的同时，抓住生活赐予的每个机会；而另一些人则非常生气，去与生活抗争。他们与老板抗争，与工作抗争，甚至与自己的配偶抗争，他们不知道生活同时也给了他们机会。”]]></content>
@@ -53,7 +62,7 @@
   <entry>
     <title><![CDATA[一些Linux命令]]></title>
     <url>%2F%2F2019%2F08%2F08%2F%E4%B8%80%E4%BA%9BLinux%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否要同时安装依赖，或删除冲突的包，你可以自己作出判断； 删除的命令是 1yum remove ~ 用yum查询想安装的软件 我们常会碰到这样的情况，想安装一个软件，只知道它和某方面有关，但又不能确切知道它的名字。这时yum的查询功能就起作用了 12yum search keywordyum info packagename#获取包的相关信息 小技巧yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新 12rpm -U 软件包名称yum update 软件包名称 centos6 添加开机自启动转自https://www.jianshu.com/p/ca79093c488e 1chkconfig sshd on]]></content>
+    <content type="text"><![CDATA[centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否要同时安装依赖，或删除冲突的包，你可以自己作出判断； 删除的命令是 1yum remove ~ 用yum查询想安装的软件 我们常会碰到这样的情况，想安装一个软件，只知道它和某方面有关，但又不能确切知道它的名字。这时yum的查询功能就起作用了 12yum search keywordyum info packagename#获取包的相关信息 小技巧yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新 12rpm -U 软件包名称yum update 软件包名称 centos6 添加开机自启动转自https://www.jianshu.com/p/ca79093c488e 1chkconfig sshd on 虚拟机设置默认路由命令：gw表示网关，后面的参数需要是真实机的网关 1route add default gw 192.168.0.1]]></content>
       <categories>
         <category>Linux</category>
       </categories>
