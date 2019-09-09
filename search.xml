@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MIT算法导论公开课笔记]]></title>
+    <url>%2F%2F2019%2F09%2F08%2FMIT%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[时间复杂度的计算：​ 忽略最高项的所有低阶项和它的系数，如： ​ 3n^3+90n^2-5n+78-&gt;θ(n^3) 插入排序的时间复杂度为θ(n^2)T(n)=∑(j=2-&gt;n)θ(j)=θ(n^2)]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[jsp二三事]]></title>
+    <url>%2F%2F2019%2F09%2F06%2Fjsp%E4%BA%8C%E4%B8%89%E4%BA%8B%2F</url>
+    <content type="text"><![CDATA[在jsp中，html标签是相对于浏览器路径，jsp标签是相对于服务器路径]]></content>
+      <categories>
+        <category>jee</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[数组copy]]></title>
+    <url>%2F%2F2019%2F09%2F03%2F%E6%95%B0%E7%BB%84copy%2F</url>
+    <content type="text"><![CDATA[目前在Java中数据拷贝提供了如下方式： clone System.arraycopy Arrays.copyOf Arrays.copyOfRange 以上属于浅copy，只能copy基本类型和String，对于引用类型则会失效 关于foreach对栈的访问，会对栈自底至顶的访问，比如入栈1,2,3；出栈顺序还是1,2,3 123for(int value : stack1)&#123; stack2.push(value);&#125;]]></content>
+      <categories>
+        <category>java学习笔记</category>
+        <category>对象与类</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[项目bug]]></title>
+    <url>%2F%2F2019%2F09%2F01%2F%E9%A1%B9%E7%9B%AEbug%2F</url>
+    <content type="text"><![CDATA[org.springframework.beans.factory.BeanCreationException: Error creating bean with name ‘sqlSessionFactory’ defined in file [C:\Program Files\Apache Software Foundation\Tomcat 8.0\webapps\Atcrowdfunding-main\WEB-INF\classes\spring\spring-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis/mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for ‘user’. Cause: java.lang.ClassNotFoundException: Cannot find class: User user类找不到，可以将相关配置先注释掉]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[mvn中jar包问题]]></title>
+    <url>%2F%2F2019%2F08%2F30%2Fmvn%E4%B8%ADjar%E5%8C%85%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[在mvn中导入jar包 12&lt;groupId&gt;org.activiti&lt;/groupId&gt;&lt;artifactId&gt;activiti-engine&lt;/artifactId&gt; 遇到以下错误提示 1Missing artifact org.vaadin.addons:dcharts-widget:jar:0.10.0 刚开始以为是jar包缺失，而后导入jar包后还是报错，且本项目中并未配置此jar包 google得知，可能是由于jar包冲突，可用以下方法解决，剔除掉重复的jar包 123456&lt;exclusions&gt;&lt;exclusion&gt;&lt;groupId&gt;org.vaadin.addons&lt;/groupId&gt;&lt;artifactId&gt;dcharts-widget&lt;/artifactId&gt;&lt;/exclusion&gt;&lt;/exclusions&gt;]]></content>
+      <categories>
+        <category>mvn</category>
+      </categories>
+      <tags>
+        <tag>踩坑日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[源码安装apt-get]]></title>
+    <url>%2F%2F2019%2F08%2F27%2F%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85apt-get%2F</url>
+    <content type="text"><![CDATA[下载好apt-get的源码包后用bunzip2或者带-d选项的bzip2命令解压压缩包 12bunzip2 apt-0.5.15lorg3.tar.bz2tar -xvf apt-0.5.15lorg3.tar 遇到问题 1configure: error: Can&apos;t find libbz2 library bzip2-libs is the equivalent package to the Debian/Ubuntu libbz2 12345cat &gt;&gt;confdefs.h &lt;&lt;_ACEOF#define RPM_VERSION_RAW &quot;$RPM_VERSION_RAW&quot;_ACEOFecho &quot;$as_me:$LINENO: checking for BZ2_bzopen in -lbz2&quot; &gt;&amp;5 以上不懂，弃]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>操作与实战</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[众筹网]]></title>
+    <url>%2F%2F2019%2F08%2F27%2F%E4%BC%97%E7%AD%B9%E7%BD%91%2F</url>
+    <content type="text"><![CDATA[管理端 尚筹网页面原型/main.html1. 权限管理 1. 用户维护（增删改查）尚筹网页面原型/user.html 2. 角色维护（同上）尚筹网页面原型/role.html 3. 许可维护 尚筹网页面原型/permission.html 2. 业务审核（功能同上） 3. 业务管理（功能同上） 用户端 尚筹网页面原型/index.html1. 众筹商品提交流程（信息入库）尚筹网页面原型/start-step-1.html 2. 个人中心 1. 资产总览（有图表展示，用了echart插件，需要弄明白）尚筹网页面原型/member.html 2. 我的众筹（）尚筹网页面原型/member.html 3. 实名认证（选做）]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[linux虚拟机网络配置]]></title>
     <url>%2F%2F2019%2F08%2F26%2Flinux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[VMware Workstation Pro中有三种网络设置方式：桥接模式、NAT模式、仅主机模式 桥接模式：将你的虚拟机以一个真实机方式连接到互联网上、会占用当前网络的一个ip（注意此ip不能被其他计算机占用），设置虚拟机的ip和子网掩码与网关确保他们位于同一网段，可能还需要设置DNS与默认路由，还要注意桥接方式。 优点：设置方便，不仅可以与本主机通信，虚拟机还可连接到互联网 仅主机模式：通常与VMnet1相关联只与本主机通信无法连接到互联网。本方式需要更改虚拟机ip及子网掩码，同样需要确保与真实机位于同一网段。不能连接到互联网 NAT模式：一般与VMnet8相关联，此方式比以上稍微复杂些。相比于桥接模式，此方式需要虚拟机和VMnet8位于同一网段，其他桥接所要做的设置其同样也不能少，除此外还要注意以下 为使以上配置永久生效，可将配置写入配置文件，以下网址可备参考 https://www.cnblogs.com/shuaixf/archive/2011/11/29/2267863.html]]></content>
@@ -62,7 +122,7 @@
   <entry>
     <title><![CDATA[一些Linux命令]]></title>
     <url>%2F%2F2019%2F08%2F08%2F%E4%B8%80%E4%BA%9BLinux%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否要同时安装依赖，或删除冲突的包，你可以自己作出判断； 删除的命令是 1yum remove ~ 用yum查询想安装的软件 我们常会碰到这样的情况，想安装一个软件，只知道它和某方面有关，但又不能确切知道它的名字。这时yum的查询功能就起作用了 12yum search keywordyum info packagename#获取包的相关信息 小技巧yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新 12rpm -U 软件包名称yum update 软件包名称 centos6 添加开机自启动转自https://www.jianshu.com/p/ca79093c488e 1chkconfig sshd on 虚拟机设置默认路由命令：gw表示网关，后面的参数需要是真实机的网关 1route add default gw 192.168.0.1]]></content>
+    <content type="text"><![CDATA[centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否要同时安装依赖，或删除冲突的包，你可以自己作出判断； 删除的命令是 1yum remove ~ 用yum查询想安装的软件 我们常会碰到这样的情况，想安装一个软件，只知道它和某方面有关，但又不能确切知道它的名字。这时yum的查询功能就起作用了 12yum search keywordyum info packagename#获取包的相关信息 小技巧yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新 12rpm -U 软件包名称yum update 软件包名称 centos6 添加开机自启动转自https://www.jianshu.com/p/ca79093c488e 1chkconfig sshd on 虚拟机设置默认路由命令：gw表示网关，后面的参数需要是真实机的网关 1route add default gw 192.168.0.1 在克隆Linux虚拟机时这些文件需要注意 1234-&gt;vim /etc/udev/rules.d/70-persistent-net.rules #-&gt;vim /etc/sysconfig/network-scripts/ifcfg-eth0 #网络接口相关配置-&gt;vim /etc/sysconfig/network #配置主机ip映射-&gt;vim /etc/init.d/network ifconfig命令加-a可以查看所有可用网络接口 下载命令Linux的下载指令有curl和wget curl：使用方法如下 12#curl [OPTION] [URL]curl http://pjreddie.com/media/files/darknet.conv.weights 通过-o/-O选项保存下载的文件到指定的文件中：-o：将文件保存为命令行中指定的文件名的文件中-O：使用URL中默认的文件名保存文件到本地 1curl -O http://pjreddie.com/media/files/darknet.conv.weights 使用-C断点续传 12345678# 当文件在下载完成之前结束该进程$ curl -O http://pjreddie.com/media/files/darknet.conv.weights############## 18.5%# 通过添加-C选项继续对该文件进行下载，已经下载过的文件不会被重新下载curl -C - -O http://pjreddie.com/media/files/darknet.conv.weights############### 18.5%原文链接：https://blog.csdn.net/u014540717/article/details/53097374 wget： wget非常稳定，它在带宽很窄的情况下和不稳定网络中有很强的适应性.如果是由于网络的原因下载失败，wget会不断的尝试，直到整个文件下载完毕。如果是服务器打断下载过程，它会再次联到服务器上从停止的地方继续下载。这对从那些限定了链接时间的服务器上下载大文件非常有用。 同时支持HTTP，HTTPS和FTP协议 12#wget [OPTION] [URL]wget http://pjreddie.com/media/files/darknet.conv.weights -c是断点续传]]></content>
       <categories>
         <category>Linux</category>
       </categories>
