@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-08T13:03:11.902Z</updated>
+  <updated>2019-09-28T12:35:38.899Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些面试题</title>
+    <link href="http://yoursite.com//2019/09/28/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://yoursite.com//2019/09/28/一些面试题/</id>
+    <published>2019-09-28T02:19:20.000Z</published>
+    <updated>2019-09-28T12:35:38.899Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;以下代码可以可以编译通过吗，可以的话输出为？&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>collection中常用方法二三事</title>
+    <link href="http://yoursite.com//2019/09/25/collection%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
+    <id>http://yoursite.com//2019/09/25/collection中常用方法二三事/</id>
+    <published>2019-09-25T02:42:32.000Z</published>
+    <updated>2019-09-25T02:59:34.210Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;containsAll：此方法工作方式并不如人意，它是对比较集合逐个调用contains方法，源码参考如下&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mysql数据库备份踩坑</title>
+    <link href="http://yoursite.com//2019/09/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E8%B8%A9%E5%9D%91/"/>
+    <id>http://yoursite.com//2019/09/19/mysql数据库备份踩坑/</id>
+    <published>2019-09-19T00:34:41.000Z</published>
+    <updated>2019-09-19T01:20:29.866Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;mysql数据库导出时记得不要勾选上二进制大文件，血淋淋的教训，不是乱码的问题，只是导出有限制&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+      <category term="踩坑日记" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>MIT算法导论公开课笔记</title>
@@ -459,85 +536,6 @@
     
     
       <category term="踩坑日记" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mysql之select</title>
-    <link href="http://yoursite.com//2019/08/04/mysql%E4%B9%8Bselect/"/>
-    <id>http://yoursite.com//2019/08/04/mysql之select/</id>
-    <published>2019-08-04T07:12:12.000Z</published>
-    <updated>2019-08-05T03:40:38.044Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;语法:&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>原子变量与CAS算法</title>
-    <link href="http://yoursite.com//2019/08/04/%E5%8E%9F%E5%AD%90%E5%8F%98%E9%87%8F%E4%B8%8ECAS%E7%AE%97%E6%B3%95/"/>
-    <id>http://yoursite.com//2019/08/04/原子变量与CAS算法/</id>
-    <published>2019-08-04T02:50:45.000Z</published>
-    <updated>2019-08-19T06:44:51.810Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;center&gt;此花不与群花比&lt;/center&gt;
-
-&lt;center&gt;&lt;audio controls=&quot;controls&quot; height=&quot;100&quot; width=&quot;100&quot;&gt;&lt;br&gt;  &lt;source
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="多线程" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>volatile关键字与内存可见性</title>
-    <link href="http://yoursite.com//2019/08/04/volatile%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E5%86%85%E5%AD%98%E5%8F%AF%E8%A7%81%E6%80%A7/"/>
-    <id>http://yoursite.com//2019/08/04/volatile关键字与内存可见性/</id>
-    <published>2019-08-04T00:28:30.000Z</published>
-    <updated>2019-08-04T02:38:17.525Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;内存屏蔽&quot;&gt;&lt;a href=&quot;#内存屏蔽&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="多线程" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
     
   </entry>
   

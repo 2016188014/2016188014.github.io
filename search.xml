@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一些面试题]]></title>
+    <url>%2F%2F2019%2F09%2F28%2F%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[以下代码可以可以编译通过吗，可以的话输出为？ 1234public static void main(String[] args) &#123; int i; System.out.println(i);&#125; 答：不能编译通过，提示变量未初始化 对volatile变量的操作会造成阻塞吗？答：不会 不依赖其他锁机制，多线程环境下的计数器可用volatile实现吗？答：多线程下计数器必须使用锁保护。 synchronized关键字不可以加给类，且属于可重入锁]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[collection中常用方法二三事]]></title>
+    <url>%2F%2F2019%2F09%2F25%2Fcollection%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E4%BA%8C%E4%B8%89%E4%BA%8B%2F</url>
+    <content type="text"><![CDATA[containsAll：此方法工作方式并不如人意，它是对比较集合逐个调用contains方法，源码参考如下 1234567public boolean containsAll(Collection&lt;?&gt; c) &#123; Iterator&lt;?&gt; e = c.iterator(); while (e.hasNext()) if (!contains(e.next())) return false; return true; &#125; contains：源码参考 1234567891011Iterator&lt;E&gt; it = iterator();if (o==null) &#123; while (it.hasNext()) if (it.next()==null) return true;&#125; else &#123; while (it.hasNext()) if (o.equals(it.next())) return true;&#125;return false;]]></content>
+      <categories>
+        <category>我眼中的java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[mysql数据库备份踩坑]]></title>
+    <url>%2F%2F2019%2F09%2F19%2Fmysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E8%B8%A9%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[mysql数据库导出时记得不要勾选上二进制大文件，血淋淋的教训，不是乱码的问题，只是导出有限制]]></content>
+      <categories>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>踩坑日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MIT算法导论公开课笔记]]></title>
     <url>%2F%2F2019%2F09%2F08%2FMIT%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[时间复杂度的计算：​ 忽略最高项的所有低阶项和它的系数，如： ​ 3n^3+90n^2-5n+78-&gt;θ(n^3) 插入排序的时间复杂度为θ(n^2)T(n)=∑(j=2-&gt;n)θ(j)=θ(n^2)]]></content>
