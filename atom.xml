@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-28T12:35:38.899Z</updated>
+  <updated>2019-09-29T13:27:40.139Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬虫初体验（爬了牛客）</title>
+    <link href="http://yoursite.com//2019/09/29/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C%EF%BC%88%E7%88%AC%E4%BA%86%E7%89%9B%E5%AE%A2%EF%BC%89/"/>
+    <id>http://yoursite.com//2019/09/29/爬虫初体验（爬了牛客）/</id>
+    <published>2019-09-29T13:15:34.000Z</published>
+    <updated>2019-09-29T13:27:40.139Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;起初不知为何有个路径（&lt;a href=&quot;https://www.nowcoder.com/recommend）为何抛FileNotFound异常，后来此异常有无缘无故消失了，很奇怪，代码写的很渣，不过总归是爬到了，代码如下&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>一些面试题</title>
@@ -510,32 +532,6 @@
     
       <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>浮点错误</title>
-    <link href="http://yoursite.com//2019/08/04/%E6%B5%AE%E7%82%B9%E9%94%99%E8%AF%AF/"/>
-    <id>http://yoursite.com//2019/08/04/浮点错误/</id>
-    <published>2019-08-04T13:03:04.000Z</published>
-    <updated>2019-08-12T11:50:59.227Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;浮点错误: 您的程序运行时发生浮点错误，比如遇到了除以 0
-        
-      
-    
-    </summary>
-    
-      <category term="C/C++" scheme="http://yoursite.com/categories/C-C/"/>
-    
-    
-      <category term="踩坑日记" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
