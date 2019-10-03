@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-29T13:27:40.139Z</updated>
+  <updated>2019-10-03T08:29:46.642Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>爬虫初体验（爬了牛客）</title>
-    <link href="http://yoursite.com//2019/09/29/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C%EF%BC%88%E7%88%AC%E4%BA%86%E7%89%9B%E5%AE%A2%EF%BC%89/"/>
-    <id>http://yoursite.com//2019/09/29/爬虫初体验（爬了牛客）/</id>
-    <published>2019-09-29T13:15:34.000Z</published>
-    <updated>2019-09-29T13:27:40.139Z</updated>
+    <title>collection.add（ArrayList）源码分析</title>
+    <link href="http://yoursite.com//2019/10/01/collection-add%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com//2019/10/01/collection-add源码分析/</id>
+    <published>2019-10-01T08:10:15.000Z</published>
+    <updated>2019-10-03T08:29:46.642Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,32 @@
       
         
         
-          &lt;p&gt;起初不知为何有个路径（&lt;a href=&quot;https://www.nowcoder.com/recommend）为何抛FileNotFound异常，后来此异常有无缘无故消失了，很奇怪，代码写的很渣，不过总归是爬到了，代码如下&quot; target=&quot;_blank&quot;
+          &lt;p&gt;相关源码截取如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫初体验（爬了牛客）</title>
+    <link href="http://yoursite.com//2019/09/29/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C%EF%BC%88%E7%88%AC%E4%BA%86%E7%89%9B%E5%AE%A2%EF%BC%89/"/>
+    <id>http://yoursite.com//2019/09/29/爬虫初体验（爬了牛客）/</id>
+    <published>2019-09-29T13:15:34.000Z</published>
+    <updated>2019-09-29T13:34:48.460Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;起初不知为何有个&lt;a href=&quot;https://www.nowcoder.com/recommend&quot; target=&quot;_blank&quot;
         
       
     
@@ -507,30 +532,6 @@
     </summary>
     
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>尚硅谷周阳的mysql脑图</title>
-    <link href="http://yoursite.com//2019/08/07/%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%91%A8%E9%98%B3%E7%9A%84mysql%E8%84%91%E5%9B%BE/"/>
-    <id>http://yoursite.com//2019/08/07/尚硅谷周阳的mysql脑图/</id>
-    <published>2019-08-07T02:13:42.000Z</published>
-    <updated>2019-08-07T03:04:19.358Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;今天在看周阳老师授课时写了脑图，众所周知，脑图可是学习利器之一啊，于是就在网上到处翻，最后终于是找到了，无奈本人的MindManager即将过期，所以把脑图转了html文档，不想要安装MindManager的可以&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
     
     
   </entry>
