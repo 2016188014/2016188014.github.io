@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-03T08:29:46.642Z</updated>
+  <updated>2019-10-05T03:48:44.783Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java四大引用</title>
+    <link href="http://yoursite.com//2019/10/05/java%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8/"/>
+    <id>http://yoursite.com//2019/10/05/java四大引用/</id>
+    <published>2019-10-05T03:40:05.000Z</published>
+    <updated>2019-10-05T03:48:44.783Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;软引用&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>collection.add（ArrayList）源码分析</title>
@@ -506,32 +531,6 @@
       <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
       <category term="多线程" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>一些Linux命令</title>
-    <link href="http://yoursite.com//2019/08/08/%E4%B8%80%E4%BA%9BLinux%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com//2019/08/08/一些Linux命令/</id>
-    <published>2019-08-08T02:58:07.000Z</published>
-    <updated>2019-08-28T01:19:56.842Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;centos中本没有apt-get命令，需要手动安装&lt;/p&gt;
-&lt;p&gt;centos切换root用户&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
     
   </entry>
