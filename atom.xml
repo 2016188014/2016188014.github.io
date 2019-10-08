@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-05T03:48:44.783Z</updated>
+  <updated>2019-10-08T01:07:56.516Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>static块的执行顺序问题</title>
+    <link href="http://yoursite.com//2019/10/08/static%E5%9D%97%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com//2019/10/08/static块的执行顺序问题/</id>
+    <published>2019-10-08T00:57:10.000Z</published>
+    <updated>2019-10-08T01:07:56.516Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;代码如下&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>java四大引用</title>
@@ -504,33 +527,6 @@
     </summary>
     
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>ConcurrentHashMap</title>
-    <link href="http://yoursite.com//2019/08/19/ConcurrentHashMap/"/>
-    <id>http://yoursite.com//2019/08/19/ConcurrentHashMap/</id>
-    <published>2019-08-19T06:43:59.000Z</published>
-    <updated>2019-08-19T06:49:03.845Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;ConcurrentHashMap采用“锁分段”机制，每个段都是一个独立的锁&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://bigengzhe.github.io/images/Snipaste_2019-08-19_14-48-20.png&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="多线程" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
     
   </entry>

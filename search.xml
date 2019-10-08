@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[static块的执行顺序问题]]></title>
+    <url>%2F%2F2019%2F10%2F08%2Fstatic%E5%9D%97%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[代码如下 123456789101112131415161718192021222324252627public class Test &#123;public static void main(String[] args) &#123; B b=new B(); &#125; static&#123; System.out.println("Test static块执行"); &#125; public Test()&#123; System.out.println("Test类初始化。。。。。"); &#125; static class A&#123; static&#123; System.out.println("A的static块执行"); &#125; public A()&#123; System.out.println("A类初始化。。。。。"); &#125; &#125; static class B extends A&#123; static &#123; System.out.println("B的static初始化"); &#125; public B()&#123; System.out.println("B类初始化。。。。。"); &#125; &#125;&#125; 输出如下]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[java四大引用]]></title>
     <url>%2F%2F2019%2F10%2F05%2Fjava%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8%2F</url>
     <content type="text"><![CDATA[软引用 123456789101112131415161718192021222324package nowcoder;import java.lang.ref.SoftReference;public class Test &#123; private static class Bigger&#123; public int[] values; public String name; public Bigger(String name)&#123; this.name=name; values=new int[1024]; &#125; &#125; public static void main(String[] args) &#123; int count =1000000; SoftReference[] values=new SoftReference[count]; for(int i=0;i&lt;count;i++)&#123; values[i]=new SoftReference&lt;Bigger&gt;(new Bigger("bigger-"+i)); &#125; for(int i=0;i&lt;10;i++)&#123; System.out.println(((Bigger)(values[i].get())).name); &#125; &#125;&#125; 输出如下： 总结：软引用用来描述一些还有用，但并非必须的对象，对于软引用关联的对象，在系统将要发生内存溢出异常之前，将会把这些对象列进回收范围之中，并进行二次回收，如果这次回收还是没有足够的内存，才会抛出内存不足异常]]></content>
