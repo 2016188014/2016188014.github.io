@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2019-10-08T01:07:56.516Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://bigengzhe.github.io/"/>
+  <updated>2019-10-22T02:38:11.134Z</updated>
+  <id>http://bigengzhe.github.io/</id>
   
   <author>
     <name>hong</name>
@@ -17,9 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SpringDataRedis常见操作</title>
+    <link href="http://bigengzhe.github.io//2019/10/21/SpringDataRedis%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/"/>
+    <id>http://bigengzhe.github.io//2019/10/21/SpringDataRedis常见操作/</id>
+    <published>2019-10-21T01:16:39.000Z</published>
+    <updated>2019-10-22T02:38:11.134Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;string类型&quot;&gt;&lt;a href=&quot;#string类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>static块的执行顺序问题</title>
-    <link href="http://yoursite.com//2019/10/08/static%E5%9D%97%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com//2019/10/08/static块的执行顺序问题/</id>
+    <link href="http://bigengzhe.github.io//2019/10/08/static%E5%9D%97%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/"/>
+    <id>http://bigengzhe.github.io//2019/10/08/static块的执行顺序问题/</id>
     <published>2019-10-08T00:57:10.000Z</published>
     <updated>2019-10-08T01:07:56.516Z</updated>
     
@@ -41,8 +63,8 @@
   
   <entry>
     <title>java四大引用</title>
-    <link href="http://yoursite.com//2019/10/05/java%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8/"/>
-    <id>http://yoursite.com//2019/10/05/java四大引用/</id>
+    <link href="http://bigengzhe.github.io//2019/10/05/java%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8/"/>
+    <id>http://bigengzhe.github.io//2019/10/05/java四大引用/</id>
     <published>2019-10-05T03:40:05.000Z</published>
     <updated>2019-10-05T03:48:44.783Z</updated>
     
@@ -66,8 +88,8 @@
   
   <entry>
     <title>collection.add（ArrayList）源码分析</title>
-    <link href="http://yoursite.com//2019/10/01/collection-add%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
-    <id>http://yoursite.com//2019/10/01/collection-add源码分析/</id>
+    <link href="http://bigengzhe.github.io//2019/10/01/collection-add%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <id>http://bigengzhe.github.io//2019/10/01/collection-add源码分析/</id>
     <published>2019-10-01T08:10:15.000Z</published>
     <updated>2019-10-03T08:29:46.642Z</updated>
     
@@ -84,15 +106,15 @@
     
     </summary>
     
-      <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
+      <category term="我眼中的java" scheme="http://bigengzhe.github.io/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
     
     
   </entry>
   
   <entry>
     <title>爬虫初体验（爬了牛客）</title>
-    <link href="http://yoursite.com//2019/09/29/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C%EF%BC%88%E7%88%AC%E4%BA%86%E7%89%9B%E5%AE%A2%EF%BC%89/"/>
-    <id>http://yoursite.com//2019/09/29/爬虫初体验（爬了牛客）/</id>
+    <link href="http://bigengzhe.github.io//2019/09/29/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C%EF%BC%88%E7%88%AC%E4%BA%86%E7%89%9B%E5%AE%A2%EF%BC%89/"/>
+    <id>http://bigengzhe.github.io//2019/09/29/爬虫初体验（爬了牛客）/</id>
     <published>2019-09-29T13:15:34.000Z</published>
     <updated>2019-09-29T13:34:48.460Z</updated>
     
@@ -113,8 +135,8 @@
   
   <entry>
     <title>一些面试题</title>
-    <link href="http://yoursite.com//2019/09/28/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://yoursite.com//2019/09/28/一些面试题/</id>
+    <link href="http://bigengzhe.github.io//2019/09/28/%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://bigengzhe.github.io//2019/09/28/一些面试题/</id>
     <published>2019-09-28T02:19:20.000Z</published>
     <updated>2019-09-28T12:35:38.899Z</updated>
     
@@ -137,8 +159,8 @@
   
   <entry>
     <title>collection中常用方法二三事</title>
-    <link href="http://yoursite.com//2019/09/25/collection%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
-    <id>http://yoursite.com//2019/09/25/collection中常用方法二三事/</id>
+    <link href="http://bigengzhe.github.io//2019/09/25/collection%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
+    <id>http://bigengzhe.github.io//2019/09/25/collection中常用方法二三事/</id>
     <published>2019-09-25T02:42:32.000Z</published>
     <updated>2019-09-25T02:59:34.210Z</updated>
     
@@ -156,15 +178,15 @@
     
     </summary>
     
-      <category term="我眼中的java" scheme="http://yoursite.com/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
+      <category term="我眼中的java" scheme="http://bigengzhe.github.io/categories/%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84java/"/>
     
     
   </entry>
   
   <entry>
     <title>mysql数据库备份踩坑</title>
-    <link href="http://yoursite.com//2019/09/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E8%B8%A9%E5%9D%91/"/>
-    <id>http://yoursite.com//2019/09/19/mysql数据库备份踩坑/</id>
+    <link href="http://bigengzhe.github.io//2019/09/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E8%B8%A9%E5%9D%91/"/>
+    <id>http://bigengzhe.github.io//2019/09/19/mysql数据库备份踩坑/</id>
     <published>2019-09-19T00:34:41.000Z</published>
     <updated>2019-09-19T01:20:29.866Z</updated>
     
@@ -181,17 +203,17 @@
     
     </summary>
     
-      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+      <category term="mysql" scheme="http://bigengzhe.github.io/categories/mysql/"/>
     
     
-      <category term="踩坑日记" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
+      <category term="踩坑日记" scheme="http://bigengzhe.github.io/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>MIT算法导论公开课笔记</title>
-    <link href="http://yoursite.com//2019/09/08/MIT%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com//2019/09/08/MIT算法导论公开课笔记/</id>
+    <link href="http://bigengzhe.github.io//2019/09/08/MIT%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
+    <id>http://bigengzhe.github.io//2019/09/08/MIT算法导论公开课笔记/</id>
     <published>2019-09-08T12:38:23.000Z</published>
     <updated>2019-09-08T13:03:11.902Z</updated>
     
@@ -208,15 +230,15 @@
     
     </summary>
     
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://bigengzhe.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
   </entry>
   
   <entry>
     <title>jsp二三事</title>
-    <link href="http://yoursite.com//2019/09/06/jsp%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
-    <id>http://yoursite.com//2019/09/06/jsp二三事/</id>
+    <link href="http://bigengzhe.github.io//2019/09/06/jsp%E4%BA%8C%E4%B8%89%E4%BA%8B/"/>
+    <id>http://bigengzhe.github.io//2019/09/06/jsp二三事/</id>
     <published>2019-09-06T06:50:03.000Z</published>
     <updated>2019-09-06T06:53:23.471Z</updated>
     
@@ -235,15 +257,15 @@
     
     </summary>
     
-      <category term="jee" scheme="http://yoursite.com/categories/jee/"/>
+      <category term="jee" scheme="http://bigengzhe.github.io/categories/jee/"/>
     
     
   </entry>
   
   <entry>
     <title>数组copy</title>
-    <link href="http://yoursite.com//2019/09/03/%E6%95%B0%E7%BB%84copy/"/>
-    <id>http://yoursite.com//2019/09/03/数组copy/</id>
+    <link href="http://bigengzhe.github.io//2019/09/03/%E6%95%B0%E7%BB%84copy/"/>
+    <id>http://bigengzhe.github.io//2019/09/03/数组copy/</id>
     <published>2019-09-03T00:16:57.000Z</published>
     <updated>2019-09-03T09:20:18.098Z</updated>
     
@@ -266,17 +288,17 @@
     
     </summary>
     
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="java学习笔记" scheme="http://bigengzhe.github.io/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="对象与类" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/"/>
+      <category term="对象与类" scheme="http://bigengzhe.github.io/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>项目bug</title>
-    <link href="http://yoursite.com//2019/09/01/%E9%A1%B9%E7%9B%AEbug/"/>
-    <id>http://yoursite.com//2019/09/01/项目bug/</id>
+    <link href="http://bigengzhe.github.io//2019/09/01/%E9%A1%B9%E7%9B%AEbug/"/>
+    <id>http://bigengzhe.github.io//2019/09/01/项目bug/</id>
     <published>2019-09-01T01:00:51.000Z</published>
     <updated>2019-09-07T03:11:32.084Z</updated>
     
@@ -297,8 +319,8 @@
   
   <entry>
     <title>mvn中jar包问题</title>
-    <link href="http://yoursite.com//2019/08/30/mvn%E4%B8%ADjar%E5%8C%85%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com//2019/08/30/mvn中jar包问题/</id>
+    <link href="http://bigengzhe.github.io//2019/08/30/mvn%E4%B8%ADjar%E5%8C%85%E9%97%AE%E9%A2%98/"/>
+    <id>http://bigengzhe.github.io//2019/08/30/mvn中jar包问题/</id>
     <published>2019-08-30T13:41:05.000Z</published>
     <updated>2019-08-30T13:49:40.997Z</updated>
     
@@ -315,17 +337,17 @@
     
     </summary>
     
-      <category term="mvn" scheme="http://yoursite.com/categories/mvn/"/>
+      <category term="mvn" scheme="http://bigengzhe.github.io/categories/mvn/"/>
     
     
-      <category term="踩坑日记" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
+      <category term="踩坑日记" scheme="http://bigengzhe.github.io/tags/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>源码安装apt-get</title>
-    <link href="http://yoursite.com//2019/08/27/%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85apt-get/"/>
-    <id>http://yoursite.com//2019/08/27/源码安装apt-get/</id>
+    <link href="http://bigengzhe.github.io//2019/08/27/%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85apt-get/"/>
+    <id>http://bigengzhe.github.io//2019/08/27/源码安装apt-get/</id>
     <published>2019-08-27T07:38:18.000Z</published>
     <updated>2019-08-30T08:24:25.999Z</updated>
     
@@ -342,17 +364,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://bigengzhe.github.io/categories/Linux/"/>
     
     
-      <category term="操作与实战" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E6%88%98/"/>
+      <category term="操作与实战" scheme="http://bigengzhe.github.io/tags/%E6%93%8D%E4%BD%9C%E4%B8%8E%E5%AE%9E%E6%88%98/"/>
     
   </entry>
   
   <entry>
     <title>众筹网</title>
-    <link href="http://yoursite.com//2019/08/27/%E4%BC%97%E7%AD%B9%E7%BD%91/"/>
-    <id>http://yoursite.com//2019/08/27/众筹网/</id>
+    <link href="http://bigengzhe.github.io//2019/08/27/%E4%BC%97%E7%AD%B9%E7%BD%91/"/>
+    <id>http://bigengzhe.github.io//2019/08/27/众筹网/</id>
     <published>2019-08-27T06:00:55.000Z</published>
     <updated>2019-08-27T06:04:01.747Z</updated>
     
@@ -368,15 +390,15 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://bigengzhe.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
   
   <entry>
     <title>linux虚拟机网络配置</title>
-    <link href="http://yoursite.com//2019/08/26/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"/>
-    <id>http://yoursite.com//2019/08/26/linux虚拟机网络配置/</id>
+    <link href="http://bigengzhe.github.io//2019/08/26/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://bigengzhe.github.io//2019/08/26/linux虚拟机网络配置/</id>
     <published>2019-08-26T06:11:51.000Z</published>
     <updated>2019-08-26T06:50:18.060Z</updated>
     
@@ -392,17 +414,17 @@
     
     </summary>
     
-      <category term="其他软件" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/"/>
+      <category term="其他软件" scheme="http://bigengzhe.github.io/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/"/>
     
-      <category term="虚拟机" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+      <category term="虚拟机" scheme="http://bigengzhe.github.io/categories/%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
   </entry>
   
   <entry>
     <title>读《富爸爸 穷爸爸》</title>
-    <link href="http://yoursite.com//2019/08/25/%E8%AF%BB%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B/"/>
-    <id>http://yoursite.com//2019/08/25/读《富爸爸-穷爸爸》/</id>
+    <link href="http://bigengzhe.github.io//2019/08/25/%E8%AF%BB%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8-%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B/"/>
+    <id>http://bigengzhe.github.io//2019/08/25/读《富爸爸-穷爸爸》/</id>
     <published>2019-08-25T14:51:31.000Z</published>
     <updated>2019-08-25T15:46:00.716Z</updated>
     
@@ -418,15 +440,15 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://bigengzhe.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
   
   <entry>
     <title>eclipse使用</title>
-    <link href="http://yoursite.com//2019/08/23/eclipse%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com//2019/08/23/eclipse使用/</id>
+    <link href="http://bigengzhe.github.io//2019/08/23/eclipse%E4%BD%BF%E7%94%A8/"/>
+    <id>http://bigengzhe.github.io//2019/08/23/eclipse使用/</id>
     <published>2019-08-23T01:42:50.000Z</published>
     <updated>2019-08-23T01:44:21.963Z</updated>
     
@@ -445,15 +467,15 @@
     
     </summary>
     
-      <category term="eclipse" scheme="http://yoursite.com/categories/eclipse/"/>
+      <category term="eclipse" scheme="http://bigengzhe.github.io/categories/eclipse/"/>
     
     
   </entry>
   
   <entry>
     <title>在eclipse中导入源码</title>
-    <link href="http://yoursite.com//2019/08/22/%E5%9C%A8eclipse%E4%B8%AD%E5%AF%BC%E5%85%A5%E6%BA%90%E7%A0%81/"/>
-    <id>http://yoursite.com//2019/08/22/在eclipse中导入源码/</id>
+    <link href="http://bigengzhe.github.io//2019/08/22/%E5%9C%A8eclipse%E4%B8%AD%E5%AF%BC%E5%85%A5%E6%BA%90%E7%A0%81/"/>
+    <id>http://bigengzhe.github.io//2019/08/22/在eclipse中导入源码/</id>
     <published>2019-08-22T07:43:58.000Z</published>
     <updated>2019-08-23T01:41:40.380Z</updated>
     
@@ -472,15 +494,15 @@
     
     </summary>
     
-      <category term="eclipse" scheme="http://yoursite.com/categories/eclipse/"/>
+      <category term="eclipse" scheme="http://bigengzhe.github.io/categories/eclipse/"/>
     
     
   </entry>
   
   <entry>
     <title>周阳jvm</title>
-    <link href="http://yoursite.com//2019/08/21/%E5%91%A8%E9%98%B3jvm/"/>
-    <id>http://yoursite.com//2019/08/21/周阳jvm/</id>
+    <link href="http://bigengzhe.github.io//2019/08/21/%E5%91%A8%E9%98%B3jvm/"/>
+    <id>http://bigengzhe.github.io//2019/08/21/周阳jvm/</id>
     <published>2019-08-21T08:31:04.000Z</published>
     <updated>2019-08-21T09:01:50.831Z</updated>
     
@@ -499,34 +521,9 @@
     
     </summary>
     
-      <category term="java学习笔记" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <category term="java学习笔记" scheme="http://bigengzhe.github.io/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="JVM" scheme="http://yoursite.com/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JVM/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>linux常用网络命令</title>
-    <link href="http://yoursite.com//2019/08/20/linux%E5%B8%B8%E7%94%A8%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com//2019/08/20/linux常用网络命令/</id>
-    <published>2019-08-20T01:13:31.000Z</published>
-    <updated>2019-08-20T01:54:16.761Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;网络命令：write给指定用户发消息&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="JVM" scheme="http://bigengzhe.github.io/categories/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JVM/"/>
     
     
   </entry>
