@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="踩坑日记,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="containsAll：此方法工作方式并不如人意，它是对比较集合逐个调用contains方法，源码参考如下 1234567public boolean containsAll(Collection&amp;lt;?&amp;gt; c) &amp;#123;    Iterator&amp;lt;?&amp;gt; e = c.iterator();    while (e.hasNext())        if (!contain">
+<meta name="description" content="在看尚硅谷的教程时，跟着写了一遍springboot的拦截器，主要代码如下 12345678910111213141516171819public class LoginHandlerInterceptor implements HandlerInterceptor &amp;#123;    //目标方法执行之前    @Override    public boolean preHandle(Http">
+<meta name="keywords" content="踩坑日记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="collection中常用方法二三事">
-<meta property="og:url" content="http://bigengzhe.github.io/2019/09/25/collection中常用方法二三事/index.html">
+<meta property="og:title" content="springboot内置的tomcat">
+<meta property="og:url" content="http://bigengzhe.github.io/2019/10/28/springboot内置的tomcat/index.html">
 <meta property="og:site_name" content="Hexohong">
-<meta property="og:description" content="containsAll：此方法工作方式并不如人意，它是对比较集合逐个调用contains方法，源码参考如下 1234567public boolean containsAll(Collection&amp;lt;?&amp;gt; c) &amp;#123;    Iterator&amp;lt;?&amp;gt; e = c.iterator();    while (e.hasNext())        if (!contain">
+<meta property="og:description" content="在看尚硅谷的教程时，跟着写了一遍springboot的拦截器，主要代码如下 12345678910111213141516171819public class LoginHandlerInterceptor implements HandlerInterceptor &amp;#123;    //目标方法执行之前    @Override    public boolean preHandle(Http">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-25T02:59:34.210Z">
+<meta property="og:updated_time" content="2019-10-28T08:19:04.301Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="collection中常用方法二三事">
-<meta name="twitter:description" content="containsAll：此方法工作方式并不如人意，它是对比较集合逐个调用contains方法，源码参考如下 1234567public boolean containsAll(Collection&amp;lt;?&amp;gt; c) &amp;#123;    Iterator&amp;lt;?&amp;gt; e = c.iterator();    while (e.hasNext())        if (!contain">
+<meta name="twitter:title" content="springboot内置的tomcat">
+<meta name="twitter:description" content="在看尚硅谷的教程时，跟着写了一遍springboot的拦截器，主要代码如下 12345678910111213141516171819public class LoginHandlerInterceptor implements HandlerInterceptor &amp;#123;    //目标方法执行之前    @Override    public boolean preHandle(Http">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://bigengzhe.github.io/2019/09/25/collection中常用方法二三事/">
+  <link rel="canonical" href="http://bigengzhe.github.io/2019/10/28/springboot内置的tomcat/">
 
 
 
 
 
-  <title>collection中常用方法二三事 | Hexohong</title>
+  <title>springboot内置的tomcat | Hexohong</title>
   
 
 
@@ -315,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://bigengzhe.github.io/2019/09/25/collection中常用方法二三事/">
+    <link itemprop="mainEntityOfPage" href="http://bigengzhe.github.io/2019/10/28/springboot内置的tomcat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hong">
@@ -332,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">collection中常用方法二三事</h1>
+          <h1 class="post-title" itemprop="name headline">springboot内置的tomcat</h1>
         
 
         <div class="post-meta">
@@ -344,8 +345,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-25T10:42:32+08:00">
-                2019-09-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-28T11:57:19+08:00">
+                2019-10-28
               </time>
             
 
@@ -354,28 +355,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我眼中的java/" itemprop="url" rel="index">
-                    <span itemprop="name">我眼中的java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -407,16 +386,14 @@
       
 
       
-        <ol>
-<li><p>containsAll：此方法工作方式并不如人意，它是对比较集合逐个调用contains方法，源码参考如下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">containsAll</span><span class="params">(Collection&lt;?&gt; c)</span> </span>&#123;</span><br><span class="line">    Iterator&lt;?&gt; e = c.iterator();</span><br><span class="line">    <span class="keyword">while</span> (e.hasNext())</span><br><span class="line">        <span class="keyword">if</span> (!contains(e.next()))</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol start="2">
-<li><p>contains：源码参考</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;E&gt; it = iterator();</span><br><span class="line"><span class="keyword">if</span> (o==<span class="keyword">null</span>) &#123;</span><br><span class="line">    <span class="keyword">while</span> (it.hasNext())</span><br><span class="line">        <span class="keyword">if</span> (it.next()==<span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (it.hasNext())</span><br><span class="line">        <span class="keyword">if</span> (o.equals(it.next()))</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">false</span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <p>在看尚硅谷的教程时，跟着写了一遍springboot的拦截器，主要代码如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginHandlerInterceptor</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line">    <span class="comment">//目标方法执行之前</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Object user = request.getSession().getAttribute(<span class="string">"loginUser"</span>);</span><br><span class="line">        <span class="keyword">if</span>(user == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="comment">//未登陆，返回登陆页面</span></span><br><span class="line">           <span class="comment">/* HttpSession session=(HttpSession)request.getSession();</span></span><br><span class="line"><span class="comment">            session.setAttribute("msg","没有权限请先登陆");*/</span></span><br><span class="line">            <span class="comment">//request.getRequestDispatcher("/login.html").forward(request,response);</span></span><br><span class="line">            response.sendRedirect(<span class="string">"/crud/index.html"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//已登陆，放行请求</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>结果发现它会拦截静态资源，这和老师讲的不一样呀，于是就网上查，发现是spingboot版本的问题，我用的是2.2.0，静态资源也全部拦截了，而且还抛了个异常（瞧我这暴脾气）：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java.lang.AbstractMethodError: org.apache.tomcat.websocket.server.WsSessionListener.sessionCreated(Ljavax/servlet/http/HttpSessionEvent;)V</span><br><span class="line">	at org.apache.catalina.session.StandardSession.tellNew(StandardSession.java:<span class="number">388</span>) [tomcat-embed-core-<span class="number">9.0</span>.27.jar:<span class="number">9.0</span>.27]</span><br><span class="line">	at org.apache.catalina.session.StandardSession.setId(StandardSession.java:<span class="number">360</span>) [tomcat-embed-core-<span class="number">9.0</span>.27.jar:<span class="number">9.0</span>.27]</span><br><span class="line">	at org.apache.catalina.session.StandardSession.setId(StandardSession.java:<span class="number">341</span>) [tomcat-embed-core-<span class="number">9.0</span>.27.jar:<span class="number">9.0</span>.27]</span><br><span class="line">	at org.apache.catalina.session.ManagerBase.createSession(ManagerBase.java:<span class="number">686</span>)</span><br></pre></td></tr></table></figure>
+<p>springboot2.2.0默认Tomcat是9.0.27版本的，使用servlet4.0，但是SpringBoot 2.x还包含着 servlet3.1，版本不兼容，网上说的解决办法是在pom里更换Tomcat为低版本，可是之后发现springboot在调用Tomcat9.0.27中新添加的部分接口，强行更换会报异常：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">An attempt was made to call a method that does not exist. The attempt was made from the following location: org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:175)</span><br><span class="line">The following method did not exist:</span><br><span class="line">    org.apache.tomcat.util.modeler.Registry.disableRegistry()V</span><br></pre></td></tr></table></figure>
+<p>未找到解决办法</p>
+<p>待续。。。</p>
 
       
     </div>
@@ -466,6 +443,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/踩坑日记/" rel="tag"># 踩坑日记</a>
+          
+        </div>
+      
 
       
       
@@ -475,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/19/mysql数据库备份踩坑/" rel="next" title="mysql数据库备份踩坑">
-                <i class="fa fa-chevron-left"></i> mysql数据库备份踩坑
+              <a href="/2019/10/21/SpringDataRedis常见操作/" rel="next" title="SpringDataRedis常见操作">
+                <i class="fa fa-chevron-left"></i> SpringDataRedis常见操作
               </a>
             
           </div>
@@ -484,10 +467,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/28/一些面试题/" rel="prev" title="一些面试题">
-                一些面试题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
