@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigengzhe.github.io/"/>
-  <updated>2019-10-28T10:07:14.394Z</updated>
+  <updated>2019-11-06T01:52:04.766Z</updated>
   <id>http://bigengzhe.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>linux网络配置</title>
+    <link href="http://bigengzhe.github.io/2019/11/06/linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://bigengzhe.github.io/2019/11/06/linux网络配置/</id>
+    <published>2019-11-06T01:38:32.000Z</published>
+    <updated>2019-11-06T01:52:04.766Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天又把Linux网络相关配置了一下，发现之前的可多东西都忘了，在此总结下&lt;/p&gt;
+&lt;h4 id=&quot;修改ip地址&quot;&gt;&lt;a href=&quot;#修改ip地址&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://bigengzhe.github.io/categories/Linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>springboot内置的tomcat</title>
     <link href="http://bigengzhe.github.io/2019/10/28/springboot%E5%86%85%E7%BD%AE%E7%9A%84tomcat/"/>
     <id>http://bigengzhe.github.io/2019/10/28/springboot内置的tomcat/</id>
     <published>2019-10-28T03:57:19.000Z</published>
-    <updated>2019-10-28T10:07:14.394Z</updated>
+    <updated>2019-11-06T01:37:31.198Z</updated>
     
     <summary type="html">
     
@@ -487,33 +512,6 @@
 &lt;li&gt;eclipse源码文件夹都会被合并到类路径下&lt;/li&gt;
 &lt;/ol&gt;
 
-        
-      
-    
-    </summary>
-    
-      <category term="eclipse" scheme="http://bigengzhe.github.io/categories/eclipse/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>在eclipse中导入源码</title>
-    <link href="http://bigengzhe.github.io/2019/08/22/%E5%9C%A8eclipse%E4%B8%AD%E5%AF%BC%E5%85%A5%E6%BA%90%E7%A0%81/"/>
-    <id>http://bigengzhe.github.io/2019/08/22/在eclipse中导入源码/</id>
-    <published>2019-08-22T07:43:58.000Z</published>
-    <updated>2019-08-23T01:41:40.380Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;方式一：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://bigengzhe.github.io/images/Snipaste_2019-08-22_15-48-02.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;点击图中所示位置，设置源码来源&lt;/p&gt;
-&lt;p&gt;&lt;img
         
       
     
