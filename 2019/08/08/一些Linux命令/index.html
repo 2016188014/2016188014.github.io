@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexohong">
 <meta property="og:description" content="centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-28T01:19:56.842Z">
+<meta property="og:updated_time" content="2019-10-30T13:54:44.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些Linux命令">
 <meta name="twitter:description" content="centos中本没有apt-get命令，需要手动安装 centos切换root用户 12[hsk@localhost 桌面]$ su密码： centos中安装软件——yum12#有个前提是yum安装的软件包都是rpm格式的yum install 软件包名#需要下载 yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否">
@@ -420,40 +420,42 @@
         <p>centos中本没有apt-get命令，需要手动安装</p>
 <p>centos切换root用户</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[hsk@localhost 桌面]$ su</span><br><span class="line">密码：</span><br></pre></td></tr></table></figure>
-<h5 id="centos中安装软件——yum"><a href="#centos中安装软件——yum" class="headerlink" title="centos中安装软件——yum"></a>centos中安装软件——yum</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">有个前提是yum安装的软件包都是rpm格式的</span></span><br><span class="line">yum install 软件包名#需要下载</span><br></pre></td></tr></table></figure>
+<h5 id="centos中安装软件——yum"><a href="#centos中安装软件——yum" class="headerlink" title="centos中安装软件——yum"></a>centos中安装软件——yum</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>有个前提是yum安装的软件包都是rpm格式的</span><br><span class="line">yum install 软件包名#需要下载</span><br></pre></td></tr></table></figure>
 <p>yum会查询数据库，有无这一软件包，如果有，则检查其依赖冲突关系，如果没有依赖冲突，那么最好，下载安装;如果有，则会给出提示，询问是否要同时安装依赖，或删除冲突的包，你可以自己作出判断；</p>
 <p>删除的命令是</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove ~</span><br></pre></td></tr></table></figure>
 <p>用yum查询想安装的软件</p>
 <p>我们常会碰到这样的情况，想安装一个软件，只知道它和某方面有关，但又不能确切知道它的名字。这时yum的查询功能就起作用了</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum search keyword</span><br><span class="line">yum info packagename#获取包的相关信息</span><br></pre></td></tr></table></figure>
-<h5 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h5><p>yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新</p>
+<h5 id="centos安装软件——rpm"><a href="#centos安装软件——rpm" class="headerlink" title="centos安装软件——rpm"></a>centos安装软件——rpm</h5><h5 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h5><p>yum用于安装软件包及其依赖，rpm用来安装特定软件包，当发生某两个软件包之间的冲突时不妨考虑一下已安装包的更新</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -U 软件包名称</span><br><span class="line">yum update 软件包名称</span><br></pre></td></tr></table></figure>
 <p>centos6 添加开机自启动转自<a href="https://www.jianshu.com/p/ca79093c488e" target="_blank" rel="noopener">https://www.jianshu.com/p/ca79093c488e</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig sshd on</span><br></pre></td></tr></table></figure>
 <p>虚拟机设置默认路由命令：gw表示网关，后面的参数需要是真实机的网关</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route add default gw 192.168.0.1</span><br></pre></td></tr></table></figure>
 <p>在克隆Linux虚拟机时这些文件需要注意</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">-&gt;</span><span class="bash">vim /etc/udev/rules.d/70-persistent-net.rules <span class="comment">#</span></span></span><br><span class="line"><span class="meta">-&gt;</span><span class="bash">vim /etc/sysconfig/network-scripts/ifcfg-eth0 <span class="comment">#网络接口相关配置</span></span></span><br><span class="line"><span class="meta">-&gt;</span><span class="bash">vim /etc/sysconfig/network <span class="comment">#配置主机ip映射</span></span></span><br><span class="line"><span class="meta">-&gt;</span><span class="bash">vim /etc/init.d/network</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">-&gt;</span>vim /etc/udev/rules.d/70-persistent-net.rules #</span><br><span class="line"><span class="meta">-&gt;</span>vim /etc/sysconfig/network-scripts/ifcfg-eth0 #网络接口相关配置</span><br><span class="line"><span class="meta">-&gt;</span>vim /etc/sysconfig/network #配置主机ip映射</span><br><span class="line"><span class="meta">-&gt;</span>vim /etc/init.d/network</span><br></pre></td></tr></table></figure>
 <p>ifconfig命令加-a可以查看所有可用网络接口</p>
 <h5 id="下载命令"><a href="#下载命令" class="headerlink" title="下载命令"></a>下载命令</h5><p>Linux的下载指令有curl和wget</p>
 <ol>
 <li><p>curl：使用方法如下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">curl [OPTION] [URL]</span></span><br><span class="line">curl http://pjreddie.com/media/files/darknet.conv.weights</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>curl [OPTION] [URL]</span><br><span class="line">curl http://pjreddie.com/media/files/darknet.conv.weights</span><br></pre></td></tr></table></figure>
 <p>通过-o/-O选项保存下载的文件到指定的文件中：<br>-o：将文件保存为命令行中指定的文件名的文件中<br>-O：使用URL中默认的文件名保存文件到本地</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O http://pjreddie.com/media/files/darknet.conv.weights</span><br></pre></td></tr></table></figure>
 <p>使用-C断点续传</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 当文件在下载完成之前结束该进程</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> curl -O http://pjreddie.com/media/files/darknet.conv.weights</span></span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">#############             18.5%</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 通过添加-C选项继续对该文件进行下载，已经下载过的文件不会被重新下载</span></span><br><span class="line">curl -C - -O http://pjreddie.com/media/files/darknet.conv.weights</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">##############            18.5%</span></span></span><br><span class="line">原文链接：https://blog.csdn.net/u014540717/article/details/53097374</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 当文件在下载完成之前结束该进程</span><br><span class="line"><span class="meta">$</span> curl -O http://pjreddie.com/media/files/darknet.conv.weights</span><br><span class="line"><span class="meta">#</span>#############             18.5%</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 通过添加-C选项继续对该文件进行下载，已经下载过的文件不会被重新下载</span><br><span class="line">curl -C - -O http://pjreddie.com/media/files/darknet.conv.weights</span><br><span class="line"><span class="meta">#</span>##############            18.5%</span><br><span class="line">原文链接：https://blog.csdn.net/u014540717/article/details/53097374</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ol start="2">
 <li><p>wget：</p>
 <p>wget非常稳定，它在带宽很窄的情况下和不稳定网络中有很强的适应性.如果是由于网络的原因下载失败，wget会不断的尝试，直到整个文件下载完毕。如果是服务器打断下载过程，它会再次联到服务器上从停止的地方继续下载。这对从那些限定了链接时间的服务器上下载大文件非常有用。</p>
 <p>同时支持HTTP，HTTPS和FTP协议</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">wget [OPTION] [URL]</span></span><br><span class="line">wget http://pjreddie.com/media/files/darknet.conv.weights</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>wget [OPTION] [URL]</span><br><span class="line">wget http://pjreddie.com/media/files/darknet.conv.weights</span><br></pre></td></tr></table></figure>
 <p>-c是断点续传</p>
 </li>
 </ol>
+<h5 id="内核相关"><a href="#内核相关" class="headerlink" title="内核相关"></a>内核相关</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum list kernel //查看当前内核可更新版本</span><br><span class="line">uname -sr //查看当前内核版本</span><br><span class="line">cat /etc/redhat-release //查看系统版本</span><br><span class="line">strings /lib64/libc.so.6 | grep GLIBC_ //最高支持glibc版本</span><br></pre></td></tr></table></figure>
+<h5 id="文件编码相关："><a href="#文件编码相关：" class="headerlink" title="文件编码相关："></a>文件编码相关：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在Vim中可以直接查看文件编码</span><br><span class="line">:set fileencoding</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -672,7 +674,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#centos中安装软件——yum"><span class="nav-text">centos中安装软件——yum</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小技巧"><span class="nav-text">小技巧</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下载命令"><span class="nav-text">下载命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#centos中安装软件——yum"><span class="nav-text">centos中安装软件——yum</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#centos安装软件——rpm"><span class="nav-text">centos安装软件——rpm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小技巧"><span class="nav-text">小技巧</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下载命令"><span class="nav-text">下载命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#内核相关"><span class="nav-text">内核相关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文件编码相关："><span class="nav-text">文件编码相关：</span></a></li></ol></div>
             
 
           </div>
